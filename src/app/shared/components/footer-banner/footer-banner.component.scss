@@ -1,0 +1,94 @@
+.main-content{
+    background-color: #A2D6F9;
+    width: 75rem;
+    height: 12rem;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+
+.bg-content{
+    width: 40rem;
+    height: 100%;
+    background-image: url("./../../../../assets/SVG/accesoire-image.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: -15rem;
+}
+
+.info-bloc {
+    margin-left: -15rem;
+}
+.message{
+    font-size: 1.5rem;
+}
+
+
+.illustre-image{
+    display: flex;
+    align-items: center;
+    margin-top: -1rem;
+}
+.illustre-image img{
+    width: 6rem;
+}
+.illustre-image span{
+    font-size: 4rem;
+    
+}
+// phone
+@media screen and (max-width: 768px) {
+    .main-content{
+        width: 100%;
+        height: 6rem;
+        
+    }
+    .bg-content{
+        width: 20rem;
+        height: 70%;
+        background-size: cover;
+        margin-left: 22rem;
+    }
+    .info-bloc {
+        margin-left: 0;
+        margin-right: -32rem;
+        width: 100%;
+        padding-left: 0.5rem;
+    }
+    .illustre-image span{
+        font-size: 1.5rem;
+    }
+    .illustre-image img{
+        width: 3rem;
+    }
+    .message{
+        font-size: 0.8rem;
+    }
+    .illustre-image{
+        margin-top: 0;
+    }
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+}

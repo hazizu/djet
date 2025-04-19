@@ -1,0 +1,37 @@
+.center-banner{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 12rem;
+    background-color: #111111;
+    margin-top: 3rem;
+}
+.center-banner-img{
+    background-image: url('./../../../../assets/SVG/center-banner-image.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 40%;
+    height: 100%;
+    box-shadow: 36px 0px 78px #e9ecefba;
+}
+.center-banner-info{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+
+}
+.text-1{
+    color: #FFC600;
+    font-size: 0.8rem;
+}
+.text-2{
+    color: #A2D6F9;
+    font-size: 1.3rem;
+    font-weight: 700;
+}

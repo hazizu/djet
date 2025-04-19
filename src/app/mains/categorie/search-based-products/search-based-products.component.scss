@@ -1,0 +1,36 @@
+.search-based-products-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.search-based-products{
+    background-color: #FFF;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 4rem;
+}
+.title{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    display: flex;
+}
+// phone
+@media screen and (max-width: 768px) {
+    .search-based-products{
+        padding: 2rem 0.5rem;
+    }
+    .title{
+        font-size: 1.1rem;
+    }
+    .search-based-products-list{
+        gap: 0;
+        justify-content: space-between;
+    }
+    .search-based-products-list-item{
+        width: 48%;
+        margin-bottom: 1rem;
+    }
+    
+}

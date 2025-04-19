@@ -1,0 +1,31 @@
+.main{
+    display: flex;
+    align-items: center;
+    width: 75rem;
+    justify-content: space-between;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+   
+}
+.title{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+}
+.product-main{
+    margin-top: 3rem;
+}
+// phone
+@media screen and (max-width: 768px)  {
+    .main{
+        width: 100%;
+       
+    }
+    .product-main{
+   width: 100%;
+   }
+   .list{
+    width: 49%;
+   }
+}
+

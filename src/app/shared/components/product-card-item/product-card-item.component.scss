@@ -1,0 +1,68 @@
+.card {
+width: 17rem;
+height: 22rem;
+position: relative;
+border-radius: 2rem;
+position: relative;
+margin-bottom: 2rem;
+}
+.content-card{
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    padding: 0 1.5rem;
+}
+.info-product{
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+}
+.product-name{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.heart, .outheart svg{
+    width: 2rem;.heart, .outheart svg{
+    width: 2rem;
+    height: 2rem;
+    color: #FFC600;
+}
+    height: 2rem;
+    color: #FFC600;
+}
+.haert-container{
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  
+}
+
+//  phone
+@media screen and (max-width: 768px)  {
+    .card{
+     width: 100%;
+      height: 15rem;
+      position: relative;
+      border-radius: 2rem;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    .product-name{
+        font-size: 0.9rem;
+    }
+    .product-price{
+        font-size: 0.9rem;
+    }
+    .content-card{
+        padding: 0 1rem;
+    }
+}
+
+
+
+  
+
+  

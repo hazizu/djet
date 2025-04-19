@@ -1,0 +1,50 @@
+<div class="container-main">
+    <div class="container-content">
+        <img src="./../../../../assets/SVG/Logo-Djet-blue.svg"/>
+        <div class="form-container">
+            <router-outlet></router-outlet>
+            <div class="condition-info">
+                <span>
+                    En continuant, vous acceptez les <a>conditions d’utilisation et de
+                     vente</a> de Djet Technologies. Consultez notre <a>déclaration de confidentialité</a>,
+                      notre politique relative aux cookies ainsi que notre <a>politique relative aux 
+                      publicités ciblées par centre d’intérêts.</a>
+                </span>
+                </div>
+
+                <div class="social-connect-bar">
+                    <div class="barre"></div>
+                    <span>Ou</span>
+                    <div class="barre"></div>
+                </div>
+
+                <div class="social-connect">
+                    <div class="social-connect-item">
+                        <img src="./../../../../assets/SVG/google-icon.svg"/>
+                    </div>
+                    <div class="social-connect-item">
+                        <img src="./../../../../assets/SVG/apple-gray-icon.svg"/>
+                    </div>
+                    <div class="social-connect-item">
+                        <img src="./../../../../assets/SVG/facebook-bue.svg"/>
+                    </div>
+                </div>
+
+                <div class="social-connect-bar2">
+                    <div class="barre2"></div>
+                    <span *ngIf="router.url === '/'">Nouveau sur Djet technologies ?</span>
+                    <span *ngIf="router.url === '/inscription'">Vous avez déjà un compte ?</span>
+                    <div class="barre2"></div>
+                </div>
+                <div class="signup">
+                    <app-button (clicked)="goToInscription()" *ngIf="router.url === '/'" label="Créer un compte" [styles]="{ marginTop:'1rem', background:'transparent', border:'1px solid #000', color:'#000', fontSize:'1.2rem'}"></app-button>
+                    <app-button (clicked)="goToLogin()" *ngIf="router.url === '/inscription'" label="Connectez-vous" [styles]="{ marginTop:'1rem', background:'transparent', border:'1px solid #000', color:'#000', fontSize:'1.2rem'}"></app-button>
+                </div>
+
+        </div>
+       
+
+
+    </div>
+
+</div>

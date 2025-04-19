@@ -1,0 +1,42 @@
+.ain-nav-contaniner{
+    width: 20rem;
+    background-color: #d9d9d993;
+    border-radius: 2rem;
+    padding: 1rem;
+    padding-bottom: 0 !important;
+    margin-right: 1rem;
+}
+.nav-list{
+    width: 100%;
+}
+.bg-container{
+    width: 100%;
+    height: 6rem;
+    background-image: url("./../../../../assets/SVG/nav-bg.png");
+    background-position: -1rem -2rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.phone-close svg{
+    width: 2rem;
+}
+.phone-close {
+    display: none;
+}
+
+// phone
+@media screen and (max-width: 768px) {
+    .ain-nav-contaniner{
+        width: 100%;
+        background-color: lightgray;
+        border-radius: 0rem;
+      
+    }
+    .phone-close{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: -0.5rem;
+
+    }
+}

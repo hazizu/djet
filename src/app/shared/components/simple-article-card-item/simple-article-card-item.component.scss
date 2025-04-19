@@ -1,0 +1,57 @@
+.simple-article{
+    width: 15rem;
+    height: 22rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    
+}
+.article-image{
+    width: 100%;
+    height: 12rem;
+    background-position:top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.article-info{
+    background-color: #F6FBFF;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0 0 1rem 1em;
+    height: 10rem;
+}
+.article-name{
+    font-weight: bold;
+}
+.caracteristic-bloc{
+    display: flex;
+    flex-direction: column;
+}
+.haert-container{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 2rem;
+    height: 2rem;
+    
+  }
+  .heart, .outheart svg{
+    width: 2rem;
+    height: 2rem;
+    color: #FFC600;
+}
+
+// phone 
+@media screen and (max-width: 768px) {
+    .simple-article{
+        width: 100%;
+    }
+    .article-name{
+        font-size: 0.8rem;
+        line-height: normal;
+        margin-bottom: 0.5rem;
+    }
+}

@@ -1,0 +1,9 @@
+<div class="chip-btn" (click)="clickedBtn()" [ngClass]="{chip_btn_clicked_style:isActive}">
+    <div class="chip-btn-content-default">
+       <img [src]="chipsData?.icon1">
+    </div>
+    <div class="chip-btn-content-cliked">
+        <img [src]="chipsData?.icon2">
+    </div>
+    <span class="chip-lib">{{chipsData?.libelle}}</span>
+</div>

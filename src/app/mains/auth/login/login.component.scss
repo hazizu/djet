@@ -1,0 +1,26 @@
+.container-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.login-title{
+    font-size: 2rem;
+}
+.login-sub-title{
+    width: 80%;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    
+}
+.login-form{
+    width: 100%;
+}
+
+//phone
+@media screen and (max-width: 767px) {
+    .login-sub-title{
+        width: 100%;
+    }
+}

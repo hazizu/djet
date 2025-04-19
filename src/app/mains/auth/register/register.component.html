@@ -1,0 +1,39 @@
+<div class="container-main">
+    <span class="login-title">
+        S'inscrire
+    </span>
+<div class="register-form">
+    <div class="login-sub-title">
+    <span>
+        Inscrivez-vous et accédez au meilleur de la tech en Côte d'ivoire
+    </span>
+</div>
+<form [formGroup]="registerForm">
+    <app-input controlName="nom" libelle="Votre Nom" inputType="text" [redBorder]="registerForm.get('nom')?.invalid && invalidError">
+     <img src="./../../../../assets/SVG/icon-profile.svg"/>
+    </app-input>
+
+    <app-input controlName="telephone" libelle="Numéro de téléphone" inputType="tel" [redBorder]="registerForm.get('telephone')?.invalid && invalidError">
+        <img src="./../../../../assets/SVG/icon-profile.svg"/>
+    </app-input>
+
+    <app-input controlName="email" libelle="email" inputType="email" [redBorder]="registerForm.get('email')?.invalid && invalidError">
+        <img src="./../../../../assets/SVG/icon-profile.svg"/>
+    </app-input>
+    <app-input controlName="adresse" libelle="Adresse" inputType="email" [redBorder]="registerForm.get('email')?.invalid && invalidError">
+        <img src="./../../../../assets/SVG/icon-profile.svg"/>
+    </app-input>
+
+    <app-input controlName="password" libelle="Créez votre mot de passe" inputType="password" [isPasswordInput]="true" [redBorder]="registerForm.get('password')?.invalid && invalidError">
+     <img src="./../../../../assets/SVG/lock.svg"/>
+    </app-input>
+
+    <app-input controlName="confirmPassword" libelle="Confirmez votre mot de passe" inputType="password" [isPasswordInput]="true" [redBorder]="registerForm.get('confirmPassword')?.invalid && invalidError">
+        <img src="./../../../../assets/SVG/lock.svg"/>
+       </app-input>
+
+       <app-button (clicked)="register()" label="S'inscrire" [styles]="{ marginTop:'1rem'}"></app-button>
+
+</form>
+</div>
+</div>

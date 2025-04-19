@@ -1,0 +1,45 @@
+.categorie-container {
+    margin: auto 5rem;
+}
+.chip-btn-container {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+.search-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 3rem;
+}
+.fixed-title{
+    color: #072AC8;
+    cursor: pointer;
+}
+.search-value{
+    font-style: italic;
+    font-weight: bold;
+}
+.djet{
+    width: 100%;
+}
+.footer-banner{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+//phone
+@media screen and (max-width: 767px) {
+    .categorie-container {
+        margin: unset;
+        width: 100%;
+        padding: 0 0rem;
+    }
+    .chip-btn-container{
+        padding: 0 0.5rem;
+    }
+    .search-title{
+        padding: 0 0.5rem;
+    }
+}

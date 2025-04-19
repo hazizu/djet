@@ -1,0 +1,52 @@
+.container-main{
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    border: 1px solid #111111;
+    border-radius: 0.4rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.redBorderStyle{
+    border: 1px solid red;
+}
+.main{
+    margin-top: 0.75rem;
+}
+
+.input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #111111;
+    height: 3rem;
+    width: 100%
+
+}
+.libelle{
+   margin-bottom: 0.5rem;
+}
+.input-bloc{
+    width: 100%;
+}
+.icon-bloc{
+    margin-right: 0.5rem;
+    margin-left: 0.6rem;
+}
+.visible-con{
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+
+}
+.visible-con img{
+    width: 1.5rem;
+    
+}
+
+  .main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }

@@ -1,0 +1,8 @@
+<div class="search-based-products">
+    <span class="title">D’autres produits basés sur vos recherches</span>
+    <div class="search-based-products-list">
+        <div class="search-based-products-list-item" *ngFor="let article of productData">
+            <app-simple-article-card-item [productData]="article"></app-simple-article-card-item>
+        </div>
+    </div>
+</div>

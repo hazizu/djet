@@ -1,0 +1,47 @@
+.main {
+width: 24rem;
+height:20rem ;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+border-radius: 2rem;
+position: relative;
+cursor: pointer;
+transition: transform 0.2s ease-in-out;
+}
+.main:hover{
+    transform: scale(1.04);
+    transition: transform 0.2s ease-in-out;
+}
+.new-title-content{
+    position: absolute;
+    bottom: 2rem;
+    left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    color: #FFF;
+
+}
+.title1{
+    font-size: 1rem;
+}
+.title2{
+    font-size: 1.5rem;
+    font-weight:500;
+}
+// table
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+.main{
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+}
+ // phone
+ @media screen and (max-width: 767px) {
+  .main{
+    width: 14rem;
+    height: 10rem;
+    margin: 0 0.5rem;
+  }
+}

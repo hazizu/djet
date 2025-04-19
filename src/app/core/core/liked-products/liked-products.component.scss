@@ -1,0 +1,71 @@
+.main{
+    display: flex;
+    align-items: center;
+    width: 75rem;
+    justify-content: space-between;
+    margin-top: 2rem;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    gap: 1rem;
+
+   
+}
+.title{
+    font-size: 1.5rem;
+    font-weight: 600;
+
+}
+.product-main{
+    margin-top: 3rem;
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+}
+.action-plus span{
+    font-size: 1.1rem;
+
+}
+.action-plus svg{
+    width: 1rem;
+    height: 1rem;
+    color: #072AC8;
+    font-weight: bold;
+}
+.action-plus{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+.title-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #1E96FC;
+    color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 1rem;
+   
+}
+.list-container {
+    width: 100%;
+    overflow: scroll;
+}
+// phone
+@media screen and (max-width: 768px)  {
+  .main{
+    overflow-x: scroll;
+  }
+   .list{
+    width: 49%;
+  }
+  .product-main{
+    margin-top: 3rem;
+    padding: 1.5rem 0rem 1rem 0rem;
+}
+.title{
+    font-size: 0.8rem;
+  
+}
+.action-plus span{
+    font-size: 1rem;
+}
+}

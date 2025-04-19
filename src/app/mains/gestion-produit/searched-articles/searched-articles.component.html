@@ -1,0 +1,16 @@
+<div class="main">
+    
+<div class="search-title">
+    <span class="fixed-title" routerLink="/home">Accueil</span>
+    <img src="./../../../../assets/SVG/chevron_droit.svg" />
+    <span class="search-value">"Recherche"</span>
+</div>
+
+<div class="list-articles">
+    <div class="list-articles-container" *ngFor="let article of articles">
+        <app-simple-article-card-item [productData]="article"></app-simple-article-card-item>
+    </div>
+</div>
+
+<app-footer-banner></app-footer-banner>
+</div>

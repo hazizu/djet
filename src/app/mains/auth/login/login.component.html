@@ -1,0 +1,23 @@
+<div class="container-main">
+    <span class="login-title">
+        S'identifier
+    </span>
+
+    <div class="login-form">
+        <div class="login-sub-title">
+            <span>
+                Connectez-vous et accédez au meilleur de la tech en Côte d'ivoire
+            </span>
+        </div>
+        <form [formGroup]="loginForm">
+        <app-input controlName="email" libelle="Adresse email ou numéro de téléphone" inputType="email" [redBorder]="(loginForm.get('email')?.invalid && invalidError) || invalidError">
+            <img src="./../../../../assets/SVG/icon-profile.svg"/>
+        </app-input>
+        <app-input controlName="password"  libelle="Mot de passe" inputType="password" [isPasswordInput]="true" [redBorder]="(loginForm.get('password')?.invalid && invalidError) || invalidError">
+            <img src="./../../../../assets/SVG/lock.svg"/>
+        </app-input>
+        <app-error-message [message]="errorMessage"></app-error-message>
+            <app-button (clicked)="login()" label="Se connecter" [styles]="{ marginTop:'1rem'}"></app-button>
+    </form>
+    </div>
+</div>

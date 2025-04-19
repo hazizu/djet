@@ -1,0 +1,30 @@
+.news-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: -1rem;
+  justify-content: space-between;
+  width: 75rem;
+}
+
+// table
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  
+}
+
+// phone
+@media screen and (max-width: 767px) {
+ .news-content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  overflow: scroll;
+  width: auto;
+  margin-left: 0.10rem;
+  
+ }
+
+}
+  
+

@@ -1,0 +1,39 @@
+.container-main{
+    background-color:#E7EBFE;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    padding: 1rem 7%;
+    
+}
+.number{
+    color: #072AC8;
+}
+.action-content{
+    display: flex;
+    align-items: center;
+    color: #072AC8;
+}
+.action-content-item{
+    cursor: pointer;
+    margin-left: 5rem;
+}
+// phone
+@media screen and (max-width: 768px)  {
+    .container-main{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        justify-content: flex-start;
+    }
+    .action-content-item{
+        margin-left: 0rem;
+        margin-right: 3rem;
+
+    }
+    .action-content{
+        margin-top: 1rem;
+    }
+}

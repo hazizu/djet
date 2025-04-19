@@ -1,0 +1,27 @@
+<div class="categorie-container">
+    <div class="search-title">
+        <span class="fixed-title" routerLink="/home">Accueil</span>
+        <img src="./../../../../assets/SVG/chevron_droit.svg" />
+        <span class="search-value">"Recherche"</span>
+    </div>
+<div class="chip-btn-container">
+ 
+    <div class="chips-list" *ngFor="let chip of chips; let i = index">
+        <app-chip-btn [isActive]="getLastWord(router.url) == chip.pathName" [chipsData]="chip" (isClicked)="getChipsClicked($event, i)">
+        </app-chip-btn>
+    </div>
+</div>
+<router-outlet></router-outlet>
+<div class="djet">
+    <app-djet-banner></app-djet-banner>
+</div>
+
+<app-search-based-products></app-search-based-products>
+
+<div class="footer-banner">
+    <app-footer-banner></app-footer-banner>
+</div>
+
+</div>
+
+

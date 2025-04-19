@@ -1,0 +1,41 @@
+<div class="main">
+    
+
+<!--home nav bloc-->
+<div class="banner-bloc">
+    <div class="nav-container" [ngClass]="{nav_container_phone:showNavPhone}">
+        <app-nav (isNavOpen)="closeNav($event)"></app-nav>
+    </div>
+    <app-slide></app-slide>
+</div>
+<!--home news bloc-->
+<div class="main-news-bloc">
+    <app-main-news></app-main-news>
+</div>
+
+<!--home news bloc-->
+<div class="main-news-bloc">
+    <app-sub-main-news></app-sub-main-news>
+</div>
+
+<!--center-banner-bloc-->
+<div class="djet">
+    <app-djet-banner></app-djet-banner>
+</div>
+
+<!--product bloc (news)-->
+<div class="week-product-bloc">
+   <app-week-product></app-week-product>
+</div>
+
+<div class="looked-products-block">
+    <app-looked-products></app-looked-products>
+</div>
+
+<div class="liked-product-bloc">
+    <app-liked-products></app-liked-products>
+</div>
+
+
+
+<app-footer-banner></app-footer-banner>

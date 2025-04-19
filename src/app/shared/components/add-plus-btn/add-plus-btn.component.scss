@@ -1,0 +1,20 @@
+.main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b8b8b8;
+    border-radius: 0.4rem;
+}
+.main span{
+    color: #FFF;
+}
+.actionStyle{
+    background-color: #FFC600;
+    color: #072AC8 !important;
+    padding: 0.2rem 0.8rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}
+
+// phone

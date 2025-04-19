@@ -1,0 +1,30 @@
+.fixed-bar{
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+.scrollin-bar{
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    background-color: #a2d6f970;
+}
+.router-content {
+    padding-top: 4rem;
+}
+.nav-container{
+    display: none;
+  }
+  // phone
+  @media screen and (max-width: 767px) {
+    .nav_container_phone{
+        display: block;
+        position: absolute;
+        z-index: 999;
+        top: 7rem; 
+        width: 100%;
+     }
+     }
+    
+
+

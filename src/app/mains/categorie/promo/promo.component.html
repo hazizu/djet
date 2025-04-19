@@ -1,0 +1,18 @@
+<div class="main-tendace">
+    <div class="main-tendace-block1">
+        <div class="tendance-header">
+            <span class="tendance-title">Les Promos</span>
+            <div class="more-btn">
+                <span>Voir tout</span>
+                <img src="./../../../../assets/SVG/chevron_droit.svg">
+            </div>
+        </div>
+
+        <div class="tendance-products">
+            <div class="tendance-list" *ngFor="let tendance of productData" >
+                <app-product-card-item [productData]="tendance"></app-product-card-item>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+.buttonStyle{
+    color: #072AC8;
+    background-color: #FFC600;
+    font-size: 0.9rem;
+    padding: 0.80rem 1rem;
+    border-radius: 0.4rem;
+    letter-spacing: 0.02rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+@media screen and (max-width: 768px)  {
+    .buttonStyle{
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,55 @@
+
+<div class="main-phone">
+    <div class="main-container-phone"> <!--for phone-->
+        <div class="logo-content-phone">
+        <div class="menu-for-phone" (click)="showPhoneNave()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+              </svg>          
+        </div>
+        <div class="logo-phone">
+            <img src="./../../../../assets/SVG/Logo-Djet-blue.svg" />
+        </div>
+    </div>
+
+    <div class="panier-content-phone">
+        <div class="user-info-item-phone">
+            <img src="./../../../../assets/SVG/profile-blue.svg" />
+        </div>
+        <div class="user-info-item-phone">
+            <img src="./../../../../assets/SVG/local_mall.svg" />
+        </div>
+    </div>
+    </div>
+    <div class="serach-phone">
+        <app-search-input (onSearchedValue)="getPreSearch($event)" (onChangeValue)="getSearchValue($event)"></app-search-input>
+    </div>
+
+    <div class="nav-container" [ngClass]="{nav_container_phone:showNavPhone}">
+        <app-nav (isNavOpen)="closeNav($event)"></app-nav>
+    </div>
+</div>
+
+
+
+<div class="main-container">
+    <div class="logo">
+        <img src="./../../../../assets/SVG/Logo-Djet-blue.svg" />
+    </div>  
+    <div class="serach">
+        <app-search-input (onSearchedValue)="getPreSearch($event)"  (onChangeValue)="getSearchValue($event)"></app-search-input>
+    </div>
+    <div class="user-info">
+        <div class="user-info-item">
+            <img src="./../../../../assets/SVG/profile-blue.svg" />
+            <span>Bonjour, {{user?.username}}</span>
+        </div>
+        <div class="user-info-item">
+            <img src="./../../../../assets/SVG/local_mall.svg" />
+            <span>Panier</span>
+        </div>
+
+
+    </div>
+</div>
+

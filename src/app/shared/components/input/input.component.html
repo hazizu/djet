@@ -1,0 +1,15 @@
+<div class="main">
+    <span class="libelle">{{libelle}}</span>
+<div class="container-main" [ngStyle]="styles" [ngClass]="{redBorderStyle:redBorder}">
+    <div class="visible-con" *ngIf="(inputType === 'password' && isPasswordInput) || (inputType === 'text' && isPasswordInput) " >
+        <img src="./../../../../assets/SVG/visibility_off.svg" (click)="showPass()" *ngIf="!show"/>
+        <img src="./../../../../assets/SVG/visibility_off.svg" (click)="hidePass()" *ngIf="show"/>
+    </div>
+    <div class="icon-bloc">
+    <ng-content></ng-content>
+    </div> 
+    <div class="input-bloc">
+       <input [formControlName]="controlName" [type]="inputType" class="input" [placeholder]="libelle? libelle: placeholderText">
+    </div>
+</div>
+</div>
