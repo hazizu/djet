@@ -12,10 +12,10 @@ export class AuthComponent {
   }
 
   goToLogin(){
-    this.router.navigate(['/'])
+    this.router.navigate(['/auth/login'])
   }
   goToInscription(){
-    this.router.navigate(['./inscription'])
+    this.router.navigate(['/auth/inscription'])
   }
 
 }

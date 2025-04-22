@@ -11,11 +11,14 @@ const routes:Routes = [
         path: '',  component:AuthComponent,
         children: [
             {
-                path:'', component: LoginComponent
+                path:'login', component: LoginComponent
             },
             {
                 path: 'inscription', component: RegisterComponent
 
+            },
+            {
+                path: '**', redirectTo: 'login'
             }
             // Lazi loading des différents modules
         ]

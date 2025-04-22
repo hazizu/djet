@@ -32,13 +32,13 @@
 
                 <div class="social-connect-bar2">
                     <div class="barre2"></div>
-                    <span *ngIf="router.url === '/'">Nouveau sur Djet technologies ?</span>
+                    <span *ngIf="router.url === '/login'">Nouveau sur Djet technologies ?</span>
                     <span *ngIf="router.url === '/inscription'">Vous avez déjà un compte ?</span>
                     <div class="barre2"></div>
                 </div>
                 <div class="signup">
-                    <app-button (clicked)="goToInscription()" *ngIf="router.url === '/'" label="Créer un compte" [styles]="{ marginTop:'1rem', background:'transparent', border:'1px solid #000', color:'#000', fontSize:'1.2rem'}"></app-button>
-                    <app-button (clicked)="goToLogin()" *ngIf="router.url === '/inscription'" label="Connectez-vous" [styles]="{ marginTop:'1rem', background:'transparent', border:'1px solid #000', color:'#000', fontSize:'1.2rem'}"></app-button>
+                    <app-button (clicked)="goToInscription()" *ngIf="router.url === '/auth/login'" label="Créer un compte" [styles]="{ marginTop:'1rem', background:'transparent', border:'1px solid #000', color:'#000', fontSize:'1.2rem'}"></app-button>
+                    <app-button (clicked)="goToLogin()" *ngIf="router.url === '/auth/inscription'" label="Connectez-vous" [styles]="{ marginTop:'1rem', background:'transparent', border:'1px solid #000', color:'#000', fontSize:'1.2rem'}"></app-button>
                 </div>
 
         </div>
