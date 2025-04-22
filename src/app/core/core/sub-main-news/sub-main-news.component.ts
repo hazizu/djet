@@ -6,37 +6,37 @@ import { IMainNews } from '../main-news/main-news.component';
   templateUrl: './sub-main-news.component.html',
   styleUrls: ['./sub-main-news.component.scss']
 })
-export class SubMainNewsComponent {
+export class SubMainNewsComponent { 
   mainNews: IMainNews[] = [
     {
       image: './../../../../assets/SVG/sub-new1.svg',
       title1: 'la meilleure garantie en terme de smartphone',
       title2: 'Smartphones',
-      routerName:''
+      pathName:'smartphones'
     },
     {
       image: './../../../../assets/SVG/sub-new4.svg',
       title1: 'la meilleure garantie en terme de smartphone',
       title2: 'PC & Mac',
-      routerName:''
+      pathName:'pc-mac'
     },
     {
       image: './../../../../assets/SVG/sub-new3.svg',
       title1: 'la meilleure garantie en terme de smartphone',
       title2: 'Gaming',
-      routerName:''
+      pathName:'gaming'
     } ,
     {
       image: './../../../../assets/SVG/sub-new4.svg',
       title1: 'la meilleure garantie en terme de smartphone',
       title2: 'Stockage',
-      routerName:''
+      pathName:'stockage'
     } ,
     {
       image: './../../../../assets/SVG/sub-new1.svg',
       title1: 'la meilleure garantie en terme de smartphone',
       title2: 'Audio & vidéo',
-      routerName:''
+      pathName:'audio-video'
     } 
     
   ]

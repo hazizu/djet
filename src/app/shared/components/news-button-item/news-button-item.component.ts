@@ -12,7 +12,7 @@ export class NewsButtonItemComponent {
     image:string,
     title1:string,
     title2:string,
-    routerName:string,
+   pathName:string,
     }
 
     constructor(
@@ -21,7 +21,7 @@ export class NewsButtonItemComponent {
       
     }
     goToCategories(){
-      this.router.navigate(['/home/categories/' +  this.newData?.routerName])
+      this.router.navigate(['/home/categories/' +  this.newData?.pathName])
 
     }
 

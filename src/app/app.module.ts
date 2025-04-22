@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {NgbCarouselModule} from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { GraphQLModule } from './core/graphql/graphql.module';
+import { SharedModule } from './shared/shared.module';
 
 
 
@@ -19,6 +20,7 @@ import { GraphQLModule } from './core/graphql/graphql.module';
     NgbCarouselModule,
     HttpClientModule,
     GraphQLModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

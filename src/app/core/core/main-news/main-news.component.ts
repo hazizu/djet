@@ -4,7 +4,7 @@ export interface IMainNews {
   image:string,
   title1:string,
   title2:string,
-  routerName:string,
+  pathName:string,
   
 }
 
@@ -20,19 +20,19 @@ export class MainNewsComponent {
       image: './../../../../assets/png/new1.png',
       title1: 'le top de la thech',
       title2: 'Tendances',
-      routerName:"tendance"
+      pathName:"tendance"
     },
     {
       image: './../../../../assets/png/new2.png',
       title1: 'Pour tous les portefeuilles',
       title2: 'Promos',
-      routerName:"promo"
+      pathName:"promo"
     },
     {
       image: './../../../../assets/png/new3.png',
       title1: 'À ne pas louper',
       title2: 'Meilleurs ventes',
-      routerName:"meilleure-vente"
+      pathName:"meilleure-vente"
     } 
     
   ]

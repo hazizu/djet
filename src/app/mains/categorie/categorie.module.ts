@@ -7,6 +7,7 @@ import { PromoComponent } from './promo/promo.component';
 import { TendancesComponent } from './tendances/tendances.component';
 import { MeilleurVenteComponent } from './meilleur-vente/meilleur-vente.component';
 import { SearchBasedProductsComponent } from './search-based-products/search-based-products.component';
+import { CategorieProduitComponent } from './categorie-produit/categorie-produit.component';
 
 
 
@@ -16,7 +17,8 @@ import { SearchBasedProductsComponent } from './search-based-products/search-bas
     PromoComponent,
     TendancesComponent,
     MeilleurVenteComponent,
-    SearchBasedProductsComponent
+    SearchBasedProductsComponent,
+    CategorieProduitComponent
   ],
   imports: [
     CommonModule,

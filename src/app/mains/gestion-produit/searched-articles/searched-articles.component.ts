@@ -17,6 +17,7 @@ export interface Article {
 })
 export class SearchedArticlesComponent implements OnInit{
 user:IUser | null = null;
+totalCount:number = 500;
   articles:Article[] = [
     {
       image: './../../../../assets/SVG/product1.svg',
@@ -115,6 +116,9 @@ user:IUser | null = null;
 
   getSearchValue(value:string){
     console.log(value);
+  }
+  onChangePage(offset:number){
+    console.log(offset);
   }
 
 }

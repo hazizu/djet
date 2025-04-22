@@ -17,6 +17,9 @@ import { ErrorMessageComponent } from './components/error-message/error-message.
 import { ChipBtnComponent } from './components/chip-btn/chip-btn.component';
 import { DjetBannerComponent } from './components/djet-banner/djet-banner.component';
 import { SimpleArticleCardItemComponent } from './components/simple-article-card-item/simple-article-card-item.component';
+import { LoaderComponent } from './components/loader/loader.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
+import { CategorieProduitNavItemComponent } from './components/categorie-produit-nav-item/categorie-produit-nav-item.component';
 
 
 
@@ -35,7 +38,10 @@ import { SimpleArticleCardItemComponent } from './components/simple-article-card
     ErrorMessageComponent,
     ChipBtnComponent,
     DjetBannerComponent,
-    SimpleArticleCardItemComponent
+    SimpleArticleCardItemComponent,
+    LoaderComponent,
+    PaginationComponent,
+    CategorieProduitNavItemComponent
   ],
   imports: [
     CommonModule,
@@ -57,7 +63,10 @@ import { SimpleArticleCardItemComponent } from './components/simple-article-card
     ErrorMessageComponent,
     ChipBtnComponent,
     DjetBannerComponent,
-    SimpleArticleCardItemComponent
+    SimpleArticleCardItemComponent,
+    LoaderComponent,
+    PaginationComponent,
+    CategorieProduitNavItemComponent
   ]
 })
 export class SharedModule { }

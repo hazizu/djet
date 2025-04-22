@@ -23,8 +23,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding: 5rem;
+    padding-bottom: 2rem;
     padding-top: 1rem;
     padding-right: 2rem;
+    position: relative;
+    margin-bottom: 2rem;
 }
 
 .list-articles-container {
@@ -38,6 +41,14 @@
     width: 100%;
     padding-left: 5rem;
     margin-top: 3rem;
+}
+.pagination-bloc{
+    position: absolute;
+    bottom: 0;
+    right: 2rem;
+}
+.footer-banner{
+    width: 100%;
 }
 
 @media screen and (max-width: 767px) {

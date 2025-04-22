@@ -16,6 +16,12 @@
     margin-bottom: 3rem;
     display: flex;
 }
+.pagination-bloc{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-top: 2rem;
+}
 // phone
 @media screen and (max-width: 768px) {
     .search-based-products{

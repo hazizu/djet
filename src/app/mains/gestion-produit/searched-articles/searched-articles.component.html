@@ -10,7 +10,12 @@
     <div class="list-articles-container" *ngFor="let article of articles">
         <app-simple-article-card-item [productData]="article"></app-simple-article-card-item>
     </div>
+    <div class="pagination-bloc">
+        <app-pagination   [totalCount]="totalCount" (changePage)="onChangePage($event)"></app-pagination>
+    </div>
 </div>
 
+<div class="footer-banner">
 <app-footer-banner></app-footer-banner>
+</div>
 </div>

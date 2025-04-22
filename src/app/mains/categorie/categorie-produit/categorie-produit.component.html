@@ -1,0 +1,31 @@
+<div class="categorie-produit-container">
+    <div class="search-title">
+        <span class="fixed-title" routerLink="/home">Accueil</span>
+        <img src="./../../../../assets/SVG/chevron_droit.svg" />
+        <span class="search-value">{{produitTitle}}</span>
+    </div>
+
+    <div class="categorie-produit-nav">
+        <div class="produit-nav-list" *ngFor="let produitNav of produitNavs">
+            <app-categorie-produit-nav-item [categorieProduitNav]="produitNav"></app-categorie-produit-nav-item>
+
+        </div>
+
+    </div>
+
+    <div class="categorie-produit-list">
+        <span class="produit-title">{{produitTitle}}</span>
+        <div class="content-produit">
+            <div class="produit-list" *ngFor="let produit of productData">
+                <app-simple-article-card-item [productData]="produit"></app-simple-article-card-item>
+            </div>
+        </div>
+
+        <div class="pagination-bloc">
+            <app-pagination [totalCount]="totalCount" (changePage)="onChangePage($event)"></app-pagination>
+    </div>
+    </div>
+    <div class="footer-banner">
+        <app-footer-banner></app-footer-banner>
+    </div>
+    

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserRegisterService } from './services/user-register.service';
+import { StoreService } from 'src/app/core/services/store.service';
 
 @Component({
   selector: 'app-register',
@@ -14,7 +15,8 @@ export class RegisterComponent {
   constructor(
     private fb:FormBuilder, 
     private router:Router,
-    private userRegisterService:UserRegisterService
+    private userRegisterService:UserRegisterService,
+    private store:StoreService,
   ){
 
     this.registerForm = this.fb.group({
@@ -29,6 +31,7 @@ export class RegisterComponent {
   }
 register(){
   if(this.registerForm.valid){
+    this.store.loader = true
     console.log(this.registerForm.value);
     let query = {
       phone:this.registerForm.value.telephone,
@@ -40,6 +43,7 @@ register(){
     }
     this.userRegisterService.postUser(query).then(
       (res)=>{
+        this.store.loader = false
         console.log(res);
         if(res.UserRegister.success){
           this.router.navigate(['/inscription-reussie'])
@@ -47,6 +51,7 @@ register(){
        
       },
       (err:any)=>{
+        this.store.loader = false
         console.log(err);
 
       }

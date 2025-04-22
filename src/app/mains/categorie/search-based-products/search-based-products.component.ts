@@ -7,6 +7,7 @@ import { Article } from '../../gestion-produit/searched-articles/searched-articl
   styleUrls: ['./search-based-products.component.scss']
 })
 export class SearchBasedProductsComponent {
+  totalCount:number = 500;
   productData:Article[] = [
     {
       image: './../../../../assets/SVG/product1.svg',
@@ -65,4 +66,8 @@ export class SearchBasedProductsComponent {
       id:"1"
     }
   ]
+
+  onChangePage(offset:number){
+    console.log(offset);
+  }
 }

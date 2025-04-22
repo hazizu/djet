@@ -1,0 +1,21 @@
+<div class="pagination-container" *ngIf="pages.length > 1">
+    <button *ngIf="currentPage > 1" (click)="updateToPrev()" class="change-button">
+      Précédent
+    </button>
+  
+     <ng-container *ngFor="let page of pages" >
+      <!-- ((currentPage - 6) >= page )|| (currentPage === page) -->
+      <button 
+  
+      (click)="updatePage(page)"
+      *ngIf=" (currentPage+ 5 > page && page >= currentPage)  || ((currentPage-5 ) < page && page < currentPage)"
+      class="pagination-item"
+      [ngClass]="{change_item_style: currentPage === page}"
+      >
+        {{ page }}
+      </button>
+     </ng-container>
+     <button *ngIf="currentPage < pages.length" (click)="updateToNext()" class="change-button">
+      Suivant
+     </button>
+  </div>

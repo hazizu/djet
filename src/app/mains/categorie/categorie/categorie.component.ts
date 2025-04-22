@@ -42,7 +42,7 @@ export class CategorieComponent implements OnInit{
       this.categorieName = params.get('categorieName')
       console.log(this.categorieName);
     })
-    console.log(this.getLastWord(this.router.url));
+    
      
   }
 

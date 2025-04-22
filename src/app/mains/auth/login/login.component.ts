@@ -32,6 +32,7 @@ export class LoginComponent {
     this.invalidError = false
     this.errorMessage = ''
     if(this.loginForm.valid){
+      this.store.loader = true
       console.log(this.loginForm.value);
       this.loginService.login(this.loginForm.value).then(
         (res)=>{
@@ -41,6 +42,7 @@ export class LoginComponent {
           this.router.navigate(['/home'])
         },
         (error:any)=>{
+          this.store.loader = false
           console.log(error[0].message);
           this.errorMessage = error[0].message
           this.invalidError = true

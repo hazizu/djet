@@ -5,4 +5,7 @@
             <app-simple-article-card-item [productData]="article"></app-simple-article-card-item>
         </div>
     </div>
+    <div class="pagination-bloc">
+        <app-pagination   [totalCount]="totalCount" (changePage)="onChangePage($event)"></app-pagination>
+    </div>
 </div>

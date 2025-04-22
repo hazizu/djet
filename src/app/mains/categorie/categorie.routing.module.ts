@@ -5,6 +5,7 @@ import { CategorieComponent } from "./categorie/categorie.component";
 import { TendancesComponent } from "./tendances/tendances.component";
 import { PromoComponent } from "./promo/promo.component";
 import { MeilleurVenteComponent } from "./meilleur-vente/meilleur-vente.component";
+import { CategorieProduitComponent } from "./categorie-produit/categorie-produit.component";
 
 
 const routes:Routes = [
@@ -23,6 +24,12 @@ const routes:Routes = [
          
         ]
     },
+    {
+        path:'categorie-produit', component:CategorieProduitComponent
+    },
+    {
+        path:'categorie-produit/:produitName', component:CategorieProduitComponent,
+    }
 
 ]
 
