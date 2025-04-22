@@ -12,7 +12,7 @@ export class RegisterSuccessComponent {
   }
 
   gotToLogin(){
-    this.router.navigate(['/'])
+    this.router.navigate(['/home'])
 
   }
 

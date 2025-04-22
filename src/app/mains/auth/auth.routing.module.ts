@@ -23,9 +23,7 @@ const routes:Routes = [
             // Lazi loading des différents modules
         ]
     },
-    {
-        path:'inscription-reussie', component:RegisterSuccessComponent,
-    }
+   
 ]
 
 @NgModule({

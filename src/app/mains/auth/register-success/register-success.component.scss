@@ -11,6 +11,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 .msg-content{
     display: flex;
@@ -41,8 +43,18 @@ span.info-for-user {
     text-align: center;
     font-size: 0.8rem;
     padding: 0 1rem;
+    width: 25rem;
 }
 svg{
     width: 1.2rem;
     margin-left: 0.5rem;
 }
+// phone
+@media screen and (max-width: 768px) {
+    span.info-for-user {
+        text-align: center;
+        font-size: 0.8rem;
+        padding: 0 2rem;
+        
+    }
+    }

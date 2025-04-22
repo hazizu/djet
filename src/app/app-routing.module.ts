@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { RegisterSuccessComponent } from './mains/auth/register-success/register-success.component';
 
 const routes: Routes = [
   {
@@ -10,6 +11,9 @@ const routes: Routes = [
     path: 'auth',
     loadChildren: () => import('./mains/auth/auth.module').then(m => m.AuthModule)
   },
+  {
+    path:'inscription-reussie', component:RegisterSuccessComponent,
+},
    {
     path: '**',
     redirectTo: 'home'

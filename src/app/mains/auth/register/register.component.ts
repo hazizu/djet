@@ -12,6 +12,7 @@ import { StoreService } from 'src/app/core/services/store.service';
 export class RegisterComponent {
   registerForm:FormGroup
   invalidError:boolean = false
+  errorMessage :string = ''
   constructor(
     private fb:FormBuilder, 
     private router:Router,
@@ -30,6 +31,8 @@ export class RegisterComponent {
 
   }
 register(){
+  this.invalidError = false
+  this.errorMessage = ''
   if(this.registerForm.valid){
     this.store.loader = true
     console.log(this.registerForm.value);
@@ -47,6 +50,9 @@ register(){
         console.log(res);
         if(res.UserRegister.success){
           this.router.navigate(['/inscription-reussie'])
+        }else if(res.UserRegister.errors.length){
+          this.invalidError = true
+          this.errorMessage = res.UserRegister.message
         }
        
       },

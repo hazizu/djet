@@ -31,6 +31,7 @@
     <app-input controlName="confirmPassword" libelle="Confirmez votre mot de passe" inputType="password" [isPasswordInput]="true" [redBorder]="registerForm.get('confirmPassword')?.invalid && invalidError">
         <img src="./../../../../assets/SVG/lock.svg"/>
        </app-input>
+       <app-error-message [message]="errorMessage"></app-error-message>
 
        <app-button (clicked)="register()" label="S'inscrire" [styles]="{ marginTop:'1rem'}"></app-button>
 
