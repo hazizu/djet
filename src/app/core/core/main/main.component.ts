@@ -13,6 +13,7 @@ export class MainComponent implements OnInit{
   ){}
   ngOnInit(): void {
     this.authServiceService.getUserData()
+    this.authServiceService.getcategories()
   }
   closeNav(value:boolean){
     this.showNavPhone = false

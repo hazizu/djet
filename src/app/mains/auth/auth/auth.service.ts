@@ -42,17 +42,7 @@ export class AuthService {
       this.getUser({id: decodeToken.user_id}).then(
         (res:IGetUserInfoResponse)=>{
           //this.store.loader = false
-          this.categoriesService.getCategorie().then(
-            (categorieData)=>{
-              this.store.categorieData = categorieData.GetCategories
-              this.store.loader = false
-              console.log('les categiries', categorieData);
-              
-            },(err)=>{
-              this.store.loader = false
-              console.log('err categiries', err)
-            }
-          )
+      
           console.log('use user', res);
           this.store.userData = res.GetUserByIdUsername
         },(err)=>{
@@ -62,5 +52,19 @@ export class AuthService {
         }
       )
     }
+  }
+
+  getcategories(){
+    this.categoriesService.getCategorie().then(
+      (categorieData)=>{
+        this.store.categorieData = categorieData.GetCategories
+        this.store.loader = false
+        console.log('les categiries', categorieData);
+      },(err)=>{
+        this.store.loader = false
+        console.log('err categiries', err)
+      }
+    )
+
   }
 }
