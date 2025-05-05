@@ -1,0 +1,63 @@
+.info-conainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+    
+}
+.article-name{
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+.article-price{
+    color: #072AC8;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+.article-old-price{
+    font-size: 1.8rem;
+    text-decoration: line-through;
+    color: #111111;
+}
+.note-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.etoiles{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.2rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    
+}
+
+.note-container>span{
+    font-size: 0.8rem;
+}
+.link-comment{
+    margin-left: 0.5rem;
+    color: #072AC8;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.haert-container{
+    position: absolute;
+    right: -0.5rem;
+    top: -0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    
+  }
+  .heart, .outheart svg{
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #FFC600;
+}
+

@@ -1,0 +1,42 @@
+
+.images-visalisation-container {
+    width: 100%;
+    height: 100%;
+}
+
+.clicked-image {
+    width: 100%;
+    height: 20rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 1rem 0 0 0;
+}
+.images-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: scroll;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    padding: 0 1rem;
+}
+.image-single {
+    width: 4rem;
+    height: 4rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+.selectStyle{
+    border: 2px solid #FFC600;
+
+}
+.images-item {
+    width: 4rem;
+    height: 4rem; 
+    
+    
+}

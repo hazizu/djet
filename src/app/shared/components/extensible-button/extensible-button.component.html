@@ -1,8 +1,8 @@
 <div class="container-main" (click)=" isMobile && expand()">
     <div class="label-container">
         <div class="label-title">
-            <img [src]="extensibleData?.icon" />
-            <span class="button-label">{{extensibleData?.libelle}}</span>
+            <!-- <img [src]="extensibleData?" /> -->
+            <span class="button-label">{{extensibleData?.name}}</span>
         </div>
         <img src="./../../../../assets/SVG/chevron_droit.svg">
     </div>
@@ -11,10 +11,11 @@
             <span class="sub-list">{{nav}}</span>
         </div>
     </div> -->
-
-    <div class="navList" [ngClass]="{expandStyle:isExpand, expandDefault:!isExpand}">
-        <div class="list-content" *ngFor="let nav of extensibleData?.navList">
-            <span class="sub-list">{{nav}}</span>
+<ng-container *ngIf="extensibleData?.subcategories?.length">
+    <div class="navList" [ngClass]="{expandStyle:isExpand, expandDefault:!isExpand}" >
+        <div class="list-content" *ngFor="let subNav of extensibleData?.subcategories" (click)="goToProducts(subNav)">
+            <span class="sub-list">{{subNav.name}}</span>
         </div>
     </div>
+</ng-container>
 </div>

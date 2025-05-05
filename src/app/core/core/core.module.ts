@@ -14,6 +14,9 @@ import { WeekProductComponent } from './week-product/week-product.component';
 import { LookedProductsComponent } from './looked-products/looked-products.component';
 import { LikedProductsComponent } from './liked-products/liked-products.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
+import { UserSpaceComponent } from './user-space/user-space.component';
+import { UpdateProfileComponent } from './update-profile/update-profile.component';
+import { UpdateIdentifiantComponent } from './update-identifiant/update-identifiant.component';
 
 
 
@@ -30,6 +33,9 @@ import { MainHeaderComponent } from './main-header/main-header.component';
     LookedProductsComponent,
     LikedProductsComponent,
     MainHeaderComponent,
+    UserSpaceComponent,
+    UpdateProfileComponent,
+    UpdateIdentifiantComponent,
   ],
   imports: [
     CommonModule,

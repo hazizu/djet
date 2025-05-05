@@ -1,0 +1,42 @@
+import { Injectable } from '@angular/core';
+import { gql, Query } from 'apollo-angular';
+
+export interface ICategorieProduct{
+  images:{
+    image:string,
+  }
+  price:number
+  name:string
+  description:string
+}
+
+export interface IGetCategorieProductsResponse{
+  GetSubCategory:{
+    id:string,
+    name:string,
+    products:ICategorieProduct[]
+  }
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class GetCategorieProductsService extends Query<IGetCategorieProductsResponse>{
+
+  override document = gql`
+  query($id:Int){
+  GetSubCategory(id:$id){
+    id
+    name
+    products{
+      images{
+        image
+      }
+      price
+      name
+      description
+    }
+  }
+}
+  `;
+}

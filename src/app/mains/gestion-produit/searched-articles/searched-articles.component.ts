@@ -1,13 +1,17 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { StoreService } from 'src/app/core/services/store.service';
 import { IUser } from '../../auth/login/queries/login-gql.service';
+import { ActivatedRoute } from '@angular/router';
+import { CategorieService } from '../../categorie/services/categorie.service';
 
 export interface Article {
   id:string,
   price:number,
+  oldPrice?:number
   name:string,
   image:string,
   description:string,
+  note?:number
 }
 
 @Component({
@@ -18,6 +22,7 @@ export interface Article {
 export class SearchedArticlesComponent implements OnInit{
 user:IUser | null = null;
 totalCount:number = 500;
+categorieId?:string | null
   articles:Article[] = [
     {
       image: './../../../../assets/SVG/product1.svg',
@@ -106,12 +111,19 @@ totalCount:number = 500;
   
   ]
   constructor(
+    private route:ActivatedRoute,
+    private categorieService:CategorieService,
+    private store:StoreService
     
   ){
     
   }
   ngOnInit(): void {
- 
+    this.route.paramMap.subscribe((params)=>{
+      console.log(params.get('id'));
+      this.categorieId = params?.get('id') as string
+      this.getProducts(+this.categorieId)
+    })
   }
 
   getSearchValue(value:string){
@@ -121,4 +133,18 @@ totalCount:number = 500;
     console.log(offset);
   }
 
+  getProducts(cat_id:number | null){
+    this.store.loader = true
+    this.categorieService.getCategorieProducts({id:cat_id}).then(
+      (res)=>{
+        this.store.loader = false
+        console.log('les produits recherchés', res)
+        
+      },(err)=>{
+        this.store.loader = false
+        console.log('erreur', err)
+      }
+    )
+
+}
 }

@@ -10,6 +10,7 @@ import { IUser } from 'src/app/mains/auth/login/queries/login-gql.service';
 })
 export class MainHeaderComponent implements OnInit{
   showNavPhone:boolean = false;
+  isShowToggle:boolean = false
 user:IUser | null = null;
   constructor(
     private router:Router,
@@ -40,6 +41,12 @@ user:IUser | null = null;
     this.showNavPhone = false
     
 
+  }
+  showToggle(){
+    this.isShowToggle = !this.isShowToggle;
+  }
+  close(){
+    this.isShowToggle = false;
   }
 
 }

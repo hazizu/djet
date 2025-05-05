@@ -9,14 +9,16 @@ export class AddPlusBtnComponent {
   addedNumber:number = 1;
   @Output() addedNumberChange:EventEmitter<number> = new EventEmitter<number>();
 
-  moin(){
+  moin(event:MouseEvent){
+    event.stopPropagation();
     if(this.addedNumber > 1){
       this.addedNumber--;
       this.addedNumberChange.emit(this.addedNumber);
     }
   }
 
-  plus(){
+  plus(event:MouseEvent){
+    event.stopPropagation();
     this.addedNumber++;
     this.addedNumberChange.emit(this.addedNumber);
   }

@@ -20,6 +20,10 @@ import { SimpleArticleCardItemComponent } from './components/simple-article-card
 import { LoaderComponent } from './components/loader/loader.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { CategorieProduitNavItemComponent } from './components/categorie-produit-nav-item/categorie-produit-nav-item.component';
+import { GarantieItemComponent } from './components/garantie-item/garantie-item.component';
+import { ImagesVisualisationComponent } from './components/images-visualisation/images-visualisation.component';
+import { InfoDetailArticleComponent } from './components/info-detail-article/info-detail-article.component';
+import { KeyValueItemComponent } from './components/key-value-item/key-value-item.component';
 
 
 
@@ -41,7 +45,11 @@ import { CategorieProduitNavItemComponent } from './components/categorie-produit
     SimpleArticleCardItemComponent,
     LoaderComponent,
     PaginationComponent,
-    CategorieProduitNavItemComponent
+    CategorieProduitNavItemComponent,
+    GarantieItemComponent,
+    ImagesVisualisationComponent,
+    InfoDetailArticleComponent,
+    KeyValueItemComponent
   ],
   imports: [
     CommonModule,
@@ -66,7 +74,11 @@ import { CategorieProduitNavItemComponent } from './components/categorie-produit
     SimpleArticleCardItemComponent,
     LoaderComponent,
     PaginationComponent,
-    CategorieProduitNavItemComponent
+    CategorieProduitNavItemComponent,
+    GarantieItemComponent,
+    ImagesVisualisationComponent,
+    InfoDetailArticleComponent,
+    KeyValueItemComponent
   ]
 })
 export class SharedModule { }

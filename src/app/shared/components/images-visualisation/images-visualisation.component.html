@@ -1,0 +1,8 @@
+<div class="images-visalisation-container">
+    <div class="clicked-image" [style.backgroundImage]="'url('+ imageSelected  +')'" ></div>
+    <div class="images-list">
+        <div  class="images-item" *ngFor="let image of listImages; let i=index" (click)="select(image, i)">
+            <div class="image-single" [ngClass]="{selectStyle:selectedIndex === i}" [style.backgroundImage]="'url('+ image +')'"></div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { Article } from 'src/app/mains/gestion-produit/searched-articles/searched-articles.component';
 
 @Component({
@@ -11,18 +12,25 @@ export class ProductCardItemComponent {
   isLiked:boolean = false;
   @Input() productData ?: Article
 
+  constructor(
+    private router:Router
+  ){}
+
   getAddedNumber(number:number){
     console.log(number);
 
   }
-  addToPanier(){
+  addToPanier(event:MouseEvent){
+    event.stopPropagation();
     this.isAdded = !this.isAdded;
     console.log("add to panier");
   }
   liked(){
-    
     this.isLiked =!this.isLiked;
     console.log(this.isLiked);
   }
+  goToDetail(){
+    this.router.navigate(['/home/articles/detail', this.productData?.id])
+ }
 
 }

@@ -47,7 +47,9 @@
 }
 
  .logo img{
-    width: 8em;
+    width: 8rem !important;
+    min-width: 8rem !important;
+    max-width: 8rem !important;
 }
 .user-info-item span{
     color: #072AC8;
@@ -57,6 +59,37 @@
     align-items: normal;
     margin-right: 3rem;
     cursor: pointer;
+    position: relative;
+    min-width: max-content;
+}
+.toggle-container{
+    position: absolute;
+    width: 20rem;
+    background-color: #fff;
+    top: 2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: 99999;
+}
+.toggle-item{
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+.toggle-item-text{
+    color: #000 !important;
+    margin-left: 0.5rem;
+}
+.toggle-item:hover .toggle-item-text{
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;        
+}
+.toggle-item img {
+    width: 1.8rem;
+    height: auto;
 }
 .user-info{
     display: flex;

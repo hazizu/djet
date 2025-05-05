@@ -1,4 +1,4 @@
-<div class="card" [style.backgroundImage]="'url('+ productData?.image +')'">
+<div class="card" [style.backgroundImage]="'url('+ productData?.image +')'" (click)="goToDetail()">
     <div class="haert-container" (click)="liked()"> 
         <div class="heart" *ngIf="isLiked">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -19,7 +19,7 @@
     </div>
     <div class="action-product">
         <ng-container *ngIf="!isAdded; else add">
-        <app-button (clicked)="addToPanier()" label="Ajouter au panier" [styles]="{paddingTop:'0.3rem', paddingBottom:'0.3rem'}"></app-button>
+        <app-button (clicked)="addToPanier($event)" label="Ajouter au panier" [styles]="{paddingTop:'0.3rem', paddingBottom:'0.3rem'}"></app-button>
     </ng-container>
     <ng-template #add>
         <app-add-plus-btn (addedNumberChange)="getAddedNumber($event)"></app-add-plus-btn>

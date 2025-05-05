@@ -1,0 +1,40 @@
+<div class="update-profile-container">
+        <span class="update-profile-title">Informations personnelles</span>
+
+        <div class="info-profile-container">
+            <div class="infos-content-bloc">
+                <app-key-value-item key="Nom et prénoms" value="Jean Dupont"></app-key-value-item>
+                <app-key-value-item key="Téléphone" value="+225 06 00 00 00 00"></app-key-value-item>
+                <app-key-value-item key="Email" value="hazizu@gmail.com"></app-key-value-item>
+            </div>
+            <div class="profile-action-bloc">
+                <span class="profile-action-title">Préférence de communication</span>
+                <span class="logout-bloc">Abonné(e) <span class="logout-button">Se désabonner</span></span>
+            </div>
+        </div>
+        <div class="update-button-bloc" *ngIf="!showUpdateForm">
+            <app-button (clicked)="showForm()" [styles]="{padding:'0.5rem 3rem 0.5rem 3rem'}" label="Modifier mes infos persos"></app-button>
+        </div>
+        <form [formGroup]="updateProfileForm" class="form-bloc" *ngIf="showUpdateForm">
+            <div class="close-form-bloc" (click)="showForm()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                  </svg>
+            </div>
+        <div class="update-form-bloc">
+                <div class="form-input">
+                <app-input placeholderText="votre nom" inputType="text" controlName="nom" libelle="Votre nom"></app-input>
+                </div>
+                <div class="form-input">
+                <app-input placeholderText="votre prénom(s)" inputType="text" controlName="prenom" libelle="Votre prénom(s)"></app-input>
+                </div>
+                <div class="form-input">
+                <app-input placeholderText="votre numéro de téléphone" inputType="tel" controlName="phone" libelle="Votre numéro de téléphone"></app-input>
+                </div>
+              
+        </div>
+        <div class="form-button">
+            <app-button [styles]="{padding:'0.5rem 3rem 0.5rem 3rem'}" label="Valider"></app-button>
+        </div>
+    </form>
+</div>

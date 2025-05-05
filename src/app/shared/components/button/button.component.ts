@@ -8,13 +8,13 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class ButtonComponent {
   @Input() label: string = '';
   @Input() styles = {}
-  @Output() clicked: EventEmitter<any> = new EventEmitter<any>();
+  @Output() clicked: EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
 
   constructor(){
 
   }
 
-  connect(){
-    this.clicked.emit();
+  connect(event:MouseEvent){
+    this.clicked.emit(event);
   }
 }

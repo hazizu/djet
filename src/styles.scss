@@ -5,7 +5,9 @@ body{
     padding: 0;
     margin: 0;
 }
-
+html {
+    scroll-behavior: auto;
+  }
 .carousel-inner {
     position: relative !important;
     width: 55rem !important;

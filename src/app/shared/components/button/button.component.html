@@ -1,4 +1,4 @@
-<button type="submit" (click)="connect()" class="buttonStyle" [ngStyle]="styles">
+<button type="submit" (click)="connect($event)" class="buttonStyle" [ngStyle]="styles">
     {{label}}
     <ng-content></ng-content>
 </button>

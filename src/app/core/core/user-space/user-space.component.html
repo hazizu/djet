@@ -1,0 +1,29 @@
+<div class="user-space-container">
+    <div class="search-title">
+        <span class="fixed-title" routerLink="/home">Accueil</span>
+        <img src="./../../../../assets/SVG/chevron_droit.svg" />
+        <span class="search-value">"Recherche"</span>
+    </div>
+    <div class="main-content">
+        <div class="left-content">
+            <div class="info-profile-container">
+                <app-update-profile></app-update-profile>
+            </div>
+            <div class="info-profile-container">
+                <app-update-identifiant></app-update-identifiant>
+            </div>
+        </div>
+
+        <div class="garantie-bloc">
+            <div class="list-garantie" *ngFor="let garantie of garantiesData">
+                <app-garantie-item [garantie]="garantie"></app-garantie-item>
+            </div>
+
+            <div class="garantie-action">
+                <span class="garantie-action-item">Déconnexion</span>
+                <span class="garantie-action-item">Suppression compte</span>
+
+            </div>
+        </div>
+    </div>
+</div>
