@@ -16,3 +16,25 @@
     border-radius: 0.2rem;
     margin-left: 0.3rem;
 }
+.change-button svg{
+    display: none;
+
+}
+
+// phone
+@media screen and (max-width: 768px) {
+    .change-button span{
+        display: none;
+    }
+    .change-button svg{
+        display: block;
+        width: 1rem;
+    }
+    .pagination-container {
+        display: flex;
+    }
+    .change-button {
+        padding: 0.2rem 0.5rem;
+        
+    }
+}

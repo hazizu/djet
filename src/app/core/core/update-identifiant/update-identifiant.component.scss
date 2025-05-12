@@ -7,10 +7,20 @@
     display: flex;
     padding: 1rem;
     border-radius: 1rem;
+    gap: 2rem;
 }
 .update-button-bloc{
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     margin-top: 1rem;
+}
+// phone
+@media screen and (max-width: 767px) {
+    .update-id-info {
+        flex-direction: column;
+    }
+    .key-value-container {
+       margin-left: 0rem !important;
+    }
 }

@@ -6,8 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./images-visualisation.component.scss']
 })
 export class ImagesVisualisationComponent implements OnInit{
-  @Input() listImages: string[] = [];
-  imageSelected: string = '';
+  @Input() listImages?: {image:string}[];
+  imageSelected?: string ;
   selectedIndex: number = 0;
 
   constructor() { 
@@ -15,15 +15,17 @@ export class ImagesVisualisationComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.imageSelected = this.listImages[0];
+    if(this.listImages?.length){
+      this.imageSelected = this.listImages[0].image;    
+    }
   }
 
   select(seletedImage:string, index:number){
     console.log(seletedImage);
     this.selectedIndex = index;
-    const imageFind = this.listImages.find(img => img === seletedImage);
+    const imageFind = this.listImages?.find(img => img.image === seletedImage);
     if(imageFind){
-      this.imageSelected = imageFind;
+      this.imageSelected = imageFind.image;
     }
   }
 }

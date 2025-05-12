@@ -13,11 +13,26 @@
     </div>
 
     <div class="panier-content-phone">
-        <div class="user-info-item-phone">
+        <div class="user-info-item-phone" (click)="showToggle()">
             <img src="./../../../../assets/SVG/profile-blue.svg" />
         </div>
         <div class="user-info-item-phone">
             <img src="./../../../../assets/SVG/local_mall.svg" />
+        </div>
+
+        <div class="toggle-container" *ngIf="isShowToggle">
+            <div class="toggle-item" (click)="close()" routerLink="/home/espace-personnel">
+                <img src="./../../../../assets/SVG/account_circle.svg" />
+                <span class="toggle-item-text">Espace personnel</span>
+            </div>
+            <div class="toggle-item" (click)="close()">
+                <img src="./../../../../assets/SVG/box-commande.svg" />
+                <span class="toggle-item-text">Mes commandes</span>
+            </div>
+            <div class="toggle-item" (click)="close()" routerLink="/auth/login">
+                <img src="./../../../../assets/SVG/deconnexion-icon.svg" />
+                <span class="toggle-item-text">Se déconnecter</span>
+            </div>
         </div>
     </div>
     </div>
@@ -43,7 +58,7 @@
         <div class="user-info-item">
             <div class="user-info-item" (click)="showToggle()">
             <img src="./../../../../assets/SVG/profile-blue.svg" />
-            <span>Bonjour, {{user?.username}}</span>
+            <span>Bonjour <span *ngIf="user?.username">,{{user?.username}}</span></span>
             <img src="./../../../../assets/SVG/arrow-bottom.svg" class="toggle-icon">
             </div>
 

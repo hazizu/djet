@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { ICategorie } from 'src/app/mains/categorie/queries/get-categorie-gql.service';
+import { ICategorieProduct } from 'src/app/mains/categorie/queries/get-categorie-products.service';
 import { Article } from 'src/app/mains/gestion-produit/searched-articles/searched-articles.component';
 
 @Component({
@@ -8,7 +10,7 @@ import { Article } from 'src/app/mains/gestion-produit/searched-articles/searche
 })
 export class InfoDetailArticleComponent {
  
-@Input() article?:Article
+@Input() article?:ICategorieProduct
 isLiked:boolean = false;
 
 liked(){

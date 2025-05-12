@@ -1,10 +1,19 @@
 import { Injectable } from '@angular/core';
 import { gql, Query } from 'apollo-angular';
 
+export interface ISubcategorie{
+  id:string, 
+  name:string
+
+}
+
 export interface ICategorieProduct{
   images:{
     image:string,
-  }
+  }[]
+  oldPrice:number
+  note:number
+  id:string
   price:number
   name:string
   description:string
@@ -29,6 +38,7 @@ export class GetCategorieProductsService extends Query<IGetCategorieProductsResp
     id
     name
     products{
+    id
       images{
         image
       }

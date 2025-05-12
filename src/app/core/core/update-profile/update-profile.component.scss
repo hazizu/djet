@@ -55,3 +55,17 @@
     cursor: pointer;
     width: 1.5rem;
 }
+// phone
+@media screen and (max-width: 767px) {
+    .info-profile-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .infos-content-bloc {
+        width: 100%;
+    }
+    .profile-action-bloc{
+        width: 100%;
+    
+    }
+}

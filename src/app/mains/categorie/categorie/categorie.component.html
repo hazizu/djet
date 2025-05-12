@@ -7,7 +7,7 @@
 <div class="chip-btn-container">
  
     <div class="chips-list" *ngFor="let chip of chips; let i = index">
-        <app-chip-btn [isActive]="getLastWord(router.url) == chip.pathName" [chipsData]="chip" (isClicked)="getChipsClicked($event, i)">
+        <app-chip-btn [isActive]="getLastWord(router.url) == chip.pathName"  (isClicked)="getChipsClicked($event, i)" [chipsData]="chip">
         </app-chip-btn>
     </div>
 </div>

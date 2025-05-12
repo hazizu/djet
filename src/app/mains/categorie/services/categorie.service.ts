@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { GetCategorieGqlService, IGetCategorieResponse } from '../queries/get-categorie-gql.service';
 import { GetCategorieProductsService, IGetCategorieProductsResponse } from '../queries/get-categorie-products.service';
+import { GetSubCategirieGqlService, IGetSubcategorieResponse } from '../queries/get-sub-categirie-gql.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,8 @@ export class CategorieService {
 
   constructor(
     private getCategorieGqlService:GetCategorieGqlService,
-    private getCategorieProductsService:GetCategorieProductsService
+    private getCategorieProductsService:GetCategorieProductsService,
+    private getSubcategorieGqlService:GetSubCategirieGqlService
   ) { }
 
   getCategorie(query:{} | undefined = undefined):Promise<IGetCategorieResponse>{
@@ -20,7 +22,7 @@ export class CategorieService {
             resolve(e.data)
           }
         },error:(e)=>{
-          reject(e)
+          reject(e.graphQLErrors)
         }
       })
     })
@@ -35,10 +37,24 @@ export class CategorieService {
             resolve(e.data)
           }
         },error:(e)=>{
-          reject(e)
+          reject(e.graphQLErrors)
         }
       })
     })
 
   } 
+
+  getSubcategorie(query:{} | undefined = undefined):Promise<IGetSubcategorieResponse>{
+    return new Promise((resolve, reject)=>{
+      this.getSubcategorieGqlService.fetch(query, {fetchPolicy:'no-cache'}).subscribe({
+        next:(e)=>{
+          if(e.data){
+            resolve(e.data)
+          }
+        },error:(e)=>{
+          reject(e.graphQLErrors)
+        }
+      })
+    })
+}
 }

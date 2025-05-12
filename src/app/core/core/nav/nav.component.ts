@@ -62,5 +62,8 @@ ngOnInit(): void {
     this.isNavOpen.emit(true);
     
   }
+  clikedNav(event:boolean){
+    this.isNavOpen.emit(event)
+  }
 
 }

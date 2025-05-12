@@ -12,21 +12,21 @@ export class CategorieComponent implements OnInit{
   categorieName?:string | null
   chips: IChip[] = [
     {
-      libelle:'Tendances',
+      name:'Tendances',
       icon1:'./../../../../assets/SVG/tendance-icon-blue.svg',
       icon2:'./../../../../assets/SVG/tendance-icon-blue.svg',
       pathName:'tendance',
       isActive:false
     },
     {
-      libelle:'Promo',
+      name:'Promo',
       icon1:'./../../../../assets/SVG/promo-icon.svg',
       icon2:'./../../../../assets/SVG/promo-icon.svg',
       pathName:'promo',
       isActive:false
     },
     {
-      libelle:'Meilleurs ventes',
+      name:'Meilleurs ventes',
       icon1:'./../../../../assets/SVG/best-vente-icon.svg',
       icon2:'./../../../../assets/SVG/best-vente-icon.svg',
       pathName:'meilleure-vente',

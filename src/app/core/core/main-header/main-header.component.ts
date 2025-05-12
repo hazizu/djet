@@ -43,6 +43,8 @@ user:IUser | null = null;
 
   }
   showToggle(){
+    console.log("show", this.isShowToggle);
+    
     this.isShowToggle = !this.isShowToggle;
   }
   close(){

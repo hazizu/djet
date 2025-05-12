@@ -51,3 +51,16 @@
     font-weight: 500;
 
 }
+// phone
+@media screen and (max-width: 767px) {
+    .garantie-bloc {
+       display: none;
+    }
+    .left-content {
+        width: 100%;
+    }
+    .user-space-container{
+        width: 100%;
+    }
+ 
+}

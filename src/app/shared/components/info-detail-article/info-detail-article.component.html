@@ -13,7 +13,7 @@
     </div>
     <div class="article-name"><span>{{article?.name}}</span></div>
     <div class="article-price"><span>{{article?.price}} FCFA</span></div>
-    <div class="article-old-price"><span>{{article?.oldPrice}} FCFA</span></div>
+    <div *ngIf="article?.oldPrice" class="article-old-price"><span>{{article?.oldPrice}} FCFA</span></div>
     <div class="note-container">
         <span>Note</span>
         <div class="etoiles">

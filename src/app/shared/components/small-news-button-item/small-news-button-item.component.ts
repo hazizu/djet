@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { ICategorie } from 'src/app/mains/categorie/queries/get-categorie-gql.service';
 
 @Component({
   selector: 'app-small-news-button-item',
@@ -11,15 +12,9 @@ export class SmallNewsButtonItemComponent {
   constructor(
     private router:Router
   ) { }
-  @Input() smallNewData?: {
-    image:string,
-    title1:string,
-    title2:string,
-    pathName:string
-    }
+  @Input() smallNewData?:ICategorie
 
     goToCategorie(){
-      this.router.navigate(['/home/categories/categorie-produit', this.smallNewData?.pathName])
-
+      this.router.navigate(['/home/categories/categorie-produit', this.smallNewData?.id])
     }
 }

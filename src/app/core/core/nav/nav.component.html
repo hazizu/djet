@@ -5,7 +5,7 @@
           </svg>          
     </div>
     <div class="nav-list" *ngFor="let nav of navData">
-        <app-extensible-button [extensibleData]="nav"></app-extensible-button>
+        <app-extensible-button (onclickNav)="clikedNav($event)" [extensibleData]="nav"></app-extensible-button>
     </div>
 
     <div class="bg-container">

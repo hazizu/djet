@@ -2,19 +2,24 @@
     <div class="search-title">
         <span class="fixed-title" routerLink="/home">Accueil</span>
         <img src="./../../../../assets/SVG/chevron_droit.svg" />
-        <span class="search-value">{{produitTitle}}</span>
+        <span class="search-value">{{categorieName}}</span>
     </div>
 
-    <div class="categorie-produit-nav">
+    <div class="subcategorie-produit-nav">
+        <div class="produit-nav-list" *ngFor="let subCategorie of subCategories; let i = index">
+            <app-chip-btn [chipsData]="subCategorie" [isActive]="categorie_index == i"  (isClicked)="getCategorieProduct($event, i)"></app-chip-btn>
+        </div>
+    </div>
+
+    <!-- <div class="categorie-produit-nav">
         <div class="produit-nav-list" *ngFor="let produitNav of produitNavs">
             <app-categorie-produit-nav-item [categorieProduitNav]="produitNav"></app-categorie-produit-nav-item>
-
         </div>
 
-    </div>
+    </div> -->
 
     <div class="categorie-produit-list">
-        <span class="produit-title">{{produitTitle}}</span>
+        <span class="produit-title">{{subCategoreiName}}</span>
         <div class="content-produit">
             <div class="produit-list" *ngFor="let produit of productData">
                 <app-simple-article-card-item [productData]="produit"></app-simple-article-card-item>

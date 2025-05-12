@@ -28,7 +28,7 @@ const routes:Routes = [
         path:'categorie-produit', component:CategorieProduitComponent
     },
     {
-        path:'categorie-produit/:produitName', component:CategorieProduitComponent,
+        path:'categorie-produit/:id', component:CategorieProduitComponent,
     }
 
 ]

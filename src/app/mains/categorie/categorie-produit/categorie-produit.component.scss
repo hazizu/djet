@@ -50,9 +50,38 @@
     margin-top: 5rem;
 
 }
+.subcategorie-produit-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 1rem;
+}
 
 @media screen and (max-width: 767px) {
     .search-title{
         padding: 0 0.5rem;
+    }
+    .categorie-produit-container{
+        padding: 0rem;
+    }
+    .subcategorie-produit-nav{
+        gap: 0.5rem;
+        margin-left: 0.5rem;
+    }
+    .categorie-produit-list {
+        background-color: #FFF;
+        margin-top: 2rem;
+        padding: 0.5rem;
+        border-radius: 1rem;
+    }
+    .produit-list {
+        width: 48%;
+    }
+    .content-produit{
+        gap: 0.5rem;
+        
     }
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { ICategorie, ISubCategorie } from 'src/app/mains/categorie/queries/get-categorie-gql.service';
 
@@ -14,6 +14,7 @@ export class ExtensibleButtonComponent  implements OnInit{
   isExpand:boolean = false
   isMobile = false;
 @Input() extensibleData?:ICategorie
+@Output() onclickNav:EventEmitter<boolean> = new EventEmitter<boolean>();
 
 
 constructor(
@@ -35,5 +36,6 @@ expand(){
 
 goToProducts(subNav:ISubCategorie){
   this.router.navigate(['/home/articles', subNav.id])
+  this.onclickNav.emit(true)
 }
 }

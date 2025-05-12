@@ -32,6 +32,8 @@
         width: 100%;
         background-color: lightgray;
         border-radius: 0rem;
+        height: max-content;
+        padding-bottom: 2rem !important;
       
     }
     .phone-close{
@@ -40,5 +42,8 @@
     justify-content: flex-end;
     margin-top: -0.5rem;
 
+    }
+    .bg-container{
+        display: none;
     }
 }

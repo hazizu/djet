@@ -3,14 +3,14 @@
 <div class="search-title">
     <span class="fixed-title" routerLink="/home">Accueil</span>
     <img src="./../../../../assets/SVG/chevron_droit.svg" />
-    <span class="search-value">"Recherche"</span>
+    <span class="search-value">{{categorieName}}</span>
 </div>
 
 <div class="list-articles">
     <div class="list-articles-container" *ngFor="let article of articles">
         <app-simple-article-card-item [productData]="article"></app-simple-article-card-item>
     </div>
-    <div class="pagination-bloc">
+    <div class="pagination-bloc" *ngIf="articles.length > 0">
         <app-pagination   [totalCount]="totalCount" (changePage)="onChangePage($event)"></app-pagination>
     </div>
 </div>

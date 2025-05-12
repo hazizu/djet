@@ -2,12 +2,12 @@
     <div class="search-title">
         <span class="fixed-title" routerLink="/home">Accueil</span>
         <img src="./../../../../assets/SVG/chevron_droit.svg" />
-        <span class="search-value">"Recherche"</span>
+        <span class="search-value">{{articleData?.name}}</span>
     </div>
 
     <div class="detail-content">
         <div class="detail-content-infos">
-            <div class="article-image">
+            <div class="article-image" *ngIf="articleImages?.length">
                 <app-images-visualisation [listImages]="articleImages"></app-images-visualisation>
             </div>
             <div class="article-infos">
@@ -28,35 +28,12 @@
             <span class="description-title">À Propos de cet article</span>
 
             <p class="description-text">
-                CONÇU POUR APPLE INTELLIGENCE – Personnelle, privée, puissante. Pour écrire, vous exprimer et en faire
-                plus sans effort.
-                PUCE A18. FUTUR EN PUISSANCE – La puce A18 offre toute sa puissance à Apple Intelligence et aux jeux. Et
-                grâce aux mises à jour régulières d’iOS, votre iPhone est toujours dernier cri, année après année.
-                AUTONOMIE DE TAILLE – Échangez des messages, naviguez sur le Web et regardez films et séries avec une
-                autonomie offrant jusqu’à 26 heures de lecture vidéo – la meilleure jamais vue sur un iPhone de 6,1
-                pouces.
-                CAMÉRAS – Le système caméra deux‑en‑un intègre une caméra Fusion 48 Mpx pour des photos en super haute
-                résolution, et un téléobjectif 2x de qualité optique. Et avec la caméra avant 12 Mpx, tous vos selfies
-                sont sensationnels.
-                DESIGN RÉSISTANT. SUPERBE ÉCRAN –Découvrez la splendeur d’un écran de 6,1 pouces avec technologie OLED
-                et bénéficiez de la protection du Ceramic Shield, plus résistant que le verre de n’importe quel
-                smartphone.
-                BOUTON ACTION – Profitez d’un accès rapide et personnalisable à vos apps et fonctionnalités préférées,
-                ou utilisez l’intelligence visuelle pour en savoir plus sur ce qui vous entoure.
-                À VOTRE IMAGE – Personnalisez l’écran d’accueil et l’écran verrouillé de votre iPhone, envoyez des
-                messages enrichis d’effets textuels, répondez par Tapback avec n’importe quel emoji et faites bien plus
-                encore.
-                SERVICES PAR SATELLITE – En l’absence de réseau cellulaire ou Wi‑Fi, l’iPhone peut contacter les
-                services d’urgence par satellite
-                CONFIDENTIALITÉ – Utilisez Face ID pour déverrouiller votre appareil, vous connecter et régler vos
-                achats, en toute sécurité.
-                MENTIONS LÉGALES – Ceci est un résumé des caractéristiques principales du produit. Voir plus haut pour
-                en savoir plus.
+             {{articleData?.description}}
             </p>
 
             <div class="description-images">
                 <div class="description-image" *ngFor="let image of articleImages | slice:0:4">
-                    <img [src]="image" alt="image de l'article djet" />
+                    <img [src]="image.image" alt="image de l'article djet" />
                 </div>
 
             </div>
@@ -66,7 +43,7 @@
     </div>
 </div>
 
-<div class="proposition-bloc">
+<div class="proposition-bloc" *ngIf="productData?.length">
     <span class="proposition-bloc-title">Ces articles pourraient vous intéresser aussi</span>
     <div class="proposition-list">
         <div class="proposition-item" *ngFor="let proposition of productData">

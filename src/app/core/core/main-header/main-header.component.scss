@@ -36,6 +36,7 @@
 .panier-content-phone{
     display: flex;
     align-items: center;
+    position: relative;
 }
 .user-info-item-phone img{
     width: 2rem;
@@ -130,5 +131,8 @@
      .serach-phone{
         margin-left: 0.5rem;
         margin-right: 0.5rem
+    }
+    .toggle-container{
+        right: 0;
     }
 }

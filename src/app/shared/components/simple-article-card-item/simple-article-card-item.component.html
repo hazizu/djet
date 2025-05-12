@@ -11,13 +11,13 @@
               </svg>              
         </div>
     </div>
-    <div class="article-image" [style.backgroundImage]="'url('+ productData?.image +')'"></div>
+    <div *ngIf="firstImageUrl" class="article-image" [style.backgroundImage]="'url('+ firstImageUrl +')'"></div>
     <div class="article-info">
     <div class="caracteristic-bloc">
         <span class="article-name">{{productData?.name}}</span>
         <span class="article-price">{{productData?.price}} FCFA</span>
     </div>
-        <app-button label="Ajouter au panier" (clicked)="addToPanier()"></app-button>
+        <app-button label="Ajouter au panier" (clicked)="addToPanier($event)"></app-button>
     </div>
     
 </div>
