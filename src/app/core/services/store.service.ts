@@ -18,6 +18,9 @@ export class StoreService {
   _loader: boolean = false
   private loaderSubject = new BehaviorSubject<boolean>(this._loader)
 
+  _showAddedAlert:boolean = false
+  private showAddedAlertSubject = new BehaviorSubject<boolean>(this._showAddedAlert)
+
   constructor() { }
 
   get userData$():BehaviorSubject<IUser | null>{ 
@@ -25,6 +28,9 @@ export class StoreService {
   }
   get loader$(): BehaviorSubject<boolean>{
     return this.loaderSubject
+  }
+  get showAddedAlert$(): BehaviorSubject<boolean>{
+    return this.showAddedAlertSubject
   }
 
   get categiesData$():BehaviorSubject<ICategorie[] | null>{
@@ -35,6 +41,10 @@ export class StoreService {
     this._loader = value
     this.loaderSubject.next(value)
     console.log('loader update', value)
+  }
+  set showAddedAlert(value: boolean){
+    this._showAddedAlert = value
+    this.showAddedAlertSubject.next(value)
   }
   set userData(data:IUser){
     this._userData = data

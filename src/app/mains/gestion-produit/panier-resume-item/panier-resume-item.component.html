@@ -1,0 +1,19 @@
+<div class="panier-resume-item">
+    <div class="bloc1">
+    <div class="commande-image" [ngStyle]="{'background-image':'url('+productData?.images?.[0]?.image+')'}"></div>
+
+    <div class="commande-article-info">
+        <span class="article-name">{{productData?.name}}</span>
+        <span class="article-price">{{productData?.updatePrice | number:'1.0-0'}} FCFA</span>
+        <span class="btn-remove" (click)="removeArticle()">Retirer</span>
+    </div>
+    </div>
+
+    <div class="action-container">
+        <app-add-plus-btn [addedNumber]="productData.quantity" (addedNumberChange)="onChangeValue($event)"></app-add-plus-btn>
+    </div>
+
+    <div class="article-total">
+        <span class="price-total">{{productData?.updatePrice | number:'1.0-0'}} FCFA</span>
+    </div>
+</div>

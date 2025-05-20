@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-add-plus-btn',
@@ -6,7 +6,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./add-plus-btn.component.scss']
 })
 export class AddPlusBtnComponent {
-  addedNumber:number = 1;
+  @Input()addedNumber:number = 1;
   @Output() addedNumberChange:EventEmitter<number> = new EventEmitter<number>();
 
   moin(event:MouseEvent){

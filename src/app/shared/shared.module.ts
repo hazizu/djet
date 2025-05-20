@@ -24,6 +24,7 @@ import { GarantieItemComponent } from './components/garantie-item/garantie-item.
 import { ImagesVisualisationComponent } from './components/images-visualisation/images-visualisation.component';
 import { InfoDetailArticleComponent } from './components/info-detail-article/info-detail-article.component';
 import { KeyValueItemComponent } from './components/key-value-item/key-value-item.component';
+import { AddedAlertComponent } from './components/added-alert/added-alert.component';
 
 
 
@@ -49,7 +50,8 @@ import { KeyValueItemComponent } from './components/key-value-item/key-value-ite
     GarantieItemComponent,
     ImagesVisualisationComponent,
     InfoDetailArticleComponent,
-    KeyValueItemComponent
+    KeyValueItemComponent,
+    AddedAlertComponent
   ],
   imports: [
     CommonModule,
@@ -78,7 +80,8 @@ import { KeyValueItemComponent } from './components/key-value-item/key-value-ite
     GarantieItemComponent,
     ImagesVisualisationComponent,
     InfoDetailArticleComponent,
-    KeyValueItemComponent
+    KeyValueItemComponent,
+    AddedAlertComponent
   ]
 })
 export class SharedModule { }

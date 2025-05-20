@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class KeyValueItemComponent {
 @Input() key:string=""
-@Input() value:string=""
+@Input() value:string | undefined=""
 @Input() styles?:{}
 }

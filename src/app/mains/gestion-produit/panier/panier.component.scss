@@ -1,0 +1,131 @@
+.search-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding-left: 5rem;
+    margin-top: 3rem;
+}
+.fixed-title{
+    color: #072AC8;
+    cursor: pointer;
+}
+.search-value{
+    font-style: italic;
+    font-weight: bold;
+}
+.main-panier-content{
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+.commandes-container{
+   width: max-content;
+   height: max-content;
+    border-radius: 1rem;
+    background-color: #FFF;
+    padding: 2rem;
+}
+.commandes-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.commande-header-title{
+    display: flex;
+    flex-direction: column;
+}
+.commande-header-title-lib{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.commande-length{
+    color: #626A8F;
+    font-size: 1.1rem;
+}
+.commande-total{
+    color: #072AC8;
+    font-size: 1.5rem;
+
+}
+.commande-list{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.resume-bloc{
+    background-color: #FFF;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.garrantie-bloc{
+    background-color: #FFF;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.commande-resume{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.panier-content-container{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+.resume-bloc-title{
+    color: #626A8F;
+}
+.no-data-block span{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #626A8F;
+    font-weight: bold;
+}
+.no-data-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 8rem;
+}
+
+.proposition-bloc {
+    width: 90%;
+    margin: auto;
+    margin-top: 4rem;
+}
+
+span.proposition-bloc-title {
+    color: #fff;
+    background: #1E96FC;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-radius: 1rem 1rem 0 0;
+    display: flex;
+}
+.proposition-list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    overflow: scroll;
+    margin-top: 1.5rem;
+}
+.categorie-produit-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    margin-left: 5%;
+}

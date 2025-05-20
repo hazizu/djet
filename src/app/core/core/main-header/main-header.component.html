@@ -58,7 +58,7 @@
         <div class="user-info-item">
             <div class="user-info-item" (click)="showToggle()">
             <img src="./../../../../assets/SVG/profile-blue.svg" />
-            <span>Bonjour <span *ngIf="user?.username">,{{user?.username}}</span></span>
+            <span>Bonjour<span *ngIf="user?.username">, {{user?.username}}</span></span>
             <img src="./../../../../assets/SVG/arrow-bottom.svg" class="toggle-icon">
             </div>
 
@@ -77,7 +77,8 @@
                 </div>
             </div>
         </div>
-        <div class="user-info-item">
+        <div class="user-info-item" (click)="goToPanier()">
+           <span class="panierLength">{{panier.length}}</span>
             <img src="./../../../../assets/SVG/local_mall.svg" />
             <span>Panier</span>
         </div>

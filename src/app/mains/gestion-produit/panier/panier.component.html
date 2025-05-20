@@ -1,0 +1,72 @@
+<div class="panier-container">
+    <div class="search-title">
+        <span class="fixed-title" routerLink="/home">Accueil</span>
+        <img src="./../../../../assets/SVG/chevron_droit.svg" />
+        <span class="search-value">Panier</span>
+    </div>
+    <div class="panier-content-container">
+    <div class="main-panier-content">
+        
+        <div class="commandes-container">
+            <div class="commandes-header">
+                <div class="commande-header-title">
+                   <span class="commande-header-title-lib">Panier</span>
+                   <span *ngIf="paniers.length > 0; else noPanier" class="commande-length">{{paniers.length}} produits dans le panier</span>
+                   <ng-template #noPanier>
+                   <span class="commande-length">Aucun produits dans le panier</span>
+                </ng-template>
+                </div>
+                <span *ngIf="paniers.length > 0" class="commande-total">{{totalPrices | number:'1.0-0'}} FCFA</span>
+            </div>
+ 
+            <div class="commande-list" *ngIf="paniers.length > 0; else noList">
+                <div class="panierlist-content" *ngFor="let panier of paniers">
+               <app-panier-resume-item [productData]="panier"></app-panier-resume-item>
+            </div>
+            </div>
+
+            <!--No data block-->
+            <ng-template #noList>
+            <div class="no-data-block" *ngIf="paniers.length == 0">
+                <span>Votre panier est vide</span>
+                <app-button (clicked)="goToHome()" [styles]="{padding:'0.4rem 1.5rem'}" label="Passez une commande">
+                    <img src="./../../../../assets/SVG/local_mall.svg">
+                </app-button>
+            </div>
+            </ng-template>
+        </div>
+        <div class="commande-resume">
+            <div class="resume-bloc" *ngIf="paniers.length > 0">
+                <span class="resume-bloc-title">Résumé du panier</span>
+                <app-key-value-item [styles]="{justifyContent:'space-between'}" key="Total" [value]="(totalPrices | number:'1.0-0') + ' FCFA'"></app-key-value-item>
+                <app-key-value-item [styles]="{justifyContent:'space-between'}"  key="Livraison" value="--"></app-key-value-item>
+                <app-key-value-item  [styles]="{justifyContent:'space-between'}"  key="Réduction" value="5%"></app-key-value-item>
+                <app-button (clicked)="goToValide()" [styles]="{marginTop:'2rem', padding:'0.4rem 1rem'}" [label]="'Commander ' + (totalPrices | number:'1.0-0') + ' FCFA'"></app-button>
+            </div>
+            <div class="garrantie-bloc">
+                <div class="list-garantie" *ngFor="let garantie of garantiesData">
+                    <app-garantie-item [garantie]="garantie"></app-garantie-item>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <div class="proposition-bloc" *ngIf="productData?.length">
+        <span class="proposition-bloc-title">Ces articles pourraient vous intéresser aussi</span>
+        <div class="proposition-list">
+            <div class="proposition-item" *ngFor="let proposition of productData">
+                <app-simple-article-card-item [productData]="proposition"></app-simple-article-card-item>
+            </div>
+        </div>
+    </div>
+    <div class="categorie-produit-nav">
+        <div class="produit-nav-list" *ngFor="let produitNav of produitNavs">
+            <app-categorie-produit-nav-item [categorieProduitNav]="produitNav"></app-categorie-produit-nav-item>
+    
+        </div>
+    </div>
+
+    
+</div>

@@ -3,6 +3,8 @@ import { Component, inject, NgModule } from "@angular/core";
 import { Route, RouterModule, Routes } from "@angular/router";
 import { SearchedArticlesComponent } from "./searched-articles/searched-articles.component";
 import { DetailArticleComponent } from "./detail-article/detail-article.component";
+import { PanierComponent } from "./panier/panier.component";
+import { ValideCommandeComponent } from "./valide-commande/valide-commande.component";
 
 const routes:Routes = [
     {
@@ -14,6 +16,12 @@ const routes:Routes = [
     },
     {
         path:'detail/:id', component:DetailArticleComponent
+    },
+    {
+        path:'user/panier',component:PanierComponent,
+    },
+    {
+        path:'user/valide-commande',component:ValideCommandeComponent,
     }
 
 ]

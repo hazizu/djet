@@ -25,7 +25,8 @@ export class ProductCardItemComponent {
     this.isAdded = !this.isAdded;
     console.log("add to panier");
   }
-  liked(){
+  liked(event:MouseEvent){
+    event.stopPropagation();
     this.isLiked =!this.isLiked;
     console.log(this.isLiked);
   }

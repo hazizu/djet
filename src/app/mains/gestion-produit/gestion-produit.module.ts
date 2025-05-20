@@ -4,13 +4,19 @@ import { SearchedArticlesComponent } from './searched-articles/searched-articles
 import { GestionProduitRoutingModule } from './gestionProduit.routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { DetailArticleComponent } from './detail-article/detail-article.component';
+import { PanierComponent } from './panier/panier.component';
+import { PanierResumeItemComponent } from './panier-resume-item/panier-resume-item.component';
+import { ValideCommandeComponent } from './valide-commande/valide-commande.component';
 
 
 
 @NgModule({
   declarations: [
     SearchedArticlesComponent,
-    DetailArticleComponent
+    DetailArticleComponent,
+    PanierComponent,
+    PanierResumeItemComponent,
+    ValideCommandeComponent
   ],
   imports: [
     CommonModule,

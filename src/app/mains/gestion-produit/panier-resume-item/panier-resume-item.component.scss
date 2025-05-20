@@ -1,0 +1,43 @@
+.commande-image{
+    width: 7rem;
+    height: 7rem;
+    background-image: url('./../../../../assets/SVG/categorie-produit-smartphone.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem 0 0 1rem;
+}
+.commande-article-info{
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+}
+.panier-resume-item{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+.bloc1{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 1rem;
+}
+.action-container{
+    width: 8rem;
+}
+.article-name{
+    font-size: 1.1rem;
+    color: #000;
+    font-weight: bold;
+}
+.article-price{
+    color: #111111;
+}
+.btn-remove{
+    color: #072AC8;
+    font-size: 0.9rem;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}

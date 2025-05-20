@@ -15,8 +15,10 @@ export interface ICategorieProduct{
   note:number
   id:string
   price:number
+  updatePrice:number
   name:string
   description:string
+  quantity:number
 }
 
 export interface IGetCategorieProductsResponse{
