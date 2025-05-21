@@ -7,6 +7,7 @@ import { DetailArticleComponent } from './detail-article/detail-article.componen
 import { PanierComponent } from './panier/panier.component';
 import { PanierResumeItemComponent } from './panier-resume-item/panier-resume-item.component';
 import { ValideCommandeComponent } from './valide-commande/valide-commande.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -20,6 +21,8 @@ import { ValideCommandeComponent } from './valide-commande/valide-commande.compo
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     GestionProduitRoutingModule,
     SharedModule
   ]

@@ -1,8 +1,9 @@
 import { Component, inject, NgModule } from "@angular/core";
 import { MainComponent } from "./main/main.component";
-import { RouterModule, Routes } from "@angular/router";
+import { ActivatedRouteSnapshot, RouterModule, RouterStateSnapshot, Routes } from "@angular/router";
 import { ShopHomeComponent } from "./shop-home/shop-home.component";
 import { UserSpaceComponent } from "./user-space/user-space.component";
+import { AuthGuardService } from "../services/auth-guard.service";
 const routes:Routes = [
     {
         path: '',  component:MainComponent,

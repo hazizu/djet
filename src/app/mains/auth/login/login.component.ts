@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LoginService } from './sevices/login.service';
 import { StoreService } from 'src/app/core/services/store.service';
+import { AuthGuardService } from 'src/app/core/services/auth-guard.service';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,8 @@ export class LoginComponent {
     private fb:FormBuilder,
     private router:Router,
     private loginService:LoginService,
-    private store:StoreService
+    private store:StoreService,
+    private authGuardService : AuthGuardService
   ) {
     this.loginForm = this.fb.group({
       email:['', [Validators.required, Validators.email]],
@@ -39,7 +41,9 @@ export class LoginComponent {
           console.log(res);
           localStorage.setItem('token', res.UserLogin.accessToken)
           this.store.userData = res.UserLogin.user
-          this.router.navigate(['/home'])
+          const returnUrl = this.authGuardService.returnUrl
+          console.log('returnUrl', returnUrl);
+          returnUrl ? this.router.navigateByUrl(returnUrl) : this.router.navigate(['/home'])
         },
         (error:any)=>{
           this.store.loader = false

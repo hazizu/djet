@@ -6,6 +6,7 @@ import { PanierService } from '../panier/panier.service';
 import { Router } from '@angular/router';
 import { StoreService } from 'src/app/core/services/store.service';
 import { IUser } from '../../auth/login/queries/login-gql.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-valide-commande',
@@ -18,6 +19,9 @@ export class ValideCommandeComponent implements OnInit{
     totalPrices:number = 0;
     userData:IUser | null ;
     isValideCommande:boolean = false
+    addressLivraisonForm:FormGroup
+    invalidError:boolean = false
+    showForm:boolean = true
   
       garantiesData:IGarantie[]=[
         {
@@ -149,9 +153,15 @@ export class ValideCommandeComponent implements OnInit{
       constructor(
         private panierService:PanierService,
          public router:Router,
-         private store:StoreService
+         private store:StoreService,
+         private fb:FormBuilder
       ){
         this.userData = null
+        this.addressLivraisonForm = this.fb.group({
+          "commune":['', Validators.required],
+          "quartier":['', Validators.required],
+          "addressDetail":[''],
+        })
 
       }
 
@@ -180,6 +190,19 @@ export class ValideCommandeComponent implements OnInit{
       }
       valideCommande(){
         this.isValideCommande = true
+      }
+
+      valideAdress(){
+        if(this.addressLivraisonForm.valid){
+          console.log('valide adresse', this.addressLivraisonForm.value);
+          this.showForm = false
+        }else{
+          this.invalidError = true;
+        }
+      }
+
+      updateAdressForm(){
+        this.showForm = true
       }
 
 }

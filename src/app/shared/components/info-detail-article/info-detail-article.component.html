@@ -26,5 +26,5 @@
         <span class="etoiles-note">{{article?.note}}</span>
         <span class="link-comment">Voir les avis (10 avis)</span>
     </div>
-    <app-button label="Ajouter au panier"></app-button>
+    <app-button (clicked)="addToPanier()" label="Ajouter au panier"></app-button>
 </div>

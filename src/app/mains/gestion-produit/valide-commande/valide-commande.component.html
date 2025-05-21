@@ -33,14 +33,39 @@
                 <div class="livraison-adresse-content">
                 <div class="livraison-adresse-header">
                 <span class="livraison-adresse-title">Adresse de livraison</span>
-                <div class="update-button-content">
+                <div (click)="updateAdressForm()" class="update-button-content" *ngIf="!showForm">
                 <img src="./../../../../assets/SVG/update-icon-blue.svg" />
                 <span class="update-button">Modifier</span>
                 </div>
                 </div>
-                <app-key-value-item [styles]="{alignItems:'flex-start', marginTop:'1rem'}"  key="Commune" value="Cocody"></app-key-value-item>
-                <app-key-value-item [styles]="{alignItems:'flex-start', marginTop:'1rem'}"   key="Quartier" value="Riviera palmeraie"></app-key-value-item>
-                <app-key-value-item [styles]="{alignItems:'flex-start', marginTop:'1rem'}"  key="Détail" value="Rond-point de la Palmeraie, immeuble en face de la BICICI, deuxièlme étage, première porte à gauche"></app-key-value-item>
+                <ng-container *ngIf="showForm; else noForm">
+                <form class="form-adresse" [formGroup]="addressLivraisonForm">
+                    <app-input controlName="commune" libelle="Commune" inputType="text" [redBorder]="addressLivraisonForm.get('commune')?.invalid && invalidError">
+                        <img src="./../../../../assets/SVG/icon-profile.svg"/>
+                    </app-input>
+
+                    <app-input controlName="quartier" libelle="Quartier" inputType="text" [redBorder]="addressLivraisonForm.get('quartier')?.invalid && invalidError">
+                        <img src="./../../../../assets/SVG/icon-profile.svg"/>
+                    </app-input>
+
+                    <div class="detail-address">
+                        <span class="input-title-area">Détail de l'adresse</span>
+                        <textarea formControlName="addressDetail" class="detail-address-input"></textarea>
+                    </div>
+
+                    <app-button (clicked)="valideAdress()" [styles]="{ padding:'0.4rem 1rem', margin:'1rem 0 1rem 0'}" label="Ajouter"></app-button>
+                </form>
+                </ng-container>
+
+                
+
+               <ng-template #noForm>
+                <div class="adress-info">
+                <app-key-value-item [styles]="{alignItems:'flex-start', marginTop:'1rem'}"  key="Commune" [value]="this.addressLivraisonForm.value.commune"></app-key-value-item>
+                <app-key-value-item [styles]="{alignItems:'flex-start', marginTop:'1rem'}"   key="Quartier" [value]="this.addressLivraisonForm.value.quartier"></app-key-value-item>
+                <app-key-value-item [styles]="{alignItems:'flex-start', marginTop:'1rem'}"  key="Détail" [value]="this.addressLivraisonForm.value.addressDetail"></app-key-value-item>
+            </div>
+               </ng-template>
                 </div>
                 <div class="profile-info">
 
@@ -76,11 +101,11 @@
             <div class="resume-bloc" >
                 <div class="resum-content">
                 <span class="resume-bloc-title">Résumé du panier</span>
-                <app-key-value-item [styles]="{justifyContent:'space-between'}" key="Total" [value]="(totalPrices | number:'1.0-0') + ' FCFA'"></app-key-value-item>
+                <app-key-value-item [styles]="{justifyContent:'space-between'}" key="Sous-total" [value]="(totalPrices | number:'1.0-0') + ' FCFA'"></app-key-value-item>
                 <app-key-value-item [styles]="{justifyContent:'space-between'}"  key="Livraison" value="2000 FCFA"></app-key-value-item>
                 <app-key-value-item  [styles]="{justifyContent:'space-between'}"  key="Réduction" value="5%"></app-key-value-item>
                 </div>
-                <app-key-value-item [styles]="{justifyContent:'space-between'}" key="Total" [value]="(totalPrices | number:'1.0-0') + ' FCFA'"></app-key-value-item>
+                <app-key-value-item [styles]="{justifyContent:'space-between'}" key="Total" [value]="(totalPrices + 2000 | number:'1.0-0') + ' FCFA'"></app-key-value-item>
 
                 <app-button (clicked)="valideCommande()" [styles]="{ padding:'0.4rem 1rem'}" label="valider"></app-button>
             </div>
@@ -106,9 +131,11 @@
     <div class="categorie-produit-nav">
         <div class="produit-nav-list" *ngFor="let produitNav of produitNavs">
             <app-categorie-produit-nav-item [categorieProduitNav]="produitNav"></app-categorie-produit-nav-item>
-    
         </div>
     </div>
+    <div class="footer-banner">
+        <app-footer-banner></app-footer-banner>
+        </div>
 
     
 </div>
