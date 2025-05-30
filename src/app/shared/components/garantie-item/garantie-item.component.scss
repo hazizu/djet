@@ -25,3 +25,10 @@ p.garantie-description {
 .garantie-card-content {
     margin-left: 0.5rem;
 }
+
+// phone
+@media screen and (max-width: 768px) {
+    .garantie-card {
+        width: 100%;
+    }
+}

@@ -41,3 +41,44 @@
     cursor: pointer;
     margin-top: 0.5rem;
 }
+.bloc2{
+    display: flex;
+    gap: 2rem;
+}
+
+// phone
+@media screen and (max-width: 768px) {
+    .panier-resume-item{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .commande-image{
+        width: 30%;
+        height: 6rem;
+    }
+    .article-name{
+        font-size: 0.8rem;
+    }
+    .article-price{
+        font-size: 0.8rem;
+    }
+    .commande-article-info{
+        width: 66%;
+    }
+    .bloc2{
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: end;
+    }
+    .bloc1{
+        gap: 0.5rem;
+        width: 60%;
+    }
+    .action-container{
+        width: 6rem;
+    }
+    .price-total{
+        font-size: 0.8rem;
+    }
+}

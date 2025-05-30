@@ -57,14 +57,17 @@
         <span class="proposition-bloc-title">Ces articles pourraient vous intéresser aussi</span>
         <div class="proposition-list">
             <div class="proposition-item" *ngFor="let proposition of productData">
+                <div class="proposition-item-content">
                 <app-simple-article-card-item [productData]="proposition"></app-simple-article-card-item>
+                </div>
             </div>
         </div>
     </div>
     <div class="categorie-produit-nav">
         <div class="produit-nav-list" *ngFor="let produitNav of produitNavs">
+        
             <app-categorie-produit-nav-item [categorieProduitNav]="produitNav"></app-categorie-produit-nav-item>
-    
+        
         </div>
     </div>
     <div class="footer-banner">

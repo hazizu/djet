@@ -1,61 +1,91 @@
-
-.main-phone{
+.main-phone {
     display: none;
     width: 100%;
 }
-.main-container-phone{
+
+.main-container-phone {
     display: flex;
     padding-top: 8rem;
     align-items: center;
     justify-content: space-between;
     width: 100%;
 }
-.logo-content-phone{
+
+.logo-content-phone {
     display: flex;
     align-items: center;
 }
-.menu-for-phone{
+
+.menu-for-phone {
     display: none;
 }
-.menu-for-phone svg{
+
+.menu-for-phone svg {
     width: 2rem;
     height: 2rem;
 }
-.logo-phone img{
+
+.logo-phone img {
     width: 4rem;
     margin-left: 0.5rem;
 }
-.main-container{
+
+.main-container {
     display: flex;
     align-items: center;
     justify-content: space-around;
-   padding-top: 4rem;
-   width: 90%;
-   margin: auto;
+    padding-top: 4rem;
+    width: 90%;
+    margin: auto;
 }
-.panier-content-phone{
+
+.panier-content-phone {
     display: flex;
     align-items: center;
     position: relative;
 }
-.user-info-item-phone img{
+
+.user-info-item-phone img {
     width: 2rem;
     height: 2rem;
     margin-left: 1rem;
 }
-.serach-phone{
+
+.panier-phone img {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 1rem;
+}
+.panier-phone{
+    position: relative;
+}
+.panier-phone-length{
+    position: absolute;
+     top: -0.3rem;
+    left: 0.5rem;
+    display: flex;
+    background-color: red;
+    color: #fff !important;
+    font-size: 0.8rem;
+    padding: 0 0.2rem;
+    border-radius: 0.5rem;
+}
+
+.serach-phone {
     margin-top: 1rem;
 }
 
- .logo img{
+.logo img {
     width: 8rem !important;
     min-width: 8rem !important;
     max-width: 8rem !important;
 }
-.user-info-item span{
+
+.user-info-item span {
     color: #072AC8;
 }
-.user-info-item{
+
+.user-info-item {
     display: flex;
     align-items: normal;
     margin-right: 3rem;
@@ -64,7 +94,8 @@
     min-width: max-content;
     position: relative;
 }
-.panierLength{
+
+.panierLength {
     position: absolute;
     top: -0.5rem;
     left: -0.7rem;
@@ -75,7 +106,8 @@
     padding: 0 0.2rem;
     border-radius: 0.5rem;
 }
-.toggle-container{
+
+.toggle-container {
     position: absolute;
     width: 20rem;
     background-color: #fff;
@@ -87,64 +119,78 @@
     gap: 0.5rem;
     z-index: 99999;
 }
-.toggle-item{
+
+.toggle-item {
     display: flex;
     align-items: center;
     margin-top: 0.5rem;
 }
-.toggle-item-text{
+
+.toggle-item-text {
     color: #000 !important;
     margin-left: 0.5rem;
 }
-.toggle-item:hover .toggle-item-text{
+
+.toggle-item:hover .toggle-item-text {
     font-weight: 500;
-    transition: all 0.3s ease-in-out;        
+    transition: all 0.3s ease-in-out;
 }
+
 .toggle-item img {
     width: 1.8rem;
     height: auto;
 }
-.user-info{
+
+.user-info {
     display: flex;
     align-items: center;
-    
+
 }
-.nav-container{
+
+.nav-container {
     display: none;
-  }
-  .toggle-icon{
+}
+
+.toggle-icon {
     width: 1.5rem;
-  }
+}
 
 @media screen and (max-width: 767px) {
-    .main-container{
+    .main-container {
         display: none;
-     }
-    .main-phone{
+    }
+
+    .main-phone {
         display: block;
     }
-    .menu-for-phone{
+
+    .menu-for-phone {
         display: block;
-      }
-      .user-info{
+    }
+
+    .user-info {
         display: none;
-      }
-      .nav_container_phone{
+    }
+
+    .nav_container_phone {
         display: block;
         position: absolute;
         z-index: 999;
-        top: 7rem; 
+        top: 7rem;
         width: 100%;
-     }
-     .main-container-phone{
+    }
+
+    .main-container-phone {
         padding-left: 0.5rem;
         padding-right: 0.5rem
-     }
-     .serach-phone{
+    }
+
+    .serach-phone {
         margin-left: 0.5rem;
         margin-right: 0.5rem
     }
-    .toggle-container{
+
+    .toggle-container {
         right: 0;
     }
 }
