@@ -25,6 +25,9 @@ import { ImagesVisualisationComponent } from './components/images-visualisation/
 import { InfoDetailArticleComponent } from './components/info-detail-article/info-detail-article.component';
 import { KeyValueItemComponent } from './components/key-value-item/key-value-item.component';
 import { AddedAlertComponent } from './components/added-alert/added-alert.component';
+import { FilterCommandeComponent } from './components/filter-commande/filter-commande.component';
+import { OrderProductItemComponent } from './components/order-product-item/order-product-item.component';
+import { OrderDetailProductItemComponent } from './components/order-detail-product-item/order-detail-product-item.component';
 
 
 
@@ -51,7 +54,10 @@ import { AddedAlertComponent } from './components/added-alert/added-alert.compon
     ImagesVisualisationComponent,
     InfoDetailArticleComponent,
     KeyValueItemComponent,
-    AddedAlertComponent
+    AddedAlertComponent,
+    FilterCommandeComponent,
+    OrderProductItemComponent,
+    OrderDetailProductItemComponent
   ],
   imports: [
     CommonModule,
@@ -81,7 +87,10 @@ import { AddedAlertComponent } from './components/added-alert/added-alert.compon
     ImagesVisualisationComponent,
     InfoDetailArticleComponent,
     KeyValueItemComponent,
-    AddedAlertComponent
+    AddedAlertComponent,
+    FilterCommandeComponent,
+    OrderProductItemComponent,
+    OrderDetailProductItemComponent
   ]
 })
 export class SharedModule { }

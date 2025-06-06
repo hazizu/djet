@@ -1,0 +1,85 @@
+<div class="my-orders-container">
+      <div class="search-title">
+        <span class="fixed-title" routerLink="/home">Accueil</span>
+        <img src="./../../../../assets/SVG/chevron_droit.svg" />
+        <span class="fixed-title" routerLink="/home/commandes">Commandes</span>
+        <img src="./../../../../assets/SVG/chevron_droit.svg" />
+        <span class="search-value">Détail commande</span>
+    </div>
+
+    <div class="camande-content">
+        <div class="filter-bloc">
+        <div class="filter-bloc-content">
+            <span class="filter-bloc-title">Étapes de la commande</span>
+            <div class="legende-detail">
+                <div class="legende-detail-item">
+                    <img src="./../../../../assets/SVG/icon-check-green.svg"/>
+                    <span>Commande livrée</span>
+                </div>
+                <div class="legende-detail-item">
+                    <img src="./../../../../assets/SVG/check-icon-yellow.svg"/>
+                    <span>Commande préparée</span>
+                </div>
+                  <div class="legende-detail-item">
+                    <img src="./../../../../assets/SVG/check-icon-black.svg"/>
+                    <span>Commande reçue</span>
+                </div>
+                <div class="legende-detail-item">
+                    <img src="./../../../../assets/SVG/check-icon-black.svg"/>
+                    <span>Commande annulée</span>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="camande-list-bloc">
+            <span class="camande-list-bloc-title">Détails d'une commande</span>
+            <div class="info-order-bloc">
+                <div class="head-bloc">
+            <div class="info-order">
+                <span >Commande n° {{orderData?.orderNumber}}</span>
+                <span> Efectuée le {{orderData?.orderDate | date:'dd/MM/yyyy'}}</span>
+                <span>Total : {{orderData?.total | number:'1.0-0'}} FCFA</span>
+            </div>
+            <div class="status-bloc" *ngIf="orderData?.status === 'DELIVERED'">
+                <img src="./../../../../assets/SVG/icon-check-green.svg"/>
+                <span class="status-lib">Commande livrée</span>
+            </div>
+
+             <div class="status-bloc" *ngIf="orderData?.status === 'CANCELLED'">
+                <img src="./../../../../assets/SVG/check-icon-black.svg"/>
+                <span class="status-lib">Commande annulée</span>
+            </div>
+
+             <div class="status-bloc" *ngIf="orderData?.status === 'PENDING'">
+                <img src="./../../../../assets/SVG/check-icon-yellow.svg"/>
+                <span class="status-lib">Commande en cours de livraison</span>
+            </div>
+
+            <div class="help-btn">
+                <img src="./../../../../assets/SVG/help.svg"/>
+                <span class="help-btn-text">Besoin d'aide ?</span>
+            </div>
+
+            </div>
+
+            <div class="camande-list-bloc-content">
+                <div class="camande-list-bloc-item" *ngFor="let product of products">
+                    <app-order-detail-product-item [product]="product.product"></app-order-detail-product-item>
+                </div>
+            </div>
+
+            <div class="cammande-footer">
+                <div class="address-bloc">
+                    <span class="footer-title">Adresse de livraison</span>
+                    <span class="bloc-text">{{orderData?.deliveryAddress}}</span>
+                </div>
+                <div class="payemen-bloc">
+                    <span class="footer-title">Mode de paiement</span>
+                    <span class="bloc-text">Paiement à la livraison</span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+

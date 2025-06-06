@@ -1,0 +1,30 @@
+.product-image {
+    width: 4rem;
+    height: 4rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem 0 0 1rem;
+}
+.image-bloc {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.product-infos {
+    display: flex;
+    flex-direction: column;
+    min-width: 15rem;
+}
+.detail-product {
+    display: flex;
+    align-items: flex-start;
+    gap: 5rem;
+}
+.product-name{
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.product-price{
+    font-size: 0.8rem;
+}

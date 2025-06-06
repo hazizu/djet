@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { MainComponent } from './main/main.component';
 import { FixedHeadBarComponent } from './fixed-head-bar/fixed-head-bar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -17,6 +17,8 @@ import { MainHeaderComponent } from './main-header/main-header.component';
 import { UserSpaceComponent } from './user-space/user-space.component';
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
 import { UpdateIdentifiantComponent } from './update-identifiant/update-identifiant.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
+import { MyCommandeDetailComponent } from './my-commande-detail/my-commande-detail.component';
 
 
 
@@ -36,6 +38,8 @@ import { UpdateIdentifiantComponent } from './update-identifiant/update-identifi
     UserSpaceComponent,
     UpdateProfileComponent,
     UpdateIdentifiantComponent,
+    MyOrdersComponent,
+    MyCommandeDetailComponent,
   ],
   imports: [
     CommonModule,
@@ -44,5 +48,8 @@ import { UpdateIdentifiantComponent } from './update-identifiant/update-identifi
     FormsModule,
     ReactiveFormsModule
   ],
+  providers:[
+    DatePipe
+  ]
 })
 export class CoreModule { }

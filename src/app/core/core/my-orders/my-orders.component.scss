@@ -1,0 +1,69 @@
+.my-orders-container{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5rem;
+}
+.search-title{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 3rem;
+}
+.fixed-title{
+    color: #072AC8;
+    cursor: pointer;
+}
+.search-value{
+    font-style: italic;
+    font-weight: bold;
+}
+.camande-content{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.filter-bloc{
+    width: 20rem;
+    background-color: #FFF;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.camande-list-bloc{
+    width: 80%;
+    background-color: #FFF;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.filter-bloc-title, .camande-list-bloc-title{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.filter-bloc-title{
+    margin-bottom: 2rem;
+    display: flex;
+}
+.camande-list-bloc-content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: flex-start;
+    margin-top: 2rem;
+}
+.no-camande{
+    width: max-content;
+    margin: auto;
+}
+.no-order-bloc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:  5rem 0;
+    color: #626A8F;
+}
+.no-order-bloc-title{
+    font-size: 2rem;
+   
+}

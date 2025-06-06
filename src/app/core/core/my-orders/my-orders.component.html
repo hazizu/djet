@@ -1,0 +1,37 @@
+<div class="my-orders-container">
+      <div class="search-title">
+        <span class="fixed-title" routerLink="/home">Accueil</span>
+        <img src="./../../../../assets/SVG/chevron_droit.svg" />
+        <span class="search-value">"Mes commandes"</span>
+    </div>
+
+    <div class="camande-content">
+        <div class="filter-bloc" *ngIf="(orderUpdate.length > 0 &&  orders.length > 0)">
+            <span class="filter-bloc-title">Filtres</span>
+            <app-filter-commande (filterCodeChange)="filterCodeChange($event)"></app-filter-commande>
+        </div>
+        <div class="camande-list-bloc">
+            <span class="camande-list-bloc-title">Mes commandes</span>
+
+            <div class="camande-list-bloc-content" *ngIf="(orderUpdate.length > 0 &&  orders.length > 0); else noOrder">
+                <div class="camande-list-bloc-item" *ngFor="let order of orderUpdate">
+                    
+                    <app-order-product-item [orderProductItem]="order"></app-order-product-item>
+                    
+                </div>
+            </div>
+            <ng-template #noOrder>
+                <div class="no-camande">
+                    <div class="no-order-bloc">
+                        <span class="no-order-bloc-title">Aucune commande</span>
+                        <span class="no-order-bloc-text">Vous n'avez pas encore de commandes en cours</span>
+                <app-button (clicked)="goToHome()" [styles]="{padding:'0.4rem 1.5rem', marginTop:'2rem'}" label="Passez une commande">
+                    <img src="./../../../../assets/SVG/local_mall.svg">
+                </app-button>
+                    </div>
+               
+                </div>
+            </ng-template>
+        </div>
+    </div>
+</div>

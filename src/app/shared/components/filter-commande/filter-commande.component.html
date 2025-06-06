@@ -1,0 +1,8 @@
+<div class="filter-container">
+    <div class="filter-content" *ngFor="let filter of filters; let i = index">
+        <div class="filter-item" (click)="changeFilter(filter.filterCode, i)">
+            <div class="check_card" [ngClass]="{check_cardStyle: isCheckedIndex == i}"></div>
+            <span class="filter-item-title">{{filter.title}}</span>
+        </div>
+    </div>
+</div>

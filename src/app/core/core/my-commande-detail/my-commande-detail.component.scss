@@ -1,0 +1,140 @@
+.my-orders-container{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 5rem;
+}
+.search-title{ 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-top: 3rem;
+}
+.fixed-title{
+    color: #072AC8;
+    cursor: pointer;
+}
+.search-value{
+    font-style: italic;
+    font-weight: bold;
+}
+.camande-content{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+.filter-bloc{
+    width: 20rem;
+    background-color: #FFF;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.camande-list-bloc{
+    
+    background-color: #FFF;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.filter-bloc-title, .camande-list-bloc-title{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.filter-bloc-title{
+    margin-bottom: 1rem;
+    display: flex;
+    font-size: 1rem !important;
+}
+.camande-list-bloc-content{
+   display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    width: max-content;
+}
+.legende-detail-item{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+   
+}
+.legende-detail{
+
+}
+.legende-detail-item span{
+    font-size: 0.8rem;
+}
+.legende-detail-item img{
+    width: 1rem;
+    height: 1rem;
+}
+.filter-bloc-content{
+background-color: #E7EBFE66;
+ padding: 1.5rem;
+ border-radius: 0.5rem;
+
+}
+.info-order{
+    display: flex;
+    flex-direction: column;
+    color: #626A8F;
+    font-size: 0.9rem;
+}
+.head-bloc{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+.status-lib{
+    font-size: 0.7rem;
+}
+.help-btn-text{
+    font-size: 0.7rem;
+}
+.help-btn img{
+    width: 0.9rem;
+    height: 0.9rem;
+}
+.help-btn{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    cursor: pointer;
+    color: #FFC600;
+}
+.status-bloc img{
+    width: 0.9rem;
+    height: 0.9rem;
+}
+.status-bloc{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+.cammande-footer{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.address-bloc, .payemen-bloc{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: #E7EBFE66;
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 1rem;
+
+}
+.footer-title{
+    color: #072AC8;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.bloc-text{
+    font-size: 0.9rem;
+}

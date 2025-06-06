@@ -1,0 +1,14 @@
+<div class="order-product-item">
+    <div class="status-lib">
+        <span class="order-deliv" *ngIf="orderProductItem?.status ==='DELIVERED'">Livré</span>
+        <span class="order-pend" *ngIf="orderProductItem?.status ==='PENDING'">Livraison en cours</span>
+        <span class="order-canc" *ngIf="orderProductItem?.status === 'CANCELLED'">Annulé</span>
+    </div>
+    <div class="image-bloc" [ngStyle]="{'background-image':getBackgroundImage()}"></div>
+    <div class="info-bloc">
+        <span class="order-style">Commande</span>
+        <span class="order-style">N° {{orderProductItem?.orderNumber}}</span>
+        <span>{{orderProductItem?.total | number:'1.0-0'}} FCFA</span>
+    </div>
+    <span (click)="goToDetail()" class="more-btn">Détails</span>
+</div>
