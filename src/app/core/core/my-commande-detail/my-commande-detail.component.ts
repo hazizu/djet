@@ -12,6 +12,7 @@ export interface IOrderDetailProduct{
   quantity:number
     product:{
     descition:string
+    quantity?:number
     id:string
     name:string
     price:number
@@ -56,6 +57,12 @@ export class MyCommandeDetailComponent implements OnInit{
         
         this.store.loader = false
         this.products = res.GetOrderById.items
+       
+        this.products.map((item)=>{
+          item.product.quantity = item.quantity
+        })
+         console.log('products',this.products)
+        
         this.orderData = res.GetOrderById
         // this.orderData?.total = res.GetOrderById.total
         // this.orderData.status = res.GetOrderById.status

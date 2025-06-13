@@ -27,3 +27,13 @@
     border-radius: 1rem;
     min-width: max-content;
 }
+// phone
+@media screen and (max-width: 768px) {
+    .filter-item-title{
+        font-size: 0.8rem;
+    }
+    .filter-container{
+        padding-top: 0.5rem;
+        margin-top: 0.5rem;
+    }
+}

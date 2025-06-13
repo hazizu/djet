@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PromoNavService } from './services/promo-nav.service';
+import { IGetPromoNav } from './queries/get-promo-categorie-gql.service';
+import { StoreService } from '../../services/store.service';
 
 export interface IMainNews {
   image:string,
@@ -13,7 +16,10 @@ export interface IMainNews {
   templateUrl: './main-news.component.html',
   styleUrls: ['./main-news.component.scss']
 })
-export class MainNewsComponent {
+export class MainNewsComponent  implements OnInit{
+  proomos:IGetPromoNav[] | null = []
+
+  
 
   mainNews: IMainNews[] = [
     {
@@ -36,5 +42,18 @@ export class MainNewsComponent {
     } 
     
   ]
+
+  constructor(
+    private store:StoreService,
+  ){
+
+  }
+  ngOnInit(): void {
+    this.store.promoNavData$.subscribe((data)=>{
+      this.proomos = data
+    })
+  }
+
+ 
 
 }

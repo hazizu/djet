@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ICategorieProduct } from 'src/app/mains/categorie/queries/get-categorie-products.service';
 import { Article } from 'src/app/mains/gestion-produit/searched-articles/searched-articles.component';
 
 export interface IProductData {
@@ -13,63 +14,5 @@ export interface IProductData {
   styleUrls: ['./week-product.component.scss']
 })
 export class WeekProductComponent {
-  productData:Article[] = [
-    {
-      image: './../../../../assets/SVG/product1.svg',
-      name: 'Iphone 14 Pro',
-      price: 120000,
-      description:"",
-      id:"1"
-    },
-    {
-      image: './../../../../assets/SVG/product2.svg',
-      name: 'Iphone 14 Pro',
-      price: 120000,  
-      description:"",
-      id:"1"
-    },
-    {
-      image: './../../../../assets/SVG/product3.svg',
-      name: 'Iphone 14 Pro',
-      price: 120000,
-      description:"",
-      id:"1"
-    },
-    {
-      image: './../../../../assets/SVG/product4.svg',
-      name: 'Iphone 14 Pro',
-      price: 120000,
-      description:"",
-      id:"1"
-    },
-    {
-      image: './../../../../assets/SVG/product1.svg',
-      name: 'Iphone 14 Pro',
-      price: 120000,
-      description:"",
-      id:"1"
-    },
-    {
-      image: './../../../../assets/SVG/product2.svg',
-      name: 'Iphone 14 Pro',
-      price: 120000,  
-      description:"",
-      id:"1"
-    },
-    {
-      image: './../../../../assets/SVG/product3.svg',
-      name: 'Iphone 14 Pro',
-      price: 120000,
-      description:"",
-      id:"1"
-    },
-    {
-      image: './../../../../assets/SVG/product4.svg',
-      name: 'Iphone 14 Pro',
-      price: 120000,
-      description:"",
-      id:"1"
-    }
-  ]
-
+  productData:ICategorieProduct[] = []
 }

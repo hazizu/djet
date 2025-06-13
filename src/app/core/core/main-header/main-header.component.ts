@@ -66,5 +66,14 @@ panier:ICategorieProduct[] = [];
     this.router.navigate(['home/articles/user/panier'])
 
   }
+  logout(){
+    this.isShowToggle = false;
+    localStorage.removeItem('token')
+    this.router.navigate(['/'])
+    setTimeout(() => {
+     window.location.reload()
+    }, 1000/2);
+    
+  }
 
 }

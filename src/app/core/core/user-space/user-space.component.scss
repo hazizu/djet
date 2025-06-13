@@ -1,6 +1,7 @@
 .user-space-container{
     width: 80%;
     margin: auto;
+    margin-bottom: 3rem;
 }
 .search-title{ 
     display: flex;
@@ -49,6 +50,7 @@
 .garantie-action-item{
     color: #FFC600;
     font-weight: 500;
+    cursor: pointer;
 
 }
 // phone
@@ -61,6 +63,7 @@
     }
     .user-space-container{
         width: 100%;
+        margin-bottom: 2rem;
     }
  
 }

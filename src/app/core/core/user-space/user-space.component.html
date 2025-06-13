@@ -2,7 +2,7 @@
     <div class="search-title">
         <span class="fixed-title" routerLink="/home">Accueil</span>
         <img src="./../../../../assets/SVG/chevron_droit.svg" />
-        <span class="search-value">"Recherche"</span>
+        <span class="search-value">Informations personnelles</span>
     </div>
     <div class="main-content">
         <div class="left-content">
@@ -20,7 +20,7 @@
             </div>
 
             <div class="garantie-action">
-                <span class="garantie-action-item">Déconnexion</span>
+                <span (click)="logout()" class="garantie-action-item">Déconnexion</span>
                 <span class="garantie-action-item">Suppression compte</span>
 
             </div>

@@ -2,12 +2,12 @@
     <div class="search-title">
         <span class="fixed-title" routerLink="/home">Accueil</span>
         <img src="./../../../../assets/SVG/chevron_droit.svg" />
-        <span class="search-value">"Recherche"</span>
+        <span class="search-value">{{ deslugify(getLastWord2(router.url)) }}</span>
     </div>
 <div class="chip-btn-container">
  
-    <div class="chips-list" *ngFor="let chip of chips; let i = index">
-        <app-chip-btn [isActive]="getLastWord(router.url) == chip.pathName"  (isClicked)="getChipsClicked($event, i)" [chipsData]="chip">
+    <div class="chips-list" *ngFor="let chip of promos; let i = index">
+        <app-chip-btn [isActive]="getLastWord(router.url) == chip.id"  (isClicked)="getChipsClicked($event, i)" [chipsData]="chip">
         </app-chip-btn>
     </div>
 </div>

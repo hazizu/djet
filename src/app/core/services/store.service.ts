@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { IUser } from 'src/app/mains/auth/login/queries/login-gql.service';
 import { ICategorie } from 'src/app/mains/categorie/queries/get-categorie-gql.service';
+import { IGetPromoNav } from '../core/main-news/queries/get-promo-categorie-gql.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,9 @@ export class StoreService {
 
   private _categorieData:ICategorie[] | null = []  
   private categorieDataSubject = new BehaviorSubject<ICategorie[] | null>(this._categorieData)
+
+  private _promoNavData:IGetPromoNav[] | null = []  
+  private promoNavDataSubject = new BehaviorSubject<IGetPromoNav[] | null>(this._promoNavData)
   
  
 
@@ -36,6 +40,10 @@ export class StoreService {
   get categiesData$():BehaviorSubject<ICategorie[] | null>{
     return this.categorieDataSubject
   }
+
+  get promoNavData$():BehaviorSubject<IGetPromoNav[] | null>{
+    return this.promoNavDataSubject
+  }
   
   set loader(value: boolean){
     this._loader = value
@@ -54,5 +62,10 @@ export class StoreService {
   set categorieData(data:ICategorie[]){
     this._categorieData = data
     this.categorieDataSubject?.next(data)
+  }
+
+  set promoNavData(data:IGetPromoNav[]){
+    this._promoNavData = data
+    this.promoNavDataSubject?.next(data)
   }
 }

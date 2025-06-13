@@ -6,6 +6,9 @@ border-radius: 2rem;
 position: relative;
 margin-bottom: 2rem;
 cursor: pointer;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
 }
 
 .content-card{
@@ -13,6 +16,9 @@ cursor: pointer;
     bottom: 1rem;
     width: 100%;
     padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 .info-product{
     display: flex;
@@ -52,7 +58,7 @@ cursor: pointer;
       position: relative;
       border-radius: 2rem;
       background-position: center;
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
     }
     .product-name{
@@ -62,7 +68,7 @@ cursor: pointer;
         font-size: 0.9rem;
     }
     .content-card{
-        padding: 0 1rem;
+        padding: 0 0.5rem;
     }
 }
 

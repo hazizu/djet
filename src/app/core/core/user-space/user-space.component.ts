@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { IGarantie } from 'src/app/shared/components/garantie-item/garantie-item.component';
 
 @Component({
@@ -7,6 +8,12 @@ import { IGarantie } from 'src/app/shared/components/garantie-item/garantie-item
   styleUrls: ['./user-space.component.scss']
 })
 export class UserSpaceComponent {
+
+  constructor(
+    private router:Router
+  ){
+
+  }
 
     garantiesData:IGarantie[]=[
       {
@@ -26,4 +33,13 @@ export class UserSpaceComponent {
   
       }
     ]
+
+    logout(){
+      localStorage.removeItem('token')
+      this.router.navigate(['/'])
+      setTimeout(() => {
+        window.location.reload()
+      }, 1000/5);
+     
+    }
 }

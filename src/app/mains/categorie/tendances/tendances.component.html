@@ -1,12 +1,27 @@
 <div class="main-tendace">
+
+    <div class="search-title">
+        <span class="fixed-title" routerLink="/home">Accueil</span>
+        <img src="./../../../../assets/SVG/chevron_droit.svg" />
+        <span class="search-value">{{ deslugify(getLastWord2(router.url)) }}</span>
+    </div>
+<div class="chip-btn-container">
+ 
+    <div class="chips-list" *ngFor="let chip of promos; let i = index">
+        <app-chip-btn [isActive]="getLastWord(router.url) == chip.id"  (isClicked)="getChipsClicked($event, i)" [chipsData]="chip">
+        </app-chip-btn>
+    </div>
+</div>
+
     <div class="main-tendace-block1">
         <div class="tendance-header">
-            <span class="tendance-title">Les tendances</span>
+            <span class="tendance-title">{{deslugify(promoName)}}</span>
             <div class="more-btn">
                 <span>Voir tout</span>
                 <img src="./../../../../assets/SVG/chevron_droit.svg">
             </div>
         </div>
+         <span class="noProductMessage" *ngIf="!productData?.length">Pas de produits</span>
 
         <div class="tendance-products">
             <div class="tendance-list" *ngFor="let tendance of productData" >
@@ -15,4 +30,14 @@
             </div>
         </div>
     </div>
+
+    <div class="djet">
+    <app-djet-banner></app-djet-banner>
+</div>
+
+<app-search-based-products></app-search-based-products>
+
+<div class="footer-banner">
+    <app-footer-banner></app-footer-banner>
+</div>
 </div>

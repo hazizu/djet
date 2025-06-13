@@ -250,3 +250,80 @@ font-size: 0.8rem;
     width: 90%;
     margin: auto;
 }
+// phone
+@media screen and (max-width: 768px) {
+  .livraison-adresse{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 1rem;
+    background-color: #E7EBFE66;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.livraison-adresse-content {
+    border-right:unset;
+}
+.main-panier-content{
+    flex-direction: column;
+  
+}
+.profile-info{
+    padding-left: 0rem;
+}
+.livraison-adresse-header {
+    margin-bottom: 0.5rem;
+}
+.livraison-adresse-content {
+    max-width: 100%;
+    width: 100%;
+    padding-right: 0rem;
+    margin-top: 2rem;
+}
+.form-adresse{
+    width: 100%;
+}
+.commandes-header{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.commandes-container{
+   width: 100%;
+   height: max-content;
+    
+    padding: 0.5rem;
+}
+.search-title{
+    padding-left: 0.5rem;
+}
+
+.commande-header-title-lib{
+    font-size: 1.1rem;
+   
+}
+.commande-length{
+    color: #626A8F;
+    font-size: 0.9rem;
+}
+.commande-total{
+    color: #072AC8;
+    font-size: 1.1rem;
+
+}
+.proposition-item{
+    width: 12rem;
+    min-width: 12rem;
+}
+span.proposition-bloc-title {
+    font-size: 0.9rem !important;
+}
+.proposition-bloc {
+    width: 97%;
+    margin-top: 3rem;
+}
+.footer-banner{
+    width: 100%;
+    margin-top: 3rem;
+}
+
+}

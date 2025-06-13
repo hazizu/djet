@@ -14,12 +14,11 @@
 .product-infos {
     display: flex;
     flex-direction: column;
-    min-width: 15rem;
+    min-width: 18rem;
 }
 .detail-product {
     display: flex;
     align-items: flex-start;
-    gap: 5rem;
 }
 .product-name{
     font-weight: bold;
@@ -27,4 +26,33 @@
 }
 .product-price{
     font-size: 0.8rem;
+}
+.info-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  
+}
+
+// phone 
+@media screen and (max-width: 768px) {
+
+.image-bloc {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.info-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.product-image {
+    width: 5rem;
+    height: 5rem;
+   
+}
+
 }

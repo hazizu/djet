@@ -17,4 +17,6 @@ export class SmallNewsButtonItemComponent {
     goToCategorie(){
       this.router.navigate(['/home/categories/categorie-produit', this.smallNewData?.id])
     }
+
+    
 }

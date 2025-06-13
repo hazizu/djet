@@ -37,7 +37,7 @@
                     <div class="barre2"></div>
                 </div>
                 <div class="signup">
-                    <app-button (clicked)="goToInscription()" *ngIf="router.url === '/auth/login'" label="Créer un compte" [styles]="{ marginTop:'1rem', background:'transparent', border:'1px solid #000', color:'#000', fontSize:'1.2rem'}"></app-button>
+                    <app-button (clicked)="goToInscription()" *ngIf="router.url.includes('auth/login')" label="Créer un compte" [styles]="{ marginTop:'1rem', background:'transparent', border:'1px solid #000', color:'#000', fontSize:'1.2rem'}"></app-button>
                     <app-button (clicked)="goToLogin()" *ngIf="router.url === '/auth/inscription'" label="Connectez-vous" [styles]="{ marginTop:'1rem', background:'transparent', border:'1px solid #000', color:'#000', fontSize:'1.2rem'}"></app-button>
                 </div>
 

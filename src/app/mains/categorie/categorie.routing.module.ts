@@ -11,18 +11,21 @@ import { CategorieProduitComponent } from "./categorie-produit/categorie-produit
 const routes:Routes = [
     {
         path: '',  component:CategorieComponent,
-        children: [
-            {
-                path:'tendance', component:TendancesComponent
-            },
-            {
-                path:'promo', component:PromoComponent
-            },
-            {
-                path:'meilleure-vente', component:MeilleurVenteComponent
-            }
+        // children: [
+        //     {
+        //         path:':categorieName/:id', component:TendancesComponent
+        //     },
+        //     {
+        //         path:':categorieName/:id', component:PromoComponent
+        //     },
+        //     {
+        //         path:':categorieName/:id', component:MeilleurVenteComponent
+        //     }
          
-        ]
+        // ]
+    },
+    {
+        path:'categorie-produit/:categorieName/:id', component:TendancesComponent
     },
     {
         path:'categorie-produit', component:CategorieProduitComponent
