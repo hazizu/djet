@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { IGarantie } from 'src/app/shared/components/garantie-item/garantie-item.component';
+import { StoreService } from '../../services/store.service';
 
 @Component({
   selector: 'app-user-space',
@@ -10,7 +11,8 @@ import { IGarantie } from 'src/app/shared/components/garantie-item/garantie-item
 export class UserSpaceComponent {
 
   constructor(
-    private router:Router
+    private router:Router,
+    private store:StoreService
   ){
 
   }
@@ -37,6 +39,7 @@ export class UserSpaceComponent {
     logout(){
       localStorage.removeItem('token')
       this.router.navigate(['/'])
+      this.store.isLogout = true;
       setTimeout(() => {
         window.location.reload()
       }, 1000/5);

@@ -7,7 +7,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
               </svg>          
         </div>
-        <div class="logo-phone">
+        <div class="logo-phone" (click)="goToHome()">
             <img src="./../../../../assets/SVG/Logo-Djet-blue.svg" />
         </div>
     </div>
@@ -30,9 +30,13 @@
                 <img src="./../../../../assets/SVG/box-commande.svg" />
                 <span class="toggle-item-text">Mes commandes</span>
             </div>
-            <div class="toggle-item" (click)="logout()">
+            <div class="toggle-item" (click)="logout()"  *ngIf="!isLogout">
                 <img src="./../../../../assets/SVG/deconnexion-icon.svg" />
                 <span class="toggle-item-text">Se déconnecter</span>
+            </div>
+            <div class="toggle-item" routerLink="/auth/login" *ngIf="isLogout">
+                    <!-- <img src="./../../../../assets/SVG/deconnexion-icon.svg" /> -->
+                    <span class="toggle-item-text connect">Se connecter</span>
             </div>
         </div>
     </div>
@@ -49,7 +53,7 @@
 
 
 <div class="main-container">
-    <div class="logo">
+    <div class="logo" (click)="goToHome()">
         <img src="./../../../../assets/SVG/Logo-Djet-blue.svg" />
     </div>  
     <div class="serach">
@@ -72,9 +76,13 @@
                     <img src="./../../../../assets/SVG/box-commande.svg" />
                     <span class="toggle-item-text">Mes commandes</span>
                 </div>
-                <div class="toggle-item" (click)="logout()" >
+                <div class="toggle-item" (click)="logout()" *ngIf="!isLogout">
                     <img src="./../../../../assets/SVG/deconnexion-icon.svg" />
                     <span class="toggle-item-text">Se déconnecter</span>
+                </div>
+                 <div class="toggle-item" routerLink="/auth/login" *ngIf="isLogout">
+                    <!-- <img src="./../../../../assets/SVG/deconnexion-icon.svg" /> -->
+                    <span class="toggle-item-text connect">Se connecter</span>
                 </div>
             </div>
         </div>

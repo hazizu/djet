@@ -17,6 +17,7 @@ export class MainHeaderComponent implements OnInit{
 user:IUser | null = null;
 
 panier:ICategorieProduct[] = [];
+isLogout?:boolean;
 
   constructor(
     private router:Router,
@@ -32,6 +33,12 @@ panier:ICategorieProduct[] = [];
     this.panierservice.paniers$.subscribe(res=>{
       this.panier = res;
       // console.log('le panier',res);
+    })
+
+    this.store.isLogout$.subscribe(res=>{
+      this.isLogout = res;
+      console.log('isLogout',res);
+      
     })
 
     
@@ -69,11 +76,21 @@ panier:ICategorieProduct[] = [];
   logout(){
     this.isShowToggle = false;
     localStorage.removeItem('token')
+    
     this.router.navigate(['/'])
     setTimeout(() => {
      window.location.reload()
     }, 1000/2);
     
+  }
+
+  goToHome(){
+     
+    this.router.navigate(['/home'])
+       setTimeout(() => {
+     window.location.reload()
+    }, 1000/3);
+  
   }
 
 }

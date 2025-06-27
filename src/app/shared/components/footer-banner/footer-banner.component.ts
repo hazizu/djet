@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer-banner',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer-banner.component.scss']
 })
 export class FooterBannerComponent {
+  constructor(private router:Router) {
+
+  }
+
+  goToHome(){
+this.router.navigate(['/home'])
+       setTimeout(() => {
+     window.location.reload()
+    }, 1000/3);
+  }
 
 }

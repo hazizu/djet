@@ -15,6 +15,7 @@
     display: flex;
     flex-direction: column;
     min-width: 18rem;
+    max-width: 18rem;
 }
 .detail-product {
     display: flex;
@@ -23,6 +24,9 @@
 .product-name{
     font-weight: bold;
     font-size: 0.9rem;
+ 
+    
+
 }
 .product-price{
     font-size: 0.8rem;
@@ -31,6 +35,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 2rem;
   
 }
 
@@ -48,11 +53,18 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+    width: 100%;
 }
 .product-image {
     width: 5rem;
     height: 5rem;
    
+}
+.product-name{
+    font-weight: bold;
+    font-size: 0.8rem;
+    display: flex;
+    width: 86%;
 }
 
 }

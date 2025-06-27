@@ -15,7 +15,7 @@
     <div class="article-info">
     <div class="caracteristic-bloc">
         <span class="article-name">{{productData?.name}}</span>
-        <span class="article-price">{{productData?.price}} FCFA</span>
+        <span class="article-price">{{productData?.price | number:'1.0-0'}} FCFA</span>
     </div>
         <app-button label="Ajouter au panier" (clicked)="addToPanier($event)"></app-button>
     </div>

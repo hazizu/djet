@@ -28,12 +28,10 @@
     padding-right: 2rem;
     position: relative;
     margin-bottom: 2rem;
+    gap: 2rem;
 }
 
-.list-articles-container {
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-}
+
 .search-title{
     display: flex;
     flex-direction: row;
@@ -79,10 +77,13 @@
     width: 100%;
     padding: 0rem;
     justify-content: space-between;
+    gap: 0rem;
 }
+
 .list-articles-container{
     width: 49%;
     margin-right: 0rem;
+    margin-bottom: 0.5rem;
 }
 .search-title{
     padding-left: 0rem;

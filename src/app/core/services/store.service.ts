@@ -22,6 +22,9 @@ export class StoreService {
   _loader: boolean = false
   private loaderSubject = new BehaviorSubject<boolean>(this._loader)
 
+  _isLogout: boolean = false
+  private isLogoutSubject = new BehaviorSubject<boolean>(this._isLogout)
+
   _showAddedAlert:boolean = false
   private showAddedAlertSubject = new BehaviorSubject<boolean>(this._showAddedAlert)
 
@@ -32,6 +35,10 @@ export class StoreService {
   }
   get loader$(): BehaviorSubject<boolean>{
     return this.loaderSubject
+  }
+
+  get isLogout$(): BehaviorSubject<boolean>{
+    return this.isLogoutSubject
   }
   get showAddedAlert$(): BehaviorSubject<boolean>{
     return this.showAddedAlertSubject
@@ -49,6 +56,11 @@ export class StoreService {
     this._loader = value
     this.loaderSubject.next(value)
     console.log('loader update', value)
+  }
+
+  set isLogout(value: boolean){
+    this._isLogout = value
+    this.isLogoutSubject.next(value)
   }
   set showAddedAlert(value: boolean){
     this._showAddedAlert = value
