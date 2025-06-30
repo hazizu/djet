@@ -3,6 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 import { IUser } from 'src/app/mains/auth/login/queries/login-gql.service';
 import { ICategorie } from 'src/app/mains/categorie/queries/get-categorie-gql.service';
 import { IGetPromoNav } from '../core/main-news/queries/get-promo-categorie-gql.service';
+import { ICategorieProduct } from 'src/app/mains/categorie/queries/get-categorie-products.service';
 
 @Injectable({
   providedIn: 'root'
@@ -16,11 +17,17 @@ export class StoreService {
 
   private _promoNavData:IGetPromoNav[] | null = []  
   private promoNavDataSubject = new BehaviorSubject<IGetPromoNav[] | null>(this._promoNavData)
+
+  private _searchData:ICategorieProduct[] | null = []
+  private searchDataSubject = new BehaviorSubject<ICategorieProduct[] | null>(this._searchData)
   
  
 
   _loader: boolean = false
   private loaderSubject = new BehaviorSubject<boolean>(this._loader)
+
+  _searchedWords:string = ''
+  private searchedWordsSubject = new BehaviorSubject<string>(this._searchedWords)
 
   _isLogout: boolean = false
   private isLogoutSubject = new BehaviorSubject<boolean>(this._isLogout)
@@ -32,6 +39,9 @@ export class StoreService {
 
   get userData$():BehaviorSubject<IUser | null>{ 
     return this.userDataSubject
+  }
+  get searchedWords$():BehaviorSubject<string>{
+    return this.searchedWordsSubject
   }
   get loader$(): BehaviorSubject<boolean>{
     return this.loaderSubject
@@ -51,11 +61,19 @@ export class StoreService {
   get promoNavData$():BehaviorSubject<IGetPromoNav[] | null>{
     return this.promoNavDataSubject
   }
+
+  get searchData$():BehaviorSubject<ICategorieProduct[] | null>{
+    return this.searchDataSubject
+  }
   
   set loader(value: boolean){
     this._loader = value
     this.loaderSubject.next(value)
     console.log('loader update', value)
+  }
+  set searchedWords(value: string){
+    this._searchedWords = value
+    this.searchedWordsSubject.next(value)
   }
 
   set isLogout(value: boolean){
@@ -79,5 +97,10 @@ export class StoreService {
   set promoNavData(data:IGetPromoNav[]){
     this._promoNavData = data
     this.promoNavDataSubject?.next(data)
+  }
+
+  set searchData(data:ICategorieProduct[]){
+    this._searchData = data
+    this.searchDataSubject?.next(data)
   }
 }

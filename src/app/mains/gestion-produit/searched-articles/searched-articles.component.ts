@@ -24,8 +24,9 @@ export class SearchedArticlesComponent implements OnInit{
 user:IUser | null = null;
 totalCount:number = 500;
 categorieId?:string | null
-  articles:ICategorieProduct[] = []
+  articles:ICategorieProduct[] | null = []
   categorieName:string = ""
+  searchedWords : string = ''
     // {
     //   image: './../../../../assets/SVG/product1.svg',
     //   name: 'Iphone 14 Pro, 256 GB, blanc, écran 6,1 pouces',
@@ -121,12 +122,21 @@ categorieId?:string | null
     
   }
   ngOnInit(): void {
-    this.route.paramMap.subscribe((params)=>{
-      console.log(params.get('id'));
-      this.categorieId = params?.get('id') as string
-      this.getProducts(+this.categorieId)
-    })
-  }
+    // this.route.paramMap.subscribe((params)=>{
+    //   console.log(params.get('id'));
+    //   this.categorieId = params?.get('id') as string
+    //   this.getProducts(+this.categorieId)
+    // })
+    this.store.searchData$.subscribe((data)=>{
+      console.log('les produits recherchés', data);
+      this.articles = data
+  })
+
+  this.store.searchedWords$.subscribe((data)=>{
+    console.log('les mots recherchés', data);
+    this.searchedWords = data
+  })
+}
 
   getSearchValue(value:string){
     console.log(value);

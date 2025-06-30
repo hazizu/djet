@@ -6,9 +6,7 @@
     margin-top: 2rem;
     flex-wrap: nowrap;
     overflow-x: scroll;
-    gap: 1rem;
-
-   
+    gap: 2rem;
 }
 .title{
     font-size: 1.5rem;
@@ -53,9 +51,13 @@
 @media screen and (max-width: 768px)  {
   .main{
     overflow-x: scroll;
+    gap: 1rem;
+    width: 100%;
   }
    .list{
-    width: 49%;
+    min-width: 12rem;
+    max-width: 12rem;
+    width: 12rem;
   }
   .product-main{
     margin-top: 3rem;

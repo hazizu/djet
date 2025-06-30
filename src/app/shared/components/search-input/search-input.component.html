@@ -4,14 +4,17 @@
 <img src="./../../../../assets/SVG/search.svg"/>
 </div>
     <div class="input-block">
-        <input [(ngModel)]="seachValue" (keyup)="getValue()" type="text" class="input" placeholder="Rechercher un produit, une marque, etc...">
+        <input [(ngModel)]="seachValue"  type="text" class="input" placeholder="Rechercher un produit, une marque, etc...">
     </div>
    
 </div>
 <div class="input-content-button">
     <app-button label="Rechercher" (clicked)="getValueWithButton()" [styles]="{height:'2.5rem', padding:'0 1.5rem', display:'flex', flexDirection:'column', justifyContent:'center', border:'1px solid transparent', marginLeft:'1rem'}"></app-button>
-    </div>
-
+</div>
+<button class="search-button-phone" (click)="getValueWithButton()">
+    <img src="./../../../../assets/SVG/search.svg"/>
+</button>
+<!-- 
     <div class="pre-search-content" *ngIf="seachValue && closeSearchedList ">
         <div class="pre-search-content-title" *ngFor="let search of preSearchList">
             <div class="presearchItem" (click)="getSearchedValue(search)">
@@ -20,5 +23,5 @@
             </div>
         </div>
             
-    </div>
+    </div> -->
 </div>

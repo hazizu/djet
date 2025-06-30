@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { RegisterSuccessComponent } from './mains/auth/register-success/register-success.component';
+import { LocalisationMapComponent } from './shared/components/localisation-map/localisation-map.component';
+import { LocalisationComponent } from './shared/components/localisation/localisation.component';
 
 const routes: Routes = [
   {
@@ -14,6 +16,9 @@ const routes: Routes = [
   {
     path:'inscription-reussie', component:RegisterSuccessComponent,
 },
+  {
+    path: 'localisation', component: LocalisationComponent
+  },
    {
     path: '**',
     redirectTo: 'home'

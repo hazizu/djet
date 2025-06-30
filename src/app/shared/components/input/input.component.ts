@@ -20,6 +20,7 @@ export class InputComponent {
   @Input() styles = {}
   @Input() isPasswordInput:boolean = false;
   @Input() redBorder?:boolean = false;
+  @Input() isStyle?:boolean = false;
 
   show:boolean = false;
 

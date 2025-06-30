@@ -74,7 +74,8 @@
 .aide-content-title{
     font-weight: 700;
     font-size: 1.1rem;
-    cursor: pointer;
+    cursor:  unset !important;
+   
 }
 .aide-content .ai{ 
     display: flex;
@@ -82,7 +83,7 @@
 }
 .aide-content span{
     margin-top: 0.5rem;
-    cursor: pointer;
+   
 }
 .categorie-content .ai{
     display: flex;
@@ -111,6 +112,15 @@
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
+}
+.logo{
+    cursor: pointer;
+}
+
+
+span.succss_lib_style {
+    font-size: 0.8rem;
+    color: lightgreen;
 }
 
 

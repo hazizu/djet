@@ -9,14 +9,7 @@
     font-size: 4rem;
 }
 
-.fixed-title{
-    color: #072AC8;
-    cursor: pointer;
-}
-.search-value{
-    font-style: italic;
-    font-weight: bold;
-}
+
 
 .list-articles {
     display: flex;
@@ -40,6 +33,14 @@
     padding-left: 5rem;
     margin-top: 3rem;
 }
+.fixed-title{
+    color: #072AC8;
+    cursor: pointer;
+}
+.search-value{
+    font-style: italic;
+    font-weight: bold;
+}
 .pagination-bloc{
     position: absolute;
     bottom: -2rem;
@@ -47,6 +48,11 @@
 }
 .footer-banner{
     width: 100%;
+}
+.no-data-lib{
+    color: #626A8F;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 @media screen and (max-width: 767px) {

@@ -28,6 +28,8 @@ import { AddedAlertComponent } from './components/added-alert/added-alert.compon
 import { FilterCommandeComponent } from './components/filter-commande/filter-commande.component';
 import { OrderProductItemComponent } from './components/order-product-item/order-product-item.component';
 import { OrderDetailProductItemComponent } from './components/order-detail-product-item/order-detail-product-item.component';
+import { LocalisationMapComponent } from './components/localisation-map/localisation-map.component';
+import { LocalisationComponent } from './components/localisation/localisation.component';
 
 
 
@@ -57,7 +59,9 @@ import { OrderDetailProductItemComponent } from './components/order-detail-produ
     AddedAlertComponent,
     FilterCommandeComponent,
     OrderProductItemComponent,
-    OrderDetailProductItemComponent
+    OrderDetailProductItemComponent,
+    LocalisationMapComponent,
+    LocalisationComponent
   ],
   imports: [
     CommonModule,

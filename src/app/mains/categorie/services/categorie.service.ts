@@ -3,6 +3,8 @@ import { GetCategorieGqlService, IGetCategorieResponse } from '../queries/get-ca
 import { GetCategorieProductsService, IGetCategorieProductsResponse } from '../queries/get-categorie-products.service';
 import { GetSubCategirieGqlService, IGetSubcategorieResponse } from '../queries/get-sub-categirie-gql.service';
 import { GetPromoProductService, IGetPromoProductResponse } from '../queries/get-promo-product.service';
+import { IGetLikedProductResponse, LikedProductGqlService } from '../queries/liked-product-gql.service';
+import { IGetWeekProductResponse, WeekProductGqlService } from '../queries/week-product-gql.service';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +15,9 @@ export class CategorieService {
     private getCategorieGqlService:GetCategorieGqlService,
     private getCategorieProductsService:GetCategorieProductsService,
     private getSubcategorieGqlService:GetSubCategirieGqlService,
-    private getPromoProductService:GetPromoProductService
+    private getPromoProductService:GetPromoProductService,
+    private getLikedProductGqlService:LikedProductGqlService,
+    private weekProductGqlService:WeekProductGqlService
   ) { }
 
   getCategorie(query:{} | undefined = undefined):Promise<IGetCategorieResponse>{
@@ -72,5 +76,34 @@ searchPromoProduct(query:{} | undefined = undefined):Promise<IGetPromoProductRes
     }
    })
   })
+}
+
+searchWeekProduct(query:{} | undefined = undefined):Promise<IGetWeekProductResponse>{
+  return new Promise((resolve, reject)=>{
+   this.weekProductGqlService.fetch(query, {fetchPolicy:'no-cache'}).subscribe({
+    next:(e)=>{
+      if(e.data){
+        resolve(e.data)
+      }
+    },error:(e)=>{
+      reject(e.graphQLErrors)
+    }
+   })
+  })  
+}
+
+searchLikedProduct(query:{} | undefined = undefined):Promise<IGetLikedProductResponse>{
+  return new Promise((resolve, reject)=>{
+   this.getLikedProductGqlService.fetch(query, {fetchPolicy:'no-cache'}).subscribe({
+    next:(e)=>{
+      if(e.data){
+        resolve(e.data)
+      }
+    },error:(e)=>{
+      reject(e.graphQLErrors)
+    }
+   })
+  })
+
 }
 }

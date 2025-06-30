@@ -39,7 +39,6 @@ export class UserSpaceComponent {
     logout(){
       localStorage.removeItem('token')
       this.router.navigate(['/'])
-      this.store.isLogout = true;
       setTimeout(() => {
         window.location.reload()
       }, 1000/5);

@@ -52,12 +52,25 @@
     cursor: pointer;
     transition: all ease 0.2s;
 }
+.search-button-phone{
+    display: none;
+}
 
 // phone
 @media screen and (max-width: 768px)  {
    .input-content-button{
     display: none;
    }
+
+   .search-button-phone{
+    display: inline-block;
+    background-color: #FFC600;
+    height: 2.5rem;
+    border-radius: 0.4rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;  
+    margin-left: 0.5rem;
+}
    .container-main{
     width: 100%;
     

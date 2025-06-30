@@ -1,4 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
+import { StoreService } from 'src/app/core/services/store.service';
+import { SearchProductService } from 'src/app/mains/gestion-produit/searched-articles/service/search-product.service';
 
 @Component({
   selector: 'app-search-input',
@@ -19,6 +22,14 @@ export class SearchInputComponent {
     "Apple iPhone 11 Pro Max",
   ]
 
+  constructor(
+    private serchProductservice:SearchProductService, 
+    private store:StoreService,
+    private router:Router
+  ){
+
+  }
+
   getValue(){
     this.onChangeValue.emit(this.seachValue)
     console.log(this.seachValue);
@@ -27,6 +38,7 @@ export class SearchInputComponent {
   getValueWithButton(){
     this.onChangeValue.emit(this.seachValue)
     console.log(this.seachValue);
+    this.searchProduct(this.seachValue)
   }
 
   getSearchedValue(searchedValue:string){
@@ -35,4 +47,18 @@ export class SearchInputComponent {
     this.closeSearchedList = false
   }
 
+  searchProduct(searchedValue:string){
+    if(searchedValue){
+    this.store.loader = true
+    this.serchProductservice.searchProductBywords({searchTerm:searchedValue}).then(
+      (res)=>{
+        this.store.loader = false 
+        console.log('les produits recherchés', res)
+        this.store.searchData = res.SearchProducts
+        this.store.searchedWords = searchedValue
+        this.router.navigate(['/home/articles']);
+      },(err)=>{this.store.loader = false}
+    )  
+  }
+  }
 }

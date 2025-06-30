@@ -2,10 +2,10 @@
     display: flex;
     align-items: center;
     width: 75rem;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-top: 2rem;
     flex-wrap: wrap;
-   
+    gap: 2rem;
 }
 .title{
     font-size: 1.5rem;
@@ -19,13 +19,17 @@
 @media screen and (max-width: 768px)  {
     .main{
         width: 100%;
+        gap: 0rem;
+        justify-content: space-between;
+       
        
     }
     .product-main{
    width: 100%;
    }
    .list{
-    width: 49%;
+    width: 48%;
+    margin-bottom: 1rem;
    }
 }
 

@@ -9,7 +9,7 @@
     <ng-content></ng-content>
     </div> 
     <div class="input-bloc">
-       <input [formControlName]="controlName" [type]="inputType" class="input" [placeholder]="libelle? libelle: placeholderText">
+       <input [formControlName]="controlName" [ngClass]="{inputstyle:isStyle}" [type]="inputType" class="input" [placeholder]="libelle? libelle: placeholderText">
     </div>
 </div>
 </div>

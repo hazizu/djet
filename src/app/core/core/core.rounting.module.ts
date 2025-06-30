@@ -6,6 +6,7 @@ import { UserSpaceComponent } from "./user-space/user-space.component";
 import { AuthGuardService } from "../services/auth-guard.service";
 import { MyOrdersComponent } from "./my-orders/my-orders.component";
 import { MyCommandeDetailComponent } from "./my-commande-detail/my-commande-detail.component";
+import { LocalisationMapComponent } from "src/app/shared/components/localisation-map/localisation-map.component";
 const routes: Routes = [
     {
         path: '', component: MainComponent,
@@ -19,7 +20,7 @@ const routes: Routes = [
             },
             {
                 path: 'commandes', component: MyOrdersComponent,
-                canActivate:[(route:ActivatedRouteSnapshot, state:RouterStateSnapshot)=>(inject(AuthGuardService).canActivateReturnUrl(route, state))]
+                canActivate: [(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => (inject(AuthGuardService).canActivateReturnUrl(route, state))]
             },
             {
                 path: 'commandes/:id', component: MyCommandeDetailComponent,
@@ -30,6 +31,11 @@ const routes: Routes = [
             },
             {
                 path: 'categories', loadChildren: () => import('./../../mains/categorie/categorie.module').then(m => m.CategorieModule),
+            },
+          
+            {
+                path: '**',
+                redirectTo: 'home'
             }
             // Lazy loading des différents modules
         ]
