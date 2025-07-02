@@ -24,7 +24,6 @@ export class RegisterComponent {
       'nom':["", Validators.required],
       'telephone':["", [Validators.required, Validators.maxLength(10), Validators.minLength(10)]],
       'email':["", [Validators.required, Validators.email]],
-      'adresse':[""],
       'password':["", [Validators.required, Validators.minLength(5)]],
       'confirmPassword':["", [Validators.required, Validators.minLength(5)]]
     })
@@ -40,7 +39,6 @@ register(){
       phone:this.registerForm.value.telephone,
       username:this.registerForm.value.nom,
       email:this.registerForm.value.email,
-      address:this.registerForm.value.adresse,
       password1:this.registerForm.value.password,
       password2:this.registerForm.value.confirmPassword
     }
