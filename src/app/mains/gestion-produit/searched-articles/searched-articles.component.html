@@ -4,6 +4,8 @@
     <span class="fixed-title" (click)="goTohome()">Accueil</span>
     <img src="./../../../../assets/SVG/chevron_droit.svg" />
     <span class="search-value">{{searchedWords}}</span>
+    <span class="search-value">{{ categorieName}}</span>
+   
 </div>
  <ng-container *ngIf="!articles?.length ; else noArticle" >
   <span class="no-data-lib" *ngIf="!articles?.length && searchedWords">Aucun résultat pour "{{searchedWords}}"</span>
