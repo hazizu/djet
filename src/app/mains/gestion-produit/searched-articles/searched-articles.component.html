@@ -1,7 +1,7 @@
 <div class="main">
     
 <div class="search-title">
-    <span class="fixed-title" routerLink="/home">Accueil</span>
+    <span class="fixed-title" (click)="goTohome()">Accueil</span>
     <img src="./../../../../assets/SVG/chevron_droit.svg" />
     <span class="search-value">{{searchedWords}}</span>
 </div>
@@ -14,9 +14,9 @@
     <div class="list-articles-container" *ngFor="let article of articles">
         <app-simple-article-card-item [productData]="article"></app-simple-article-card-item>
     </div>
-    <div class="pagination-bloc" *ngIf="articles?.length">
+    <!-- <div class="pagination-bloc" *ngIf="articles?.length">
         <app-pagination   [totalCount]="totalCount" (changePage)="onChangePage($event)"></app-pagination>
-    </div>
+    </div> -->
 </div>
 </ng-template>
 

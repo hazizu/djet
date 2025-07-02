@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { StoreService } from 'src/app/core/services/store.service';
 import { IUser } from '../../auth/login/queries/login-gql.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CategorieService } from '../../categorie/services/categorie.service';
 import { ICategorieProduct } from '../../categorie/queries/get-categorie-products.service';
 
@@ -116,20 +116,23 @@ categorieId?:string | null
   constructor(
     private route:ActivatedRoute,
     private categorieService:CategorieService,
-    private store:StoreService
+    private store:StoreService,
+    private router:Router
     
   ){
     
   }
   ngOnInit(): void {
-    // this.route.paramMap.subscribe((params)=>{
-    //   console.log(params.get('id'));
-    //   this.categorieId = params?.get('id') as string
-    //   this.getProducts(+this.categorieId)
-    // })
+    this.route.paramMap.subscribe((params)=>{
+      console.log(params.get('id'));
+      this.categorieId = params?.get('id') as string
+      this.getProducts(+this.categorieId)
+    })
     this.store.searchData$.subscribe((data)=>{
       console.log('les produits recherchés', data);
-      this.articles = data
+      if(data?.length){
+        this.articles = data
+      }
   })
 
   this.store.searchedWords$.subscribe((data)=>{
@@ -160,5 +163,11 @@ categorieId?:string | null
       }
     )
 
+}
+
+goTohome(){
+  this.router.navigate(['/home'])
+  this.store.searchedWords = ''
+  this.store.searchData = []
 }
 }

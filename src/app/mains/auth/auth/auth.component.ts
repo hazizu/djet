@@ -17,5 +17,8 @@ export class AuthComponent {
   goToInscription(){
     this.router.navigate(['/auth/inscription'])
   }
+  goToHome(){
+    this.router.navigate(['/home'])
+  }
 
 }
