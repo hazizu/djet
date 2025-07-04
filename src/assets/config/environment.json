@@ -1,6 +1,5 @@
 {
     "apiUrl": "http://158.69.52.19:8012/",
-    "fileUrl": "http://158.69.52.19:8012",
     "production": false,
     "dataOffset": 50,
     "mode":"dev"
