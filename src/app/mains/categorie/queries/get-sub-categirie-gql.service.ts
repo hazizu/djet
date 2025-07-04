@@ -11,7 +11,7 @@ export interface IGetSubcategorieResponse{
     id:string,
     name:string,
     subcategories:ISubcategorie[]
-  }
+  }[]
 }
 
 @Injectable({

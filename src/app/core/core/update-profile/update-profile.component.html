@@ -12,9 +12,9 @@
                 <span class="logout-bloc">Abonné(e) <span class="logout-button">Se désabonner</span></span>
             </div>
         </div>
-        <div class="update-button-bloc" *ngIf="!showUpdateForm">
+        <!-- <div class="update-button-bloc" *ngIf="!showUpdateForm">
             <app-button (clicked)="showForm()" [styles]="{padding:'0.5rem 3rem 0.5rem 3rem'}" label="Modifier mes infos persos"></app-button>
-        </div>
+        </div> -->
         <form [formGroup]="updateProfileForm" class="form-bloc" *ngIf="showUpdateForm">
             <div class="close-form-bloc" (click)="showForm()">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">

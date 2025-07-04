@@ -170,14 +170,15 @@ export class CategorieProduitComponent implements OnInit{
     this.store.loader = true
     this.categorieService.getSubcategorie({id:categorie_id}).then(
       (subCategories)=>{
+        
         this.store.loader = false
-        this.subCategories = subCategories.GetCategory.subcategories
-        this.categorieName = subCategories.GetCategory.name
-        this.subCategoreiName = subCategories.GetCategory.subcategories[0].name
+        this.subCategories = subCategories.GetCategory[0].subcategories
+        this.categorieName = subCategories.GetCategory[0].name
+        this.subCategoreiName = subCategories.GetCategory[0].subcategories[0].name
 
         // get les produits de la premiere sous catégorie
-        this.getProduct(+subCategories.GetCategory.subcategories[0].id)
-        console.log('les sous categoris', subCategories);
+        this.getProduct(+subCategories.GetCategory[0].subcategories[0].id)
+       
       },(err)=>{
         this.store.loader = false
         console.log('erreur', err)

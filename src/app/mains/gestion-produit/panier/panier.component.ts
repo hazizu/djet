@@ -4,6 +4,8 @@ import { ICategorieProduct } from '../../categorie/queries/get-categorie-product
 import { IGarantie } from 'src/app/shared/components/garantie-item/garantie-item.component';
 import { Router } from '@angular/router';
 import { CategorieProduitNavItem } from 'src/app/shared/components/categorie-produit-nav-item/categorie-produit-nav-item.component';
+import { CategorieService } from '../../categorie/services/categorie.service';
+import { StoreService } from 'src/app/core/services/store.service';
 
 @Component({
   selector: 'app-panier',
@@ -61,90 +63,14 @@ export class PanierComponent implements OnInit{
         }
       ]
 
-    productData:ICategorieProduct[] = [
-    {
-      images:[{image:'./../../../../assets/SVG/product1.svg'}],
-      updatePrice:120000,
-      oldPrice:120000,
-      name: 'Iphone 14 Pro, 128 Go, ecran led, 6,1 pouces, gris',
-      price: 120000,
-      description:"",
-      id:"1",
-      note:1,
-      quantity:1
-    },
-    {
-      images:[{image:'./../../../../assets/SVG/product2.svg'}],
-      updatePrice:120000,
-      oldPrice:120000,
-      name: 'Iphone 14 Pro, 128 Go, ecran led, 6,1 pouces, gris',
-      price: 120000,
-      description:"",
-      id:"1",
-      note:1,
-      quantity:1
-    },
-    {
-      images:[{image:'./../../../../assets/SVG/product3.svg'}],
-      updatePrice:120000,
-      oldPrice:120000,
-      name: 'Iphone 14 Pro, 128 Go, ecran led, 6,1 pouces, gris',
-      price: 120000,
-      description:"",
-      id:"1",
-      note:1,
-      quantity:1
-    },
-    {
-      images:[{image:'./../../../../assets/SVG/product1.svg'}],
-      updatePrice:120000,
-      oldPrice:120000,
-      name: 'Iphone 14 Pro, 128 Go, ecran led, 6,1 pouces, gris',
-      price: 120000,
-      description:"",
-      id:"1",
-      note:1,
-      quantity:1
-    },
-    {
-      images:[{image:'./../../../../assets/SVG/product2.svg'}],
-      updatePrice:120000,
-      oldPrice:120000,
-      name: 'Iphone 14 Pro, 128 Go, ecran led, 6,1 pouces, gris',
-      price: 120000,
-      description:"",
-      id:"1",
-      note:1,
-      quantity:1
-    },
-    {
-      images:[{image:'./../../../../assets/SVG/product3.svg'}],
-      updatePrice:120000,
-      oldPrice:120000,
-      name: 'Iphone 14 Pro, 128 Go, ecran led, 6,1 pouces, gris',
-      price: 120000,
-      description:"",
-      id:"1",
-      note:1,
-      quantity:1
-    },
-    {
-      images:[{image:'./../../../../assets/SVG/product1.svg'}],
-      updatePrice:120000,
-      oldPrice:120000,
-      name: 'Iphone 14 Pro, 128 Go, ecran led, 6,1 pouces, gris',
-      price: 120000,
-      description:"",
-      id:"1",
-      note:1,
-      quantity:1
-    },
-    ]
+    productData:ICategorieProduct[] = []
 
 
   constructor(
     private panierService:PanierService,
-    public router:Router
+    public router:Router,
+    private categorieSevice:CategorieService,
+    private store:StoreService
   ){
 
   }
@@ -159,6 +85,7 @@ export class PanierComponent implements OnInit{
       console.log('total',this.totalPrices, typeof(this.totalPrices))
       
     })
+    this.getLikedProducts()
     
   }
 
@@ -169,5 +96,14 @@ export class PanierComponent implements OnInit{
   goToValide(){
     this.router.navigate(['/home/articles/user/valide-commande'])
   }
+
+    getLikedProducts(){
+    this.categorieSevice.searchLikedProduct().then((res)=>{
+      console.log('liked product', res);
+      this.productData = res.GetRecommendedProducts
+    },(err)=>{
+      this.store.loader = false
+    })
+}
 
 }

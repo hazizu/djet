@@ -26,6 +26,8 @@
             </div>
         </div>
 
+        <div class="no-data-lib" *ngIf="!productData?.length">Aucun résultat pour trouvé</div>
+
         <!-- <div class="pagination-bloc">
             <app-pagination [totalCount]="totalCount" (changePage)="onChangePage($event)"></app-pagination>
     </div> -->
