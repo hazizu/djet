@@ -61,10 +61,10 @@ export function createApollo(httpLink: HttpLink, _http: HttpClient): ApolloClien
 
   const authLink = new ApolloLink((operation, forward) => {
     // Retrieve the token from local storage or any other storage mechanism
-    const token = localStorage.getItem('auth-token') || '';
+    const token = localStorage.getItem('token') || '';
 
     operation.setContext({
-      headers: new HttpHeaders().set('Authorization', `JWT ${token}`)
+      headers: new HttpHeaders().set('Authorization', `Bearer ${token}`)
     });
 
     return forward(operation);

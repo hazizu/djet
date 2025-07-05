@@ -3,18 +3,23 @@
 
         <div class="info-profile-container">
             <div class="infos-content-bloc">
-                <app-key-value-item key="Nom et prénoms" value="Jean Dupont"></app-key-value-item>
-                <app-key-value-item key="Téléphone" value="+225 06 00 00 00 00"></app-key-value-item>
-                <app-key-value-item key="Email" value="hazizu@gmail.com"></app-key-value-item>
+                <app-key-value-item key="Utilisateur" value="{{user?.username}}"></app-key-value-item>
+                <app-key-value-item *ngIf="user?.firstName && user?.lastName" key="Nom et prénoms" value="{{user?.firstName}} {{user?.lastName}}"></app-key-value-item>
+                 <app-key-value-item key="Email" value="{{user?.email}}"></app-key-value-item>
+                <app-key-value-item key="Téléphone" value="{{user?.phone}}"></app-key-value-item>
+                 <app-key-value-item *ngIf="user?.address" key="Adresse" value="{{user?.address}}"></app-key-value-item>
+               
             </div>
-            <div class="profile-action-bloc">
+            <!-- <div class="profile-action-bloc">
                 <span class="profile-action-title">Préférence de communication</span>
                 <span class="logout-bloc">Abonné(e) <span class="logout-button">Se désabonner</span></span>
-            </div>
+            </div> -->
         </div>
-        <!-- <div class="update-button-bloc" *ngIf="!showUpdateForm">
+            <span *ngIf="isSuccess" class="success-message">Votre profil a été modifié avec succès</span>
+
+        <div class="update-button-bloc" *ngIf="!showUpdateForm">
             <app-button (clicked)="showForm()" [styles]="{padding:'0.5rem 3rem 0.5rem 3rem'}" label="Modifier mes infos persos"></app-button>
-        </div> -->
+        </div>
         <form [formGroup]="updateProfileForm" class="form-bloc" *ngIf="showUpdateForm">
             <div class="close-form-bloc" (click)="showForm()">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -23,18 +28,23 @@
             </div>
         <div class="update-form-bloc">
                 <div class="form-input">
-                <app-input placeholderText="votre nom" inputType="text" controlName="nom" libelle="Votre nom"></app-input>
+                <app-input placeholderText="votre nom" inputType="text" controlName="lastName" libelle="Votre nom" [redBorder]="(updateProfileForm.get('lastName')?.invalid && invalidError)"></app-input>
                 </div>
                 <div class="form-input">
-                <app-input placeholderText="votre prénom(s)" inputType="text" controlName="prenom" libelle="Votre prénom(s)"></app-input>
+                <app-input placeholderText="votre prénom(s)" inputType="text" controlName="firstName" libelle="Votre prénom(s)" [redBorder]="(updateProfileForm.get('firstName')?.invalid && invalidError)"></app-input>
                 </div>
                 <div class="form-input">
-                <app-input placeholderText="votre numéro de téléphone" inputType="tel" controlName="phone" libelle="Votre numéro de téléphone"></app-input>
+                <app-input placeholderText="votre numéro de téléphone" inputType="tel" controlName="phone" libelle="Votre numéro de téléphone" [redBorder]="(updateProfileForm.get('phone')?.invalid && invalidError)"></app-input>
                 </div>
-              
+                <div class="form-input">
+                <app-input placeholderText="votre addresse" inputType="text" controlName="address" libelle="Votre adresse" [redBorder]="(updateProfileForm.get('address')?.invalid && invalidError)"></app-input>
+                </div>
+     
         </div>
-        <div class="form-button">
-            <app-button [styles]="{padding:'0.5rem 3rem 0.5rem 3rem'}" label="Valider"></app-button>
+   <div class="form-button">
+            <app-button (clicked)="updateProfile()" [styles]="{padding:'0.5rem 3rem 0.5rem 3rem'}" label="Valider"></app-button>
         </div>
+        
+      
     </form>
 </div>

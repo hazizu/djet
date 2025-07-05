@@ -14,8 +14,8 @@ private map:any;
 
 private initMap(): void {
     this.map = L.map('map', {
-      center: [ 5.389251, -3.983412],
-      zoom: 15
+      center: [ 5.399587, -3.953656],
+      zoom: 16
     });
 
   const DefaultIcon = L.icon({
@@ -35,7 +35,7 @@ private initMap(): void {
     });
 
    
-    L.marker([5.389251, -3.983412], {icon: DefaultIcon}).addTo(this.map)
+    L.marker([5.399587, -3.953656], {icon: DefaultIcon}).addTo(this.map)
     // .bindPopup('A pretty CSS popup.<br> Easily customizable.')
     // .openPopup();
 

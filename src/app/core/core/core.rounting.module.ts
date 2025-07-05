@@ -15,7 +15,8 @@ const routes: Routes = [
                 path: '', component: ShopHomeComponent
             },
             {
-                path: 'espace-personnel', component: UserSpaceComponent
+                path: 'espace-personnel', component: UserSpaceComponent,
+                canActivate: [(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) => (inject(AuthGuardService).canActivateReturnUrl(route, state))]
 
             },
             {

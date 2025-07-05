@@ -1,10 +1,40 @@
 <div class="update-identifiant-container">
     <span class="update-id-title">Identifiant</span>
     <div class="update-id-info">
-        <app-key-value-item key="Email" value="hazizu@gmail.com"></app-key-value-item>
+        <app-key-value-item key="Email" value="{{user?.email}}"></app-key-value-item>
         <app-key-value-item key="mot de passe" value="********"></app-key-value-item>
     </div>
-    <!-- <div class="update-button-bloc">
-        <app-button [styles]="{padding:'0.5rem 3rem 0.5rem 3rem'}" label="Modifier mes identifiants"></app-button>
-    </div> -->
+    <span *ngIf="isSuccess" class="success-message">Votre mot de passe a été modifié avec succès</span>
+    <div class="update-button-bloc" *ngIf="!isShowForm">
+        <app-button (clicked)="showForm()" [styles]="{padding:'0.5rem 3rem 0.5rem 3rem'}" label="Modifier le mot de passe"></app-button>
+    </div>
+
+
+            <form [formGroup]="updateIdForm" class="form-bloc" *ngIf="isShowForm">
+            <div class="close-form-bloc" (click)="showForm()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                    <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+                  </svg>
+            </div>
+        <div class="update-form-bloc">
+                <div class="form-input">
+                <app-input placeholderText="Mot de passe actuel" inputType="password" controlName="oldPass" libelle="Mot de passe actuel" [redBorder]="(updateIdForm.get('oldPass')?.invalid && invalidError)"></app-input>
+                </div>
+                <div class="form-input">
+                <app-input placeholderText="Nouveau mot de passe" inputType="password" controlName="newPass" libelle="Nouveau mot de passe" [redBorder]="(updateIdForm.get('newPass')?.invalid && invalidError)"></app-input>
+                </div>
+                <div class="form-input">
+                <app-input placeholderText="Confirmez votre nouveau mot de passe" inputType="password" controlName="conNewPass" libelle="Confirmez votre nouveau mot de passe" [redBorder]="(updateIdForm.get('conNewPass')?.invalid && invalidError)"></app-input>
+                </div>
+                
+       
+        </div>
+        <span *ngIf="errorMessage" class="errror-message">{{errorMessage}}</span>
+         <div class="form-button">
+            <app-button (clicked)="updateId()" [styles]="{padding:'0.5rem 3rem 0.5rem 3rem'}" label="Valider"></app-button>
+        </div>
+
+        
+      
+    </form>
 </div>

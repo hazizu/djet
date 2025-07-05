@@ -9,6 +9,7 @@ import { IUser } from '../../auth/login/queries/login-gql.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GestionOrderService } from '../detail-article/services/gestion-order.service';
 import { ILinkArticleToOrderResponse } from '../detail-article/queries/link-article-to-order-gql.service';
+import { CategorieService } from '../../categorie/services/categorie.service';
 
 @Component({
   selector: 'app-valide-commande',
@@ -73,92 +74,15 @@ export class ValideCommandeComponent implements OnInit {
     }
   ]
 
-  productData: ICategorieProduct[] = [
-    {
-      images: [{ image: './../../../../assets/SVG/product1.svg' }],
-      updatePrice: 120000,
-      oldPrice: 120000,
-      name: 'Iphone 14 Pro, 128 Go, ecran led, 6,1 pouces, gris',
-      price: 120000,
-      description: "",
-      id: "1",
-      note: 1,
-      quantity: 1
-    },
-    {
-      images: [{ image: './../../../../assets/SVG/product2.svg' }],
-      updatePrice: 120000,
-      oldPrice: 120000,
-      name: 'Iphone 14 Pro, 128 Go, ecran led, 6,1 pouces, gris',
-      price: 120000,
-      description: "",
-      id: "1",
-      note: 1,
-      quantity: 1
-    },
-    {
-      images: [{ image: './../../../../assets/SVG/product3.svg' }],
-      updatePrice: 120000,
-      oldPrice: 120000,
-      name: 'Iphone 14 Pro, 128 Go, ecran led, 6,1 pouces, gris',
-      price: 120000,
-      description: "",
-      id: "1",
-      note: 1,
-      quantity: 1
-    },
-    {
-      images: [{ image: './../../../../assets/SVG/product1.svg' }],
-      updatePrice: 120000,
-      oldPrice: 120000,
-      name: 'Iphone 14 Pro, 128 Go, ecran led, 6,1 pouces, gris',
-      price: 120000,
-      description: "",
-      id: "1",
-      note: 1,
-      quantity: 1
-    },
-    {
-      images: [{ image: './../../../../assets/SVG/product2.svg' }],
-      updatePrice: 120000,
-      oldPrice: 120000,
-      name: 'Iphone 14 Pro, 128 Go, ecran led, 6,1 pouces, gris',
-      price: 120000,
-      description: "",
-      id: "1",
-      note: 1,
-      quantity: 1
-    },
-    {
-      images: [{ image: './../../../../assets/SVG/product3.svg' }],
-      updatePrice: 120000,
-      oldPrice: 120000,
-      name: 'Iphone 14 Pro, 128 Go, ecran led, 6,1 pouces, gris',
-      price: 120000,
-      description: "",
-      id: "1",
-      note: 1,
-      quantity: 1
-    },
-    {
-      images: [{ image: './../../../../assets/SVG/product1.svg' }],
-      updatePrice: 120000,
-      oldPrice: 120000,
-      name: 'Iphone 14 Pro, 128 Go, ecran led, 6,1 pouces, gris',
-      price: 120000,
-      description: "",
-      id: "1",
-      note: 1,
-      quantity: 1
-    },
-  ]
+  productData: ICategorieProduct[] = []
 
   constructor(
     private panierService: PanierService,
     public router: Router,
     private store: StoreService,
     private fb: FormBuilder,
-    private gestionOrderService: GestionOrderService
+    private gestionOrderService: GestionOrderService,
+    private categorieSevice:CategorieService
   ) {
     this.userData = null
     this.addressLivraisonForm = this.fb.group({
@@ -186,12 +110,24 @@ export class ValideCommandeComponent implements OnInit {
       this.userData = userdata;
       console.log('userdata', userdata);
     })
+    this.getLikedProducts()
 
   }
 
   goToHome() {
     this.router.navigate(['/home']);
   }
+
+      getLikedProducts(){
+    this.categorieSevice.searchLikedProduct().then((res)=>{
+      console.log('liked product', res);
+      this.productData = res.GetRecommendedProducts
+    },(err)=>{
+      this.store.loader = false
+    })
+}
+
+
   valideCommande() {
     if (this.addressLivraisonForm.valid) {
      this.postOrder()

@@ -6,10 +6,10 @@
 }
 
 .map-main {
-    height: 70vh;
+    height: 50vh;
     position: relative;
     width: 80%;
-    border: 1px solid #000;
+    border: 2px solid #072AC8;
     margin-top: 2rem;
 }
 
@@ -28,4 +28,32 @@
     font-style: italic;
     font-weight: bold;
 }
+span.info-content-title {
+    font-size: 2rem;
+}
+.info-content {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+span.info-content-text {
+    width: 25rem;
+    margin: 1rem 0rem;
+}
+span.info-content-end {
+    font-size: 1.2rem;
+}
+
+// phone
+@media screen and (max-width: 768px) {
+    span.info-content-text {
+    width: 80%;
+    text-align: center;
+    
+}
+
+}
+
 

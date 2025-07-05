@@ -15,6 +15,49 @@
     justify-content: flex-end;
     margin-top: 1rem;
 }
+
+.update-form-bloc{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.form-bloc{
+    width: 100%;
+    background-color: #E7EBFE66;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+    position: relative;
+
+}
+.form-input{
+    width: 19rem;
+}
+.form-button{
+    margin-top: 1rem;
+}
+
+.close-form-bloc{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+.close-form-bloc svg{
+    cursor: pointer;
+    width: 1.5rem;
+}
+
+.errror-message{
+    color: red;
+    font-size: 0.8em;
+    margin-top: 1rem;
+}
+.success-message{
+    color: green;
+    font-size: 0.8em;
+    margin-top: 1rem;
+    
+}
 // phone
 @media screen and (max-width: 767px) {
     .update-id-info {

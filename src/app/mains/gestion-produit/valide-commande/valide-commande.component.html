@@ -64,6 +64,7 @@
                 <app-key-value-item [styles]="{alignItems:'flex-start', marginTop:'1rem'}"  key="Commune" [value]="this.addressLivraisonForm.value.commune"></app-key-value-item>
                 <app-key-value-item [styles]="{alignItems:'flex-start', marginTop:'1rem'}"   key="Quartier" [value]="this.addressLivraisonForm.value.quartier"></app-key-value-item>
                 <app-key-value-item [styles]="{alignItems:'flex-start', marginTop:'1rem'}"  key="Détail" [value]="this.addressLivraisonForm.value.addressDetail"></app-key-value-item>
+                
             </div>
                </ng-template>
                 </div>
@@ -71,6 +72,7 @@
 
                     <ng-container *ngIf="userData">
                         <app-key-value-item [styles]="{alignItems:'flex-start', marginTop:'1rem'}"  key="Nom utilisateur" [value]="userData?.username"></app-key-value-item>
+                        <app-key-value-item *ngIf="userData?.firstName && userData?.lastName  " [styles]="{alignItems:'flex-start', marginTop:'1rem'}"  key="Nom et prénom(s)" [value]="userData?.firstName + ' ' + userData?.lastName"></app-key-value-item>
                         <app-key-value-item [styles]="{alignItems:'flex-start', marginTop:'1rem'}"   key="Téléphone" [value]="userData?.phone"></app-key-value-item>
                         <app-key-value-item [styles]="{alignItems:'flex-start', marginTop:'1rem'}"  key="Email" [value]="userData?.email"></app-key-value-item>
                         <app-key-value-item [styles]="{alignItems:'flex-start', marginTop:'1rem'}"  key="Adresse" [value]="userData?.address"></app-key-value-item>
