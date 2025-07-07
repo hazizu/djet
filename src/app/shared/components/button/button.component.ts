@@ -9,6 +9,7 @@ export class ButtonComponent {
   @Input() label: string = '';
   @Input() styles = {}
   @Output() clicked: EventEmitter<MouseEvent> = new EventEmitter<MouseEvent>();
+  @Input() isDisabled:boolean = false
 
   constructor(){
 

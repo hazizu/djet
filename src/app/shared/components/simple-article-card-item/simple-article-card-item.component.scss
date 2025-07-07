@@ -24,7 +24,12 @@
     justify-content: space-between;
     border-radius: 0 0 1rem 1em;
     height: 10rem;
+    padding-top: 0 !important;
 }
+.available_text_style {
+    padding-top: 1rem !important;
+}
+
 .article-name{
     font-weight: bold;
     height: 3rem;
@@ -52,6 +57,13 @@
     width: 2rem;
     height: 2rem;
     color: #FFC600;
+}
+span.available-text {
+    font-size: 0.6rem;
+    display: flex;
+    justify-content: center;
+    color: red;
+    background: #80808047;
 }
 
 // phone 

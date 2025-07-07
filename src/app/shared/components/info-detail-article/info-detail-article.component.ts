@@ -31,7 +31,7 @@ addToPanier(){
   if(this.article){
     const copyArticle = {...this.article}
     
-    copyArticle.quantity = 1
+    copyArticle.cmdQuantity = 1;
     copyArticle.price = Number(copyArticle.price);
     copyArticle.updatePrice = Number(copyArticle.price);
     this.panierService.addToPanier(copyArticle)

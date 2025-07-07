@@ -25,7 +25,7 @@ export class SimpleArticleCardItemComponent {
     event.stopPropagation();
 
     if(this.productData){
-      this.productData.quantity = 1;
+      this.productData.cmdQuantity = 1;
       this.productData.price = Number(this.productData.price);
       this.productData.updatePrice = Number(this.productData.price);
       this.panierService.addToPanier(this.productData)

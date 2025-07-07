@@ -62,4 +62,14 @@ export class FooterComponent implements OnInit {
 
   }
 
+
+  goToFacebook(){
+    window.open('https://www.facebook.com/DjetTechnologie', '_blank');
+  }
+  goToInsta(){
+    window.open('https://www.instagram.com/djet_technologie/', '_blank');
+  }
+  goToTiktok(){
+    window.open('https://www.tiktok.com/@djet.technologie', '_blank');
+  }
 }

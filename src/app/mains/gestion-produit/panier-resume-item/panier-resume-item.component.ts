@@ -17,15 +17,21 @@ constructor(
 }
 
 onChangeValue(changeValue:number){
-  console.log('onChangeValue', changeValue);
+  
 if(this.productData){
   let panier = this.panierService.getPanier();
  const copiePanier = [...panier];
  copiePanier.forEach((item, index)=>{
   if(item.id == this.productData.id){
-    copiePanier[index].quantity = changeValue;
-    copiePanier[index].updatePrice = copiePanier[index].price * copiePanier[index].quantity;
+    if(  changeValue <= copiePanier[index].quantity){
+    copiePanier[index].cmdQuantity = changeValue;
+    copiePanier[index].updatePrice = copiePanier[index].price * copiePanier[index].cmdQuantity;
     copiePanier[index] = {...item, ...copiePanier[index]};
+    }else{
+      console.log('onChangeValue', changeValue);
+      alert('Vous ne pouvez pas ajouter plus de produits, rupture de stock')
+    }
+   
   }
   panier = copiePanier
   localStorage.setItem('panier', JSON.stringify(panier));

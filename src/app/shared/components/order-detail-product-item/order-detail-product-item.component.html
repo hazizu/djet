@@ -5,10 +5,10 @@
             <div class="product-infos">
                 <span class="product-name">{{product?.name}}</span>
 
-                <span class="product-price">{{product?.price}} FCFA</span>
+                <span class="product-price">{{product?.price | number:'1.0-0'}} FCFA</span>
                  <span class="product-price"><span>Quantité: </span>{{product?.quantity}}</span>
             </div>
-            <app-button [styles]="{paddingTop:'0.3rem', paddingBottom:'0.3rem', fontSize:'0.7rem'}"
-                label="Commander à nouveau"></app-button>
+            <!-- <app-button (clicked)="addToPanier()" [styles]="{paddingTop:'0.3rem', paddingBottom:'0.3rem', fontSize:'0.7rem'}"
+                label="Commander à nouveau"></app-button> -->
         </div>
     </div>

@@ -5,12 +5,16 @@
         <div class="commande-article-info">
             <span class="article-name">{{productData?.name}}</span>
             <span class="article-price">{{productData?.updatePrice | number:'1.0-0'}} FCFA</span>
+            <span class="article-quantity" *ngIf="productData && productData?.quantity">
+                {{productData?.quantity}} 
+                {{productData.quantity > 1 ? 'articles restants' : 'article restant'}}
+            </span>
             <span class="btn-remove" (click)="removeArticle()">Retirer</span>
         </div>
     </div>
     <div class="bloc2">
         <div class="action-container">
-            <app-add-plus-btn [addedNumber]="productData.quantity"
+            <app-add-plus-btn [product]="productData" [addedNumber]="productData.cmdQuantity"
                 (addedNumberChange)="onChangeValue($event)"></app-add-plus-btn>
         </div>
 

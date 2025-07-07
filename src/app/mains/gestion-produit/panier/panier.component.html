@@ -39,8 +39,7 @@
             <div class="resume-bloc" *ngIf="paniers.length > 0">
                 <span class="resume-bloc-title">Résumé du panier</span>
                 <app-key-value-item [styles]="{justifyContent:'space-between'}" key="Total" [value]="(totalPrices | number:'1.0-0') + ' FCFA'"></app-key-value-item>
-                <app-key-value-item [styles]="{justifyContent:'space-between'}"  key="Livraison" value="--"></app-key-value-item>
-                <app-key-value-item  [styles]="{justifyContent:'space-between'}"  key="Réduction" value="5%"></app-key-value-item>
+                <app-key-value-item [styles]="{justifyContent:'space-between'}"  key="Livraison" value="gratuite"></app-key-value-item>
                 <app-button (clicked)="goToValide()" [styles]="{marginTop:'2rem', padding:'0.4rem 1rem'}" [label]="'Commander ' + (totalPrices | number:'1.0-0') + ' FCFA'"></app-button>
             </div>
             <div class="garrantie-bloc">

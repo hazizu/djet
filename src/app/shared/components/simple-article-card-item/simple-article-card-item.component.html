@@ -1,4 +1,5 @@
 <div class="simple-article" (click)="goToDetail()">
+    
     <div class="haert-container" (click)="liked($event)">
         <div class="heart" *ngIf="isLiked">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -12,12 +13,13 @@
         </div>
     </div>
     <div *ngIf="firstImageUrl" class="article-image" [style.backgroundImage]="'url('+ firstImageUrl +')'"></div>
-    <div class="article-info">
+    <div class="article-info" [ngClass]="{available_text_style:productData?.quantity != 0}">
     <div class="caracteristic-bloc">
+        <span class="available-text" *ngIf="productData?.quantity == 0">EN RUPTURE DE STOCK</span>
         <span class="article-name">{{productData?.name}}</span>
         <span class="article-price">{{productData?.price | number:'1.0-0'}} FCFA</span>
     </div>
-        <app-button label="Ajouter au panier" (clicked)="addToPanier($event)"></app-button>
+        <app-button [isDisabled]="productData?.quantity == 0" label="Ajouter au panier" (clicked)="addToPanier($event)"></app-button>
     </div>
     
 </div>

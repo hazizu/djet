@@ -201,7 +201,7 @@ export class ValideCommandeComponent implements OnInit {
       name: panier.name,
       price: panier.price,
       productId: +panier.id,
-      quantity: panier.quantity,
+      quantity: panier.cmdQuantity,
       updatePrice: panier.updatePrice
     }
    promises.push(this.linkArticle(query))

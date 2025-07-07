@@ -19,6 +19,7 @@ export interface ICategorieProduct{
   name:string
   description:string
   quantity:number
+  cmdQuantity:number
 }
 
 export interface IGetCategorieProductsResponse{
@@ -45,6 +46,7 @@ export class GetCategorieProductsService extends Query<IGetCategorieProductsResp
         image
       }
       price
+      quantity
       name
       description
     }
