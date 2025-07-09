@@ -23,9 +23,14 @@
     </div>
     <div><span class="available-text" *ngIf="article?.quantity == 0">EN RUPTURE DE STOCK</span></div>
     <div *ngIf=" article && article?.quantity" class="livraison-text"><span>Livraison gratuite !</span></div>
-    <div class="article-price"><span>{{article?.price | number:'1.0-0'}} FCFA</span></div>
-    <div *ngIf="article?.oldPrice" class="article-old-price"><span>{{article?.oldPrice}} FCFA</span></div>
-    <div class="note-container">
+    <div  *ngIf="article && article?.price" class="article-price"><span>{{article?.price | number:'1.0-0'}} FCFA</span></div>
+    <div *ngIf="article?.discountPercentage || article?.highPrice" class="discount-percent-content">
+    <div *ngIf="article?.highPrice" class="article-old-price">
+        <span>{{article?.highPrice | number:'1.0-0'}} FCFA</span>
+    </div>
+    <div class="discount-percent">-{{article?.discountPercentage}}%</div>
+    </div>
+    <!-- <div class="note-container">
         <span>Note</span>
         <div class="etoiles">
             <img src="./../../../../assets/SVG/star.svg" alt="djet website star">
@@ -36,6 +41,6 @@
         </div>
         <span class="etoiles-note">{{article?.note}}</span>
         <span class="link-comment">Voir les avis (10 avis)</span>
-    </div>
+    </div> -->
     <app-button [isDisabled]="article?.quantity == 0" (clicked)="addToPanier()" label="Ajouter au panier"></app-button>
 </div>

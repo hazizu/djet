@@ -1,6 +1,6 @@
 .simple-article{
     width: 15rem;
-    height: 22rem;
+    height: 23rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -15,6 +15,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 1rem 1rem 0 0;
+    position: relative;
 }
 .article-info{
     background-color: #F6FBFF;
@@ -23,7 +24,7 @@
     flex-direction: column;
     justify-content: space-between;
     border-radius: 0 0 1rem 1em;
-    height: 10rem;
+    height: 11rem;
     padding-top: 0 !important;
 }
 .available_text_style {
@@ -51,6 +52,7 @@
     top: 1rem;
     width: 2rem;
     height: 2rem;
+    z-index: 99;
     
   }
   .heart, .outheart svg{
@@ -64,6 +66,26 @@ span.available-text {
     justify-content: center;
     color: red;
     background: #80808047;
+}
+.discount-percent {
+    position: absolute;
+    bottom: 0;
+    color: #072AC8;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background-color: #FFC600;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.article-price-old{
+    font-size: 0.8rem;
+    text-decoration: line-through;
+    color: #626A8F;
 }
 
 // phone 

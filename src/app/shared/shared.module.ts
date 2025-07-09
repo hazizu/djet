@@ -30,6 +30,7 @@ import { OrderProductItemComponent } from './components/order-product-item/order
 import { OrderDetailProductItemComponent } from './components/order-detail-product-item/order-detail-product-item.component';
 import { LocalisationMapComponent } from './components/localisation-map/localisation-map.component';
 import { LocalisationComponent } from './components/localisation/localisation.component';
+import { ContactPageComponent } from './components/contact-page/contact-page.component';
 
 
 
@@ -61,7 +62,8 @@ import { LocalisationComponent } from './components/localisation/localisation.co
     OrderProductItemComponent,
     OrderDetailProductItemComponent,
     LocalisationMapComponent,
-    LocalisationComponent
+    LocalisationComponent,
+    ContactPageComponent
   ],
   imports: [
     CommonModule,

@@ -20,6 +20,8 @@ export class GetProductGqlService extends Query<IGetProductResponse>{
     quantity
     id
     description
+    highPrice
+    discountPercentage
     images{
       image
     }

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegisterSuccessComponent } from './mains/auth/register-success/register-success.component';
 import { LocalisationMapComponent } from './shared/components/localisation-map/localisation-map.component';
 import { LocalisationComponent } from './shared/components/localisation/localisation.component';
+import { ContactPageComponent } from './shared/components/contact-page/contact-page.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,9 @@ const routes: Routes = [
 },
   {
     path: 'localisation', component: LocalisationComponent
+  },
+  {
+    path:'contact', component:ContactPageComponent
   },
    {
     path: '**',

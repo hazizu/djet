@@ -18,6 +18,8 @@ export class LikedProductGqlService extends Query<IGetLikedProductResponse>{
     quantity
     price
     description
+    highPrice
+    discountPercentage
     images {
       image
     }

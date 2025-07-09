@@ -20,6 +20,8 @@ export interface ICategorieProduct{
   description:string
   quantity:number
   cmdQuantity:number
+  highPrice:number
+  discountPercentage:string
 }
 
 export interface IGetCategorieProductsResponse{
@@ -45,10 +47,12 @@ export class GetCategorieProductsService extends Query<IGetCategorieProductsResp
       images{
         image
       }
-      price
-      quantity
-      name
-      description
+    highPrice
+    discountPercentage
+    price
+    quantity
+    name
+    description
     }
   }
 }

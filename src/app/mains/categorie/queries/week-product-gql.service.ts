@@ -19,6 +19,8 @@ export class WeekProductGqlService extends Query<IGetWeekProductResponse>{
       quantity
       price
       description
+      highPrice
+      discountPercentage
       images{
         image
       }

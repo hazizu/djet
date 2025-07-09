@@ -18,6 +18,8 @@ export class FilterProductGqlService extends Query<IfilterProductResponse>{
     quantity
     price
     description
+    highPrice
+    discountPercentage
     images{
       image
     }

@@ -18,6 +18,9 @@ export class GetPromoProductService extends Query<IGetPromoProductResponse>{
     name
     price
     quantity
+    highPrice
+    discountPercentage
+    description
     images{
       image
     }

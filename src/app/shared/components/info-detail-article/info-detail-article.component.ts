@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { StoreService } from 'src/app/core/services/store.service';
 import { ICategorie } from 'src/app/mains/categorie/queries/get-categorie-gql.service';
 import { ICategorieProduct } from 'src/app/mains/categorie/queries/get-categorie-products.service';
@@ -10,7 +10,7 @@ import { Article } from 'src/app/mains/gestion-produit/searched-articles/searche
   templateUrl: './info-detail-article.component.html',
   styleUrls: ['./info-detail-article.component.scss']
 })
-export class InfoDetailArticleComponent {
+export class InfoDetailArticleComponent implements OnInit {
  
 @Input() article?:ICategorieProduct
 isLiked:boolean = false;
@@ -20,6 +20,13 @@ constructor(
 ){
 
 } 
+
+ngOnInit(): void {
+
+  
+  
+  
+}
 
 liked(){
   this.isLiked =!this.isLiked;
