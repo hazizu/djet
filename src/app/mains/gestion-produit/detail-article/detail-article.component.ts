@@ -147,12 +147,22 @@ product_id:string=""
       this.articleData = res.GetProduct
       this.articleImages = res.GetProduct.images
       console.log('le produit', this.articleData);
+      this.getSimilarArticle(product_id)
     },(err)=>{
       this.store.loader = false
       console.log('erreur', err)
     }
     )
     
+  }
+
+  getSimilarArticle(product_id:number){
+    this.detailProductService.getSimilarArticle({productId:product_id}).then(
+      (res)=>{
+        console.log('similar product', res);
+        this.productData = res.GetSimilarProducts
+      })
+
   }
 
   
