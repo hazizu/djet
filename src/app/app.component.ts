@@ -17,7 +17,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
     this.http.get('./../../assets/config/environment.json').subscribe((res:any)=>{
-      if(res && res.mode === 'prod'){
+      if(res && res.mode === 'dev'){
          console.warn(`🚨 Console output is disabled on production!`);
           console.log = function (): void { };
           console.debug = function (): void { };

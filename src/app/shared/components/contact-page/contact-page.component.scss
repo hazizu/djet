@@ -43,10 +43,11 @@
   font-size: 1rem;
 }
 
-.contact-list span {
+.contact-list a{
   color: #1c87c9;
   text-decoration: none;
   outline: none;
+  cursor: pointer;
 }
 
 .contact-list a:hover {

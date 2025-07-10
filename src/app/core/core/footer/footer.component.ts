@@ -72,4 +72,12 @@ export class FooterComponent implements OnInit {
   goToTiktok(){
     window.open('https://www.tiktok.com/@djet.technologie', '_blank');
   }
+  goToWhatsapp(){
+  const tel = "+2250758798524"
+  //const site="https://djettechnologie.com/"
+  const message = ` Bonjour, puis-je discuter avec vous ?`
+  const url = `https://wa.me/${tel}?text=${message}`
+  window.open(url, '_blank'); 
+
+  }
 }

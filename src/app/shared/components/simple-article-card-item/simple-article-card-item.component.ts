@@ -34,7 +34,7 @@ export class SimpleArticleCardItemComponent {
     }
 
     this.store.showAddedAlert = true
-    setTimeout(() => {
+    setTimeout(() => {          
       this.store.showAddedAlert = false
     }, 3000);
 
