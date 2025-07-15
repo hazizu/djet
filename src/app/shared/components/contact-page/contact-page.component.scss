@@ -48,6 +48,15 @@
   text-decoration: none;
   outline: none;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  color: #072AC8;
+}
+.contact-list a img{
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .contact-list a:hover {
