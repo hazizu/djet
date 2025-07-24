@@ -46,7 +46,17 @@ export class SimpleArticleCardItemComponent {
     console.log(this.isLiked);
   }
   goToDetail(){
-     this.router.navigate(['/home/articles/detail', this.productData?.id]);
+    if(this.router.url.includes('/home/articles/detail')){
+       this.router.navigate(['/home/articles/detail', this.productData?.id]);
+       setTimeout(() => {
+        window.location.reload();
+       }, 0);
+      
+    }else{
+      this.router.navigate(['/home/articles/detail', this.productData?.id]);
+    }
+    
+    
   }
   get firstImageUrl(): string | null {
     return this.productData?.images?.[0]?.image ?? null;

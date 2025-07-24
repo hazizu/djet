@@ -74,6 +74,9 @@ export class MyCommandeDetailComponent implements OnInit{
     )
 
   }
+   removeLastComma(phrase:string | undefined){
+  return phrase?.trim().replace(/,+\s*$/, '');
+}
 
   
 
