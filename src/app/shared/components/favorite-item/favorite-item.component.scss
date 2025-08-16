@@ -1,0 +1,142 @@
+.info-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 25rem;
+    width: 29rem;
+}
+.favorite-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+span.article-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+span.article-price {
+    font-size: 0.9rem;
+}
+span.article-old-price {
+    font-size: 0.8rem;
+    color: #626A8F;
+    text-decoration: line-through;
+}
+span.remove-link {
+    color: #072AC8;
+    text-decoration: underline;
+    font-size: 0.8rem;
+    transition: all 0.5s ease;
+}
+span.remove-link:hover{
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+span.discount-percent {
+    font-size: 0.8rem;
+    background-color: #FFC600;
+    padding: 0.3rem;
+    /* width: 2rem; */
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #072AC8;
+}
+.image-bloc {
+    width: 6rem;
+    height: 8rem;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+.discount-percent-content{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.favorite-container:hover{
+    background-color: rgba(225, 225, 225, 0.6);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.forPhone{
+    display: none;
+}
+.rupture_stock{
+    color: red;
+    font-size: 0.5rem;
+    background-color: rgba(128, 128, 128, 0.2784313725);
+    padding: 0 1rem;
+}
+.article-price-bloc{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+//phone
+@media screen and (max-width: 768px) {
+    .favorite-container {
+    padding:0;
+}
+
+span.article-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+span.article-price {
+    font-size: 0.8rem;
+}
+span.article-old-price {
+    font-size: 0.7rem;
+    color: #626A8F;
+    text-decoration: line-through;
+}
+.forPhone{
+    display: block;
+}
+.forPc{
+    display: none;
+}
+.action-content{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.image-bloc {
+    min-width: 4rem;
+    min-height: 6rem;
+  
+}
+.favorite-container{
+    gap: 0.5rem;
+}
+
+.info-content {
+    min-width: 75%;
+    width: 75%;
+    max-width: 75%;
+}
+span.discount-percent {
+    font-size: 0.7rem;
+    background-color: #FFC600;
+    padding: 0.3rem;
+    /* width: 2rem; */
+    
+    width: 2rem;
+    height: 2rem;
+    color: #072AC8;
+
+    border-radius: 50%;
+}
+
+}

@@ -35,6 +35,9 @@ export class StoreService {
   _showAddedAlert:boolean = false
   private showAddedAlertSubject = new BehaviorSubject<boolean>(this._showAddedAlert)
 
+  _addedMessage:string = ''
+  private addedMessageSubject = new BehaviorSubject<string>(this._addedMessage)
+
   constructor() { }
 
   get userData$():BehaviorSubject<IUser | null>{ 
@@ -50,9 +53,15 @@ export class StoreService {
   get isLogout$(): BehaviorSubject<boolean>{
     return this.isLogoutSubject
   }
+
   get showAddedAlert$(): BehaviorSubject<boolean>{
     return this.showAddedAlertSubject
   }
+
+  get addedMessage$(): BehaviorSubject<string>{
+    return this.addedMessageSubject
+  }
+  
 
   get categiesData$():BehaviorSubject<ICategorie[] | null>{
     return this.categorieDataSubject
@@ -83,6 +92,11 @@ export class StoreService {
   set showAddedAlert(value: boolean){
     this._showAddedAlert = value
     this.showAddedAlertSubject.next(value)
+  }
+
+  set addedMessage(value: string){
+    this._addedMessage = value
+    this.addedMessageSubject.next(value)
   }
   set userData(data:IUser){
     this._userData = data

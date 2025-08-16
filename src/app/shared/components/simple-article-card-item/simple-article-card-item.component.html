@@ -21,7 +21,6 @@
     <div class="caracteristic-bloc">
         <span class="available-text" *ngIf="productData?.quantity == 0">EN RUPTURE DE STOCK</span>
         <span class="article-name">{{productData?.name}}</span>
-        
            <span class="article-price">{{productData?.price | number:'1.0-0'}} FCFA</span> 
            <span *ngIf="productData && productData.highPrice" class="article-price-old">{{productData?.highPrice | number:'1.0-0'}} FCFA</span> 
     </div>

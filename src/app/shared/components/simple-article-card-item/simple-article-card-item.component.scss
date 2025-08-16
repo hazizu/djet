@@ -49,15 +49,32 @@
 .haert-container{
     position: absolute;
     right: 1rem;
-    top: 1rem;
+    top: 0.5rem;
     width: 2rem;
     height: 2rem;
     z-index: 99;
+   
     
   }
+.outheart {
+    padding: 0.4rem;
+    width: 2.8rem;
+}
+.heart{
+    padding: 0.4rem;
+    width: 2.8rem;
+}
+
+
+.outheart:hover{
+    background-color: #ffc80056;
+    border-radius: 50%;
+}
+.heart:hover{
+    background-color: #ffc80056;
+    border-radius: 50%;
+}
   .heart, .outheart svg{
-    width: 2rem;
-    height: 2rem;
     color: #FFC600;
 }
 span.available-text {

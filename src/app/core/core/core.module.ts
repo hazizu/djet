@@ -19,6 +19,7 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
 import { UpdateIdentifiantComponent } from './update-identifiant/update-identifiant.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { MyCommandeDetailComponent } from './my-commande-detail/my-commande-detail.component';
+import { FavoritesComponent } from './main-news/favorites/favorites.component';
 
 
 
@@ -40,6 +41,7 @@ import { MyCommandeDetailComponent } from './my-commande-detail/my-commande-deta
     UpdateIdentifiantComponent,
     MyOrdersComponent,
     MyCommandeDetailComponent,
+    FavoritesComponent,
   ],
   imports: [
     CommonModule,

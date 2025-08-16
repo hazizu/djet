@@ -31,6 +31,7 @@ import { OrderDetailProductItemComponent } from './components/order-detail-produ
 import { LocalisationMapComponent } from './components/localisation-map/localisation-map.component';
 import { LocalisationComponent } from './components/localisation/localisation.component';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
+import { FavoriteItemComponent } from './components/favorite-item/favorite-item.component';
 
 
 
@@ -63,7 +64,8 @@ import { ContactPageComponent } from './components/contact-page/contact-page.com
     OrderDetailProductItemComponent,
     LocalisationMapComponent,
     LocalisationComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    FavoriteItemComponent
   ],
   imports: [
     CommonModule,
@@ -96,7 +98,8 @@ import { ContactPageComponent } from './components/contact-page/contact-page.com
     AddedAlertComponent,
     FilterCommandeComponent,
     OrderProductItemComponent,
-    OrderDetailProductItemComponent
+    OrderDetailProductItemComponent,
+    FavoriteItemComponent
   ]
 })
 export class SharedModule { }

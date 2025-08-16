@@ -92,5 +92,8 @@ isLogout?:boolean;
     }, 1000/3);
   
   }
+  getFavorite(){
+    
+  }
 
 }

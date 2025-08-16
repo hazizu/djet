@@ -1,0 +1,24 @@
+<div class="favorite-container" (click)="goToDetail()">
+    <div class="image-bloc" [ngStyle]="{'background-image':getBackgroundImage()}"></div>
+    <div class="info-content">
+        <span class="article-name">{{favoriteArticle?.name}}</span>
+        <div class="article-price-bloc">
+            <span class="article-price">{{favoriteArticle?.price | number:'1.0-0'}} FCFA</span>
+            <span *ngIf="favoriteArticle?.quantity == 0" class="rupture_stock">{{favoriteArticle?.quantity == 0 ? 'EN RUPTURE DE STOCK' : ''}}</span>
+        </div>
+       
+
+        <div class="discount-percent-content">
+            <span class="article-old-price">{{favoriteArticle?.highPrice | number:'1.0-0'}} FCFA</span>
+            <span class="discount-percent">-{{favoriteArticle?.discountPercentage}}%</span>
+        </div>
+        <div class="action-content">
+            <span class="remove-link" (click)="deleteFavorite($event)">Supprimer</span>
+            <div class="forPhone"><app-button [isDisabled]="favoriteArticle?.quantity == 0" [styles]="{padding:'0.2rem 0.8rem', fontSize:'0.6rem'}" (clicked)="addToPanier($event)" label="Ajouter au panier"></app-button></div>
+        </div>
+        
+    </div>
+    <div class="forPc">
+    <app-button [isDisabled]="favoriteArticle?.quantity == 0" (clicked)="addToPanier($event)" label="Ajouter au panier" [styles]="{padding:'0.5rem 0.8rem'}" ></app-button>
+    </div>
+</div>

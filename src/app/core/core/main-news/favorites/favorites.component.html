@@ -1,0 +1,17 @@
+<div class="my-favorites-container">
+      <div class="search-title">
+        <span class="fixed-title" routerLink="/home">Accueil</span>
+        <img src="./../../../../assets/SVG/chevron_droit.svg" />
+        <span class="search-value">Mes favoris</span>
+    </div>
+
+    <div class="no-favorites" *ngIf="isEmpty">
+        <span class="no-favorites-title">Vous n'avez pas encore ajouté d'articles en favoris</span>
+    </div>
+
+   <div class="favorite-content" *ngIf="favorites?.length">
+    <div class="list-favorite" *ngFor="let favorite of favorites">
+        <app-favorite-item [favoriteArticle]="favorite" (deleteUserFavorite)="removeFavorite($event)"></app-favorite-item>
+    </div>
+   </div>
+</div>

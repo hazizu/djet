@@ -30,6 +30,10 @@
                 <img src="./../../../../assets/SVG/box-commande.svg" />
                 <span class="toggle-item-text">Mes commandes</span>
             </div>
+             <div class="toggle-item" (click)="close()" routerLink="/home/favoris">
+                <img src="./../../../../assets/SVG/favorite-icon-blue.svg"/>
+                <span class="toggle-item-text">Mes favoris</span>
+            </div>
             <div class="toggle-item" (click)="logout()"  *ngIf="!isLogout">
                 <img src="./../../../../assets/SVG/deconnexion-icon.svg" />
                 <span class="toggle-item-text">Se déconnecter</span>
@@ -76,6 +80,10 @@
                     <img src="./../../../../assets/SVG/box-commande.svg" />
                     <span class="toggle-item-text">Mes commandes</span>
                 </div>
+            <div class="toggle-item" (click)="close()" routerLink="/home/favoris">
+                <img src="./../../../../assets/SVG/favorite-icon-blue.svg"/>
+                <span class="toggle-item-text">Mes favoris</span>
+            </div>
                 <div class="toggle-item" (click)="logout()" *ngIf="!isLogout">
                     <img src="./../../../../assets/SVG/deconnexion-icon.svg" />
                     <span class="toggle-item-text">Se déconnecter</span>
