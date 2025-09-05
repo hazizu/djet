@@ -7,6 +7,7 @@ import { AuthRoutingModule } from './auth.routing.module';
 import { SharedModule } from "../../shared/shared.module";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterSuccessComponent } from './register-success/register-success.component';
+import { ForgetPassComponent } from './forget-pass/forget-pass.component';
 
 
 
@@ -15,7 +16,8 @@ import { RegisterSuccessComponent } from './register-success/register-success.co
     LoginComponent,
     RegisterComponent,
     AuthComponent,
-    RegisterSuccessComponent
+    RegisterSuccessComponent,
+    ForgetPassComponent
   ],
   imports: [
     CommonModule,

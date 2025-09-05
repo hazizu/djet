@@ -1,0 +1,34 @@
+.imageBlock1{
+    width: 100%;
+    height: 8rem;
+    border-radius: 0.7rem 0.7rem 0 0;
+    background-image: url("./../../../../assets/png/local-image1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+.itemBlock2{
+    width: 5rem;
+    height: 6rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+}
+.list-block2{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: scroll;
+    gap: 0.3rem;
+    border-radius: 0 0 0.7rem 0.7rem;
+    
+    
+}
+.popup-infos{
+   z-index: 9999999;
+   width: 100%;
+   height: 100%;
+   background-color: #072AC8;
+   border-radius: 0.7rem;
+}

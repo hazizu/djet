@@ -30,14 +30,14 @@
                     </div>
                 </div> -->
 
-                <div class="social-connect-bar2">
-                    <!-- <div class="barre2"></div> -->
-                    <span *ngIf="router.url === '/login'">Nouveau sur Djet technologies ?</span>
+                <!-- <div class="social-connect-bar2">
+                     <div class="barre2"></div> -->
+                    <span *ngIf="router.url === 'auth/login'">Nouveau sur Djet technologies ?</span>
                     <span *ngIf="router.url === '/inscription'">Vous avez déjà un compte ?</span>
                     <!-- <div class="barre2"></div> -->
-                </div>
+                <!-- </div>  -->
                 <div class="signup">
-                    <app-button (clicked)="goToInscription()" *ngIf="router.url.includes('auth/login')" label="Créer un compte" [styles]="{ marginTop:'1rem', background:'transparent', border:'1px solid #000', color:'#000', fontSize:'1.2rem'}"></app-button>
+                    <app-button (clicked)="goToInscription()" *ngIf="router.url.includes('auth/login') || router.url.includes('auth/mot-de-passe-oublie')" label="Créer un compte" [styles]="{ marginTop:'1rem', background:'transparent', border:'1px solid #000', color:'#000', fontSize:'1.2rem'}"></app-button>
                     <app-button (clicked)="goToLogin()" *ngIf="router.url === '/auth/inscription'" label="Connectez-vous" [styles]="{ marginTop:'1rem', background:'transparent', border:'1px solid #000', color:'#000', fontSize:'1.2rem'}"></app-button>
                 </div>
 

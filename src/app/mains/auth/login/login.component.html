@@ -17,7 +17,10 @@
             <img src="./../../../../assets/SVG/lock.svg"/>
         </app-input>
         <app-error-message [message]="errorMessage"></app-error-message>
-            <app-button (clicked)="login()" label="Se connecter" [styles]="{ marginTop:'1rem'}"></app-button>
+            <app-button (clicked)="login()" label="Se connecter" [styles]="{ marginTop:'0.5rem'}"></app-button>
+            <span class="link-forgot-pass" (click)="goToForget()">
+                Mot de passe oublié ?
+            </span>
     </form>
     </div>
 </div>

@@ -13,7 +13,7 @@ goToHome(){
 }
 
 openwhatsapp(){
-  const tel = "+2250758798524"
+  const tel = "+2250701509331"
   //const site="https://djettechnologie.com/"
   const message = ` Bonjour, puis-je discuter avec vous ?`
   const url = `https://wa.me/${tel}?text=${message}`

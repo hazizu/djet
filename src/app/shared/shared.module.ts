@@ -32,6 +32,7 @@ import { LocalisationMapComponent } from './components/localisation-map/localisa
 import { LocalisationComponent } from './components/localisation/localisation.component';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
 import { FavoriteItemComponent } from './components/favorite-item/favorite-item.component';
+import { LocalisationPopupInfosComponent } from './components/localisation-popup-infos/localisation-popup-infos.component';
 
 
 
@@ -65,7 +66,10 @@ import { FavoriteItemComponent } from './components/favorite-item/favorite-item.
     LocalisationMapComponent,
     LocalisationComponent,
     ContactPageComponent,
-    FavoriteItemComponent
+    FavoriteItemComponent,
+    LocalisationPopupInfosComponent
+   
+    
   ],
   imports: [
     CommonModule,
@@ -99,7 +103,8 @@ import { FavoriteItemComponent } from './components/favorite-item/favorite-item.
     FilterCommandeComponent,
     OrderProductItemComponent,
     OrderDetailProductItemComponent,
-    FavoriteItemComponent
+    FavoriteItemComponent,
+    LocalisationPopupInfosComponent
   ]
 })
 export class SharedModule { }

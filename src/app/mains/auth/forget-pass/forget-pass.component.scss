@@ -26,6 +26,10 @@
     display: flex;
     cursor: pointer;
 }
+.successStyle{
+    font-size: 0.8rem;
+    color: green;
+}
 
 //phone
 @media screen and (max-width: 767px) {

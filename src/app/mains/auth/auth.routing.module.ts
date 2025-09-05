@@ -5,6 +5,7 @@ import { AuthComponent } from "./auth/auth.component";
 import { RegisterComponent } from "./register/register.component";
 import { LoginComponent } from "./login/login.component";
 import { RegisterSuccessComponent } from "./register-success/register-success.component";
+import { ForgetPassComponent } from "./forget-pass/forget-pass.component";
 
 const routes:Routes = [
     {
@@ -16,6 +17,9 @@ const routes:Routes = [
             {
                 path: 'inscription', component: RegisterComponent
 
+            },
+            {
+                path: 'mot-de-passe-oublie', component: ForgetPassComponent
             },
             {
                 path: '**', redirectTo: 'login'

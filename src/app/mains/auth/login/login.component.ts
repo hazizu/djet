@@ -30,6 +30,10 @@ export class LoginComponent {
 
   }
 
+   goToForget(){
+    this.router.navigate(['/auth/mot-de-passe-oublie'])
+   }
+
   login(){
     this.invalidError = false
     this.errorMessage = ''
@@ -57,5 +61,7 @@ export class LoginComponent {
     }
    
   }
+
+ 
 
 }

@@ -18,11 +18,38 @@ html {
 .picsum-img-wrapper img {
     width: 100% !important;
 }
+
+#popup-container{
+    width: 20rem;
+    height: 14rem;
+}
+
+.leaflet-popup-content {
+     margin: 0px 0px 0px 0px !important; 
+     width: auto !important;
+    /* line-height: 1.3; */
+}
+.leaflet-popup-content-wrapper {
+     padding: 0px !important;   
+}
+.leaflet-popup-content-wrapper, .leaflet-popup-tip {
+    background-color: white !important;
+    
+}
+.leaflet-popup-tip {
+    width: 23px !important; 
+    height: 23px !important;
+    
+}
 // phone
 @media screen and (max-width: 768px)  {
     .carousel-inner {
         width: 100%!important;
         height: 100%!important;
     }
+#popup-container{
+    width: 10rem;
+}
 }
 
+ 

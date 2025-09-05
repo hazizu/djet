@@ -1,0 +1,26 @@
+<div class="container-main">
+    <span class="login-title">
+        Mot de passe oublié
+    </span>
+
+    <div class="login-form">
+        <div class="login-sub-title">
+            <span>
+               Veuillez saisir votre adresse email. Nous vous enverrons un lien par mail pour réinitialiser votre mot de passe.
+            </span>
+        </div>
+        <form [formGroup]="forgetPassForm">
+        <app-input controlName="email" libelle="Adresse email" inputType="email" [redBorder]="(forgetPassForm.get('email')?.invalid && invalidError) || invalidError">
+            <img src="./../../../../assets/SVG/icon-profile.svg"/>
+        </app-input>
+
+        <app-error-message [message]="errorMessage"></app-error-message>
+        <span class="successStyle" *ngIf="successMessage">{{successMessage}}</span>
+            <app-button (clicked)="envoyer()" label="Valider" [styles]="{ marginTop:'0.5rem'}"></app-button>
+
+             <span class="link-forgot-pass" (click)="goToLogin()">
+                Revenir à la page de connexion
+            </span>
+    </form>
+    </div>
+</div>
