@@ -31,4 +31,18 @@
    height: 100%;
    background-color: #072AC8;
    border-radius: 0.7rem;
+   position: relative;
+}
+.itineraire-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: #FFF;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.itineraire-btn img{
+    width: 2rem;
+    height: 2rem;
 }
