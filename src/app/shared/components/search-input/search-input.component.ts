@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { StoreService } from 'src/app/core/services/store.service';
 import { SearchProductService } from 'src/app/mains/gestion-produit/searched-articles/service/search-product.service';
@@ -9,6 +10,7 @@ import { SearchProductService } from 'src/app/mains/gestion-produit/searched-art
   styleUrls: ['./search-input.component.scss']
 })
 export class SearchInputComponent {
+  searchForm:FormGroup
 
   seachValue:string=""
   closeSearchedList:boolean=true
@@ -25,8 +27,13 @@ export class SearchInputComponent {
   constructor(
     private serchProductservice:SearchProductService, 
     private store:StoreService,
-    private router:Router
+    private router:Router,
+    private fb:FormBuilder
   ){
+
+    this.searchForm = fb.group({
+      searchInput:['']
+    })
 
   }
 

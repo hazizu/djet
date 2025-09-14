@@ -7,11 +7,8 @@
     <span class="search-value">{{ categorieName}}</span>
    
 </div>
- <ng-container *ngIf="!articles?.length ; else noArticle" >
-  <span class="no-data-lib" *ngIf="!articles?.length && searchedWords">Aucun résultat pour "{{searchedWords}}"</span>
-  <span class="no-data-lib" *ngIf="!articles?.length && !searchedWords">Aucun résultat trouvé</span>
- </ng-container>
-<ng-template #noArticle>
+
+<ng-container *ngIf="articles && articles.length > 0 ; else noArticle" >
 <div class="list-articles">
     <div class="list-articles-container" *ngFor="let article of articles">
         <app-simple-article-card-item [productData]="article"></app-simple-article-card-item>
@@ -20,7 +17,13 @@
         <app-pagination   [totalCount]="totalCount" (changePage)="onChangePage($event)"></app-pagination>
     </div> -->
 </div>
-</ng-template>
+</ng-container>
+
+ <ng-template #noArticle>
+  <span class="no-data-lib" *ngIf="articles?.length === 0 && searchedWords">Aucun résultat pour "{{searchedWords}}"</span>
+  <span class="no-data-lib" *ngIf="articles?.length === 0 && !searchedWords">Aucun résultat trouvé</span>
+ </ng-template>
+
 
 <div class="footer-banner">
 <app-footer-banner></app-footer-banner>

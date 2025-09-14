@@ -1,10 +1,11 @@
+<form [formGroup]="searchForm" (ngSubmit)="getValueWithButton()">
 <div class="main-content">
 <div class="container-main">
 <div class="icon-bloc">
 <img src="./../../../../assets/SVG/search.svg"/>
 </div>
     <div class="input-block">
-        <input [(ngModel)]="seachValue"  type="text" class="input" placeholder="Rechercher un produit, une marque, etc...">
+        <input [(ngModel)]="seachValue" formControlName="searchInput"  type="text" class="input" placeholder="Rechercher un produit, une marque, etc...">
     </div>
    
 </div>
@@ -25,3 +26,4 @@
             
     </div> -->
 </div>
+</form>

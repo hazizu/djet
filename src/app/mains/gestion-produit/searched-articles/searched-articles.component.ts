@@ -132,6 +132,8 @@ categorieId?:string | null
       console.log('les produits recherchés', data);
       if(data?.length){
         this.articles = data
+      }else{
+        this.articles = []
       }
   })
 
